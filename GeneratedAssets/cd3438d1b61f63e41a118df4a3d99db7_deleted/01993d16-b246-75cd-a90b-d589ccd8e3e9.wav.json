@@ -1,0 +1,13 @@
+{
+    "asset": "cd3438d1b61f63e41a118df4a3d99db7",
+    "fileName": "01993d16-b246-75cd-a90b-d589ccd8e3e9.wav",
+    "prompt": "A nice sound of two lego pieces clicking together",
+    "negativePrompt": "",
+    "model": "0ee39b33-2893-4e0f-8c46-0e0bdd4eda85",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "a6dc6e72f5698403b451d3606962e7c9",
+    "duration": 1.0,
+    "autoTrim": true,
+    "hasReference": false
+}
