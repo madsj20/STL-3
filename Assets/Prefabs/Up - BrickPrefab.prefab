@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7891845007460454821}
   - component: {fileID: 6419294495141786937}
   - component: {fileID: 8504903385303584813}
+  - component: {fileID: -7505136315189123625}
   m_Layer: 5
   m_Name: Up - BrickPrefab
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5849056, g: 0.54903877, b: 0.54903877, a: 1}
+  m_Color: {r: 0.19698799, g: 1, b: 0.0141509175, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -101,3 +102,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7126d48c949b97418266996e11143f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrickDragHandler
+--- !u!114 &-7505136315189123625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8664433607397383791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454ae8b425aae29498fb541e4f155aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrickPiece
+  action: 0

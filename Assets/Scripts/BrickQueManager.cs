@@ -90,6 +90,46 @@ public class BrickQueManager : MonoBehaviour
         }
         isPlaying = false;
     }
+
+    public void ClearAll()
+    {
+        // stop any running playback
+        if (isPlaying)
+        {
+            StopAllCoroutines();
+            isPlaying = false;
+        }
+
+        // clear the logical queue & label
+        queue.Clear();
+        RefreshLabel();
+
+        // clear the placed bricks from the bottom panel
+        ClearSlotsUI();
+    }
+
+    // Remove any bricks from each slot in PanelThatPlaysTheSequence
+    private void ClearSlotsUI()
+    {
+        if (PanelThatPlaysTheSequence == null) return;
+
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot == null) continue;
+
+            // if a brick is in this slot, destroy it and null the reference
+            if (slot.brickPrefab != null)
+            {
+                Destroy(slot.brickPrefab);
+                slot.brickPrefab = null;
+            }
+
+            // safety: if anything else was parented under the slot, remove it too
+            for (int c = slot.transform.childCount - 1; c >= 0; c--)
+                Destroy(slot.transform.GetChild(c).gameObject);
+        }
+    }
     
     // Update the queue label text
     private void RefreshLabel()
