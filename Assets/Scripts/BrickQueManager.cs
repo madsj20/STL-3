@@ -8,12 +8,11 @@ public class BrickQueManager : MonoBehaviour
 {
     public enum ActionType { MoveForward, TurnLeft, TurnRight }
 
-    [Header("References")]
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
-
-    [Header("Timing")]
     public float commandDelay = 0.05f; // small gap between commands
+
+    public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
 
     private readonly Queue<ActionType> queue = new Queue<ActionType>();
     private bool isPlaying = false;
@@ -27,12 +26,39 @@ public class BrickQueManager : MonoBehaviour
         queue.Clear();
         RefreshLabel();
     }
+    //play the queued commands
     public void Play()
     {
         if (!isPlaying)
             StartCoroutine(Run());
     }
-    // ----------------------------------
+
+    public void PlayFromPanel()
+    {
+        if (isPlaying) return;
+
+        // remove any previous commands
+        queue.Clear();
+
+        if (PanelThatPlaysTheSequence == null) { RefreshLabel(); return; }
+
+        // read slots left to right
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot == null) continue;
+
+            var brickGO = slot.brickPrefab;
+            if (brickGO == null) continue;
+
+            var piece = brickGO.GetComponent<BrickPiece>();
+            if (piece == null) continue;
+
+            Enqueue(piece.action);
+        }
+
+        Play();
+    }
 
     private void Enqueue(ActionType a)
     {
@@ -64,7 +90,8 @@ public class BrickQueManager : MonoBehaviour
         }
         isPlaying = false;
     }
-
+    
+    // Update the queue label text
     private void RefreshLabel()
     {
         if (queueLabel == null) return;
@@ -72,7 +99,7 @@ public class BrickQueManager : MonoBehaviour
         var arr = queue.ToArray();
         if (arr.Length == 0)
         {
-            queueLabel.text = "Queue: —";
+            queueLabel.text = "Queue: ";
             return;
         }
 
@@ -82,8 +109,8 @@ public class BrickQueManager : MonoBehaviour
             sb.Append(arr[i] switch
             {
                 ActionType.MoveForward => "F",
-                ActionType.TurnLeft    => "L",
-                ActionType.TurnRight   => "R",
+                ActionType.TurnLeft => "L",
+                ActionType.TurnRight => "R",
                 _ => "?"
             });
             if (i < arr.Length - 1) sb.Append(" → ");
