@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         transform.position = end;
         gridPosition = newPos;
         isMoving = false;
+
     }
     
     private IEnumerator RotateTo(Vector2Int newDir)
@@ -95,7 +96,8 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPosition()
     {
-        transform.position = new Vector3(startGridPosition.x, startGridPosition.y, 0);
+        gridPosition = startGridPosition; // Reset logical position
+        transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
         faceDirection = Vector2Int.up;
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
     }
