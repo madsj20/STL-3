@@ -106,6 +106,9 @@ public class BrickQueManager : MonoBehaviour
 
         // clear the placed bricks from the bottom panel
         ClearSlotsUI();
+
+        // reset the player position
+        player.ResetPosition();
     }
 
     // Remove any bricks from each slot in PanelThatPlaysTheSequence
