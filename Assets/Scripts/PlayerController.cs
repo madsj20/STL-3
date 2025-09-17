@@ -5,7 +5,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public Vector2Int gridPosition; //Current grid position
-    public float moveDuration = 0.5f; //Car speed from one tile to another
+    private Vector2Int startGridPosition;
+    public float moveDuration = 1f; //Car speed from one tile to another
 
     private bool isMoving = false;
     private GridManager gridManager;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         gridManager = FindAnyObjectByType<GridManager>();
         transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Set initial facing direction
+        startGridPosition = gridPosition;
     }
 
     private bool TryMove(Vector2Int delta)
@@ -70,6 +72,7 @@ public class PlayerController : MonoBehaviour
         transform.position = end;
         gridPosition = newPos;
         isMoving = false;
+
     }
     
     private IEnumerator RotateTo(Vector2Int newDir)
@@ -89,6 +92,14 @@ public class PlayerController : MonoBehaviour
 
         faceDirection = newDir; // Updates first when the rotation is done
         isRotating = false;
+    }
+
+    public void ResetPosition()
+    {
+        gridPosition = startGridPosition; // Reset logical position
+        transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
+        faceDirection = Vector2Int.up;
+        transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
     }
 
 }
