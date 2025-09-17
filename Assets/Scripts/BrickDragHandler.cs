@@ -66,7 +66,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         Vector3 worldPos;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(
             rt.parent as RectTransform, eventData.position, eventData.pressEventCamera, out worldPos);
-
         rt.position = worldPos;
     }
 
@@ -108,13 +107,22 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             // Re-parent dragged brick to the drop slot and center it
             transform.SetParent(dropSlot.transform, false);
             SnapUI(transform as RectTransform);
+            return;
         }
+
+        // delete the dragged item if dropped outside inventory panel
+        if (originalSlot != null && originalSlot.brickPrefab == gameObject)
+            originalSlot.brickPrefab = null;
+
+        Destroy(gameObject);
+        /*
         else
         {
             // If no valid slot was hit, return to the original parent
             transform.SetParent(originalParent, false);
             SnapUI(transform as RectTransform);
         }
+        */
     }
 
     // Ensure the UI element is centered inside its parent
