@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int width, height;
+    [SerializeField] public int width, height;
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private Transform cam;
     [SerializeField] private Transform grid;
@@ -45,4 +45,15 @@ public class GridManager : MonoBehaviour
         }
         return null;
     }
+
+    public Vector3 GetGridOrigin()
+    {
+        float cameraDistance = Mathf.Abs(Camera.main.transform.position.z);
+        return Camera.main.ViewportToWorldPoint(new Vector3(0, 0, cameraDistance));
+    }
+    public Vector2 GetTileSize()
+    {
+        return tilePrefab.GetComponent<SpriteRenderer>().bounds.size;
+    }
+
 }
