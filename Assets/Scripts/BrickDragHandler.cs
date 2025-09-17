@@ -15,6 +15,13 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // Normalize RectTransform for dragging
+        var rt = GetComponent<RectTransform>();
+        if (rt)
+        {
+            rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
+            rt.pivot = new Vector2(0.5f, 0.5f);
+        }
         // Save the original parent (slot or panel)
         originalParent = transform.parent;
         originalSiblingIndex = transform.GetSiblingIndex();
@@ -56,14 +63,11 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         var rt = GetComponent<RectTransform>();
         if (!rt) { transform.position = eventData.position; return; }
 
-        // Convert screen position to local position relative to parent
-        RectTransform parentRt = rt.parent as RectTransform;
-        Vector2 localPos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            parentRt, eventData.position, eventData.pressEventCamera, out localPos);
+        Vector3 worldPos;
+        RectTransformUtility.ScreenPointToWorldPointInRectangle(
+            rt.parent as RectTransform, eventData.position, eventData.pressEventCamera, out worldPos);
 
-        // Move UI element to follow the mouse
-        rt.anchoredPosition = localPos;
+        rt.position = worldPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
