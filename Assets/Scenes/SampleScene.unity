@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -405.50012, y: -173}
+  m_AnchoredPosition: {x: -303.32, y: -182}
   m_SizeDelta: {x: 70.33618, y: 31.9925}
   m_Pivot: {x: 0.99999976, y: 0.5}
 --- !u!114 &193190198
@@ -1270,11 +1270,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryController
   inventoryPanel: {fileID: 1472407213}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
-  slotCount: 8
+  slotCount: 12
   brickPrefabs:
   - {fileID: 8664433607397383791, guid: 11c8182bc1ba4a142bf6676d4ee1fe30, type: 3}
-  - {fileID: 4683543359870968786, guid: e458f11ea8bee844dbd78f150e772cab, type: 3}
   - {fileID: 8628905314089425671, guid: d45cad85eb358874a91b65c934a849a0, type: 3}
+  - {fileID: 4683543359870968786, guid: e458f11ea8bee844dbd78f150e772cab, type: 3}
   pickablePanel: {fileID: 1564109855}
 --- !u!1 &960094175
 GameObject:
@@ -1523,8 +1523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -192.13774}
-  m_SizeDelta: {x: 842.6062, y: 105.6181}
+  m_AnchoredPosition: {x: 63.356567, y: -196.72696}
+  m_SizeDelta: {x: 703.8152, y: 51.1736}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472407215
 MonoBehaviour:
@@ -1539,15 +1539,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 0
+    m_Left: 10
     m_Right: 0
-    m_Top: 0
+    m_Top: 1
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 6, y: 6}
+  m_CellSize: {x: 50, y: 50}
+  m_Spacing: {x: 8, y: 6}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1472407216
@@ -1755,8 +1755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.7939, y: 169}
-  m_SizeDelta: {x: 1047.5879, y: 50}
+  m_AnchoredPosition: {x: 0.4812, y: 232.05}
+  m_SizeDelta: {x: 848.2748, y: 33.1896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494033021
 MonoBehaviour:
@@ -1787,8 +1787,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287635664
-  m_fontColor: {r: 0.8156863, g: 0.1254902, b: 0.5647059, a: 1}
+    rgba: 4279238851
+  m_fontColor: {r: 0.764151, g: 0, b: 0.06269082, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1805,8 +1805,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1843,7 +1843,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.00018310547, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1892,8 +1892,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.6942, y: -9.4914}
-  m_SizeDelta: {x: 107.9515, y: 266.9827}
+  m_AnchoredPosition: {x: -387.17, y: 42.759705}
+  m_SizeDelta: {x: 72.9794, y: 345.3853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564109857
 MonoBehaviour:
@@ -1946,14 +1946,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 0
+    m_Left: 12
     m_Right: 0
-    m_Top: 0
+    m_Top: 5
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 50, y: 50}
   m_Spacing: {x: 6, y: 6}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2129,7 +2129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -405.50012, y: -222}
+  m_AnchoredPosition: {x: -303.32, y: -213.99}
   m_SizeDelta: {x: 70.33618, y: 31.9925}
   m_Pivot: {x: 0.99999976, y: 0.5}
 --- !u!114 &1842726138
