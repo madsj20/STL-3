@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: Assembly-CSharp::RoadPieceData
   type: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b762910e25e3c2343932a7be520150f1, type: 3}
   startDirection: {x: -1, y: 0}
