@@ -35,6 +35,10 @@
         "**/*.ma": true,
         "**/*.MA": true,
         "**/*.obj": true,
+        "**/Library": true, //added
+        "**/Temp": true, //added
+        "**/Logs": true, //added
+        "**/UserSettings": true, //added
         "**/*.OBJ": true,
         "**/*.asset": true,
         "**/*.cubemap": true,
