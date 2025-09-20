@@ -6,23 +6,55 @@ public class PlayerController : MonoBehaviour
 {
     public Vector2Int gridPosition; //Current grid position
     private Vector2Int startGridPosition;
+    public Vector2Int faceDirection = Vector2Int.up; //The car facing direction
+
     public float moveDuration = 1f; //Car speed from one tile to another
 
-    private bool isMoving = false;
     private GridManager gridManager;
-    public Vector2Int faceDirection = Vector2Int.up; //The car facing direction
+
+    private bool isMoving = false;
     public bool isIdle => !isMoving;
     private bool isRotating = false;
+
     public float rotateDuration = 0.25f; // how long a 90° turn takes
 
     void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
-        transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
-        transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Set initial facing direction
-        startGridPosition = gridPosition;
+        //transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
+        //transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Set initial facing direction
+        //startGridPosition = gridPosition;
     }
 
+    // Set spawn position for the "START" RoadPiece
+    public void SetSpawnWorld(Vector3 worldPos, Vector2Int dir)
+    {
+        transform.position = worldPos; // exact prefab position
+        transform.up = new Vector3(dir.x, dir.y, 0);
+        faceDirection = dir;
+
+        // logical grid for movement
+        gridPosition = Vector2Int.RoundToInt(new Vector2(worldPos.x, worldPos.y));
+    }
+
+    // Set the logic for the Clear button to respawn to the current Start piece
+    public void RespawnToCurrentStart()
+    {
+        var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
+        foreach (var p in pieces)
+        {
+            if (p != null && p.data != null && p.data.type == RoadPieceType.Start)
+            {
+                SetSpawnWorld(p.transform.position,
+                            Vector2Int.RoundToInt(p.data.startDirection));
+                return;
+            }
+        }
+        // fallback if no Start piece exists
+        ResetPosition();
+    }
+
+    // Makes the car drive forward if possible
     private bool TryMove(Vector2Int delta)
     {
         if (isMoving || isRotating) return false;

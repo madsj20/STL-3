@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4732823362411261207}
   - component: {fileID: 1905918852858363131}
   - component: {fileID: 8080725611186947047}
+  - component: {fileID: -5789671085465102154}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadPiece
   data: {fileID: 11400000, guid: e262ebbd34b105f4b8ab7e232b62d0e2, type: 2}
+--- !u!114 &-5789671085465102154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046424008530396100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454ae8b425aae29498fb541e4f155aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrickPiece
+  action: 3
