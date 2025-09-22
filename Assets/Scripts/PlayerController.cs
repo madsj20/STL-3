@@ -87,6 +87,12 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(RotateTo(right));
     }
 
+    public void Hold (float delay)
+    {
+        
+        StartCoroutine(HandlePitStop(delay));
+    }
+
     private IEnumerator MoveTo(Vector2Int newPos)
     {
         isMoving = true;
@@ -124,6 +130,26 @@ public class PlayerController : MonoBehaviour
 
         faceDirection = newDir; // Updates first when the rotation is done
         isRotating = false;
+    }
+
+    public IEnumerator HandlePitStop(float delay)
+    {
+        // Wait until the current MoveTo/RotateTo completes, so we "land" on the pit tile.
+        while (isMoving || isRotating)
+            yield return null;
+
+        // Block new actions during the pause
+        bool prevMoving = isMoving;
+        bool prevRotating = isRotating;
+
+        isMoving = true;     // makes player.isIdle == false so the queue waits
+        isRotating = true;
+
+        yield return new WaitForSeconds(delay);
+
+        // Restore previous ability to move/rotate
+        isMoving = prevMoving && false;
+        isRotating = prevRotating && false;
     }
 
     public void ResetPosition()

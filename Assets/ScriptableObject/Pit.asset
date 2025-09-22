@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd1d8aa3f17245b4493b0d60c5e35615, type: 3}
-  m_Name: Start
+  m_Name: Pit
   m_EditorClassIdentifier: Assembly-CSharp::RoadPieceData
-  type: 1
-  sprite: {fileID: 21300000, guid: b762910e25e3c2343932a7be520150f1, type: 3}
+  type: 2
+  sprite: {fileID: 21300000, guid: fb87c68d4b26b584496f8936e09eee05, type: 3}
   startDirection: {x: -1, y: 0}
-  pitAudio: {fileID: 0}
-  pitDelay: 3
+  pitAudio: {fileID: 8300000, guid: 06f7097de5c3563448b69c8bfdb4fb07, type: 3}
+  pitDelay: 3.3
