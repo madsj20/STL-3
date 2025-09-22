@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c339c0fb41973ae4a9720cd04aec3804
+guid: 6012936e2d895c844bd0689d5fdec60b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4346244404228752641
-    second: Arrow_0
+      213: 1496337058796807982
+    second: Dark Grey Brick_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arrow_0
+      name: Dark Grey Brick_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 241
+        height: 185
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffa7ae2edb90fa3c0800000000000000
-      internalID: -4346244404228752641
+      spriteID: e2726d580ae04c410800000000000000
+      internalID: 1496337058796807982
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Arrow_0: -4346244404228752641
+      Dark Grey Brick_0: 1496337058796807982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
