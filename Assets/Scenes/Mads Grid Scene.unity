@@ -691,6 +691,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 569271523362715998, guid: 26f59e336de5ff34b93a11d0d59c44e0, type: 3}
   cam: {fileID: 519420032}
   grid: {fileID: 31473929}
+  map: {fileID: 2035723173}
 --- !u!4 &407847700
 Transform:
   m_ObjectHideFlags: 0
