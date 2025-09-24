@@ -171,6 +171,7 @@ public class BrickQueManager : MonoBehaviour
                 ActionType.MoveForward => "F",
                 ActionType.TurnLeft => "L",
                 ActionType.TurnRight => "R",
+                ActionType.MoveBackward => "B",
                 _ => "?"
             });
             if (i < arr.Length - 1) sb.Append(" → ");
