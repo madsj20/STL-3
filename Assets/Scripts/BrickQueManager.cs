@@ -7,7 +7,7 @@ using UnityEngine;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -71,23 +71,27 @@ public class BrickQueManager : MonoBehaviour
         {
             var a = queue.Dequeue();
 
-                switch (a)
-                {
-                    case ActionType.None:
-                        // Do nothing
-                        break;
+            switch (a)
+            {
+                case ActionType.None:
+                    // Do nothing
+                    break;
 
-                    case ActionType.MoveForward:
-                        player.MoveForward();
-                        break;
+                case ActionType.MoveForward:
+                    player.MoveForward();
+                    break;
 
-                    case ActionType.TurnLeft:
-                        player.TurnLeft();
-                        break;
+                case ActionType.TurnLeft:
+                    player.TurnLeft();
+                    break;
 
-                    case ActionType.TurnRight:
-                        player.TurnRight();
-                        break;
+                case ActionType.TurnRight:
+                    player.TurnRight();
+                    break;
+                        
+                case ActionType.MoveBackward:
+                    player.MoveBackward();
+                    break;
                 }
 
             // Wait until the car finishes moving/rotating

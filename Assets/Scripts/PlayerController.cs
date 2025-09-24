@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour
         TryMove(faceDirection); // Move one step in the current direction
     }
 
+    public void MoveBackward()
+    {
+        TryMove(-faceDirection);
+    }
+
     public void TurnLeft()
     {
         // 90° Left: (x,y) -> (-y, x)

@@ -1491,6 +1491,7 @@ MonoBehaviour:
   - {fileID: 8664433607397383791, guid: 11c8182bc1ba4a142bf6676d4ee1fe30, type: 3}
   - {fileID: 8628905314089425671, guid: d45cad85eb358874a91b65c934a849a0, type: 3}
   - {fileID: 4683543359870968786, guid: e458f11ea8bee844dbd78f150e772cab, type: 3}
+  - {fileID: 8664433607397383791, guid: 58931740031fbc94899e9a451f7b1100, type: 3}
   pickablePanel: {fileID: 1564109855}
 --- !u!1001 &816242954
 PrefabInstance:
