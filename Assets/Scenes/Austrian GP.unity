@@ -243,11 +243,11 @@ RectTransform:
   - {fileID: 1667418752}
   m_Father: {fileID: 422230578}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -303.32, y: -182}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -330.32315, y: -131.46689}
   m_SizeDelta: {x: 70.33618, y: 31.9925}
-  m_Pivot: {x: 0.99999976, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &193190198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -7679,11 +7679,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 521142556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.356567, y: -196.72696}
-  m_SizeDelta: {x: 703.8152, y: 51.1736}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 44.62538, y: 11.512283}
+  m_SizeDelta: {x: 700, y: 60}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1472407215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7701,7 +7701,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 1
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 3
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 50, y: 50}
@@ -7913,8 +7913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4812, y: 232.05}
-  m_SizeDelta: {x: 848.2748, y: 33.1896}
+  m_AnchoredPosition: {x: -0.3600583, y: 204.73303}
+  m_SizeDelta: {x: 782.8202, y: 33.1896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494033021
 MonoBehaviour:
@@ -8048,11 +8048,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 422230578}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -387.17, y: 42.759705}
-  m_SizeDelta: {x: 72.9794, y: 345.3853}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -325.15506, y: 18.300005}
+  m_SizeDelta: {x: 60, y: 330}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1564109857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8104,11 +8104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 12
+    m_Left: 0
     m_Right: 0
     m_Top: 5
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 50, y: 50}
@@ -8437,11 +8437,11 @@ RectTransform:
   - {fileID: 2120899352}
   m_Father: {fileID: 422230578}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -303.32, y: -213.99}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -330.32315, y: -166.46324}
   m_SizeDelta: {x: 70.33618, y: 31.9925}
-  m_Pivot: {x: 0.99999976, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1842726138
 MonoBehaviour:
   m_ObjectHideFlags: 0
