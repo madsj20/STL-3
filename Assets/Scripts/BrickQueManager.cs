@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class BrickQueManager : MonoBehaviour
 {
-    public enum ActionType { MoveForward, TurnLeft, TurnRight }
+    // Define the possible actions the player can take
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -17,10 +18,7 @@ public class BrickQueManager : MonoBehaviour
     private readonly Queue<ActionType> queue = new Queue<ActionType>();
     private bool isPlaying = false;
 
-    // --- Hook these from UI Buttons ---
-    public void Move()  => Enqueue(ActionType.MoveForward);
-    public void Left()  => Enqueue(ActionType.TurnLeft);
-    public void Right() => Enqueue(ActionType.TurnRight);
+
     public void ClearQueue()
     {
         queue.Clear();
@@ -73,12 +71,24 @@ public class BrickQueManager : MonoBehaviour
         {
             var a = queue.Dequeue();
 
-            switch (a)
-            {
-                case ActionType.MoveForward: player.MoveForward(); break;
-                case ActionType.TurnLeft:    player.TurnLeft();    break;
-                case ActionType.TurnRight:   player.TurnRight();   break;
-            }
+                switch (a)
+                {
+                    case ActionType.None:
+                        // Do nothing
+                        break;
+
+                    case ActionType.MoveForward:
+                        player.MoveForward();
+                        break;
+
+                    case ActionType.TurnLeft:
+                        player.TurnLeft();
+                        break;
+
+                    case ActionType.TurnRight:
+                        player.TurnRight();
+                        break;
+                }
 
             // Wait until the car finishes moving/rotating
             yield return new WaitUntil(() => player.isIdle);
@@ -108,7 +118,7 @@ public class BrickQueManager : MonoBehaviour
         ClearSlotsUI();
 
         // reset the player position
-        player.ResetPosition();
+        player.RespawnToCurrentStart();
     }
 
     // Remove any bricks from each slot in PanelThatPlaysTheSequence

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] private Color baseColor, offsetColor;
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private new SpriteRenderer renderer;
     [SerializeField] private GameObject highlight;
 
     public void Init(bool isOffset)
