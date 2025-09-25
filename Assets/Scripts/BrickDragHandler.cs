@@ -40,7 +40,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             {
                 repRt.localScale = Vector3.one;
                 repRt.anchorMin = repRt.anchorMax = new Vector2(0.5f, 0.5f);
-                repRt.pivot     = new Vector2(0.5f, 0.5f);
+                repRt.pivot = new Vector2(0.5f, 0.5f);
                 repRt.anchoredPosition = Vector2.zero;
                 repRt.localRotation = Quaternion.identity;
             }

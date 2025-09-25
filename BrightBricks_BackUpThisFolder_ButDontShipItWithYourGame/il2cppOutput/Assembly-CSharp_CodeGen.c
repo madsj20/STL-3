@@ -20,6 +20,7 @@ extern void BrickQueManager_PlayFromPanel_mFB80EE79284DC3D843B60E5B7606F865AD64B
 extern void BrickQueManager_Enqueue_m474B3220A3592FC241B4EAB9318EF276AE21132D (void);
 extern void BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517 (void);
 extern void BrickQueManager_ClearAll_m70326CBCB1A1BFA5BA841DC514E5F26E90AE6328 (void);
+extern void BrickQueManager_ResetPlayerPosition_mAB758EB0864846646C2C48AED4FBEDA088715191 (void);
 extern void BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610 (void);
 extern void BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C (void);
 extern void BrickQueManager__ctor_m466B8856E8D6CA558224FE98C707CAB3670E22D3 (void);
@@ -90,7 +91,7 @@ extern void RoadPieceData_OnEnter_m50D858E4BC2CBA8C94DADD573022CA49620457E3 (voi
 extern void RoadPieceData__ctor_m5B17963465183214070B2168AC745DA62A5DE700 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[83] = 
+static Il2CppMethodPointer s_methodPointers[84] = 
 {
 	BrickDragHandler_Start_mBF2579664A9AE1D13F54EBA3895253007D0349CD,
 	BrickDragHandler_OnBeginDrag_mB95D95EC867ECD9AA8156F20769A8AE8D6715DB7,
@@ -105,6 +106,7 @@ static Il2CppMethodPointer s_methodPointers[83] =
 	BrickQueManager_Enqueue_m474B3220A3592FC241B4EAB9318EF276AE21132D,
 	BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517,
 	BrickQueManager_ClearAll_m70326CBCB1A1BFA5BA841DC514E5F26E90AE6328,
+	BrickQueManager_ResetPlayerPosition_mAB758EB0864846646C2C48AED4FBEDA088715191,
 	BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610,
 	BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C,
 	BrickQueManager__ctor_m466B8856E8D6CA558224FE98C707CAB3670E22D3,
@@ -176,7 +178,7 @@ static Il2CppMethodPointer s_methodPointers[83] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[83] = 
+static const int32_t s_InvokerIndices[84] = 
 {
 	14587,
 	10998,
@@ -190,6 +192,7 @@ static const int32_t s_InvokerIndices[83] =
 	14587,
 	10936,
 	14367,
+	14587,
 	14587,
 	14587,
 	14587,
@@ -266,7 +269,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	83,
+	84,
 	s_methodPointers,
 	0,
 	NULL,

@@ -32,9 +32,9 @@ public class RoadPieceData : ScriptableObject
 
             case RoadPieceType.Start:
                 {
-                    var player = other.GetComponent<PlayerController>();
-                    if (player != null)
-                        player.SetSpawnWorld(piece.transform.position, Vector2Int.RoundToInt(startDirection)); // exact prefab position
+                    //var player = other.GetComponent<PlayerController>();
+                    //if (player != null)
+                        //player.SetSpawnWorld(piece.transform.position, Vector2Int.RoundToInt(startDirection)); // exact prefab position
                     break;
                 }
             case RoadPieceType.Pit:

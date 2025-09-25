@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour
     private GridManager gridManager;
 
     private bool isMoving = false;
-    public bool isIdle => !isMoving;
+    private bool isHolding = false;
     private bool isRotating = false;
+    public bool isIdle => !isMoving && !isRotating && !isHolding;
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
 
@@ -57,7 +58,7 @@ public class PlayerController : MonoBehaviour
     // Makes the car drive forward if possible
     private bool TryMove(Vector2Int delta)
     {
-        if (isMoving || isRotating) return false;
+        if (isMoving || isRotating || isHolding) return false;
 
         Vector2Int newPos = gridPosition + delta;
         Tile targetTile = gridManager.GetTileAtPosition(newPos);
@@ -81,6 +82,8 @@ public class PlayerController : MonoBehaviour
     {
         // 90° Left: (x,y) -> (-y, x)
         Vector2Int left = new Vector2Int(-faceDirection.y, faceDirection.x);  // 90° ccw
+
+        if (isMoving || isRotating || isHolding) return;
         TryMove(left); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(left));
     }
@@ -88,6 +91,8 @@ public class PlayerController : MonoBehaviour
     {
         // 90° Right: (x,y) -> (y, -x)
         Vector2Int right = new Vector2Int(faceDirection.y, -faceDirection.x); // 90° cw
+
+        if (isMoving || isRotating || isHolding) return;
         TryMove(right); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(right));
     }
@@ -95,7 +100,7 @@ public class PlayerController : MonoBehaviour
     public void Hold (float delay)
     {
         
-        StartCoroutine(HandlePitStop(delay));
+        StartCoroutine(HandleHold(delay));
     }
 
     private IEnumerator MoveTo(Vector2Int newPos)
@@ -137,24 +142,11 @@ public class PlayerController : MonoBehaviour
         isRotating = false;
     }
 
-    public IEnumerator HandlePitStop(float delay)
+    public IEnumerator HandleHold(float delay)
     {
-        // Wait until the current MoveTo/RotateTo completes, so we "land" on the pit tile.
-        while (isMoving || isRotating)
-            yield return null;
-
-        // Block new actions during the pause
-        bool prevMoving = isMoving;
-        bool prevRotating = isRotating;
-
-        isMoving = true;     // makes player.isIdle == false so the queue waits
-        isRotating = true;
-
+        isHolding = true;
         yield return new WaitForSeconds(delay);
-
-        // Restore previous ability to move/rotate
-        isMoving = prevMoving && false;
-        isRotating = prevRotating && false;
+        isHolding = false;
     }
 
     public void ResetPosition()
