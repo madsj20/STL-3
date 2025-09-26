@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(MoveTo(newPos)); // Start the movement coroutine
         return true;
     }
-    
+    /* Our old movement system with facing direction
     public void MoveForward()
     {
         TryMove(faceDirection); // Move one step in the current direction
@@ -96,10 +96,38 @@ public class PlayerController : MonoBehaviour
         TryMove(right); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(right));
     }
+    */
 
-    public void Hold (float delay)
+    public void MoveUp()
     {
-        
+        if (isMoving || isRotating || isHolding) return;
+        TryMove(Vector2Int.up); // (0,1)
+        StartCoroutine(RotateTo(Vector2Int.up));
+    }
+    public void MoveDown()
+    {
+        if (isMoving || isRotating || isHolding) return;
+        TryMove(-faceDirection); // (0,-1)
+
+        //StartCoroutine(RotateTo(Vector2Int.down)); // Optional: Rotate to face downwards when moving down
+        //TryMove(Vector2Int.down); // (0,-1)
+    }
+    public void MoveLeft()
+    {
+        if (isMoving || isRotating || isHolding) return;
+        TryMove(Vector2Int.left); // (-1,0)
+        StartCoroutine(RotateTo(Vector2Int.left));
+    }
+    public void MoveRight()
+    {
+        if (isMoving || isRotating || isHolding) return;
+        TryMove(Vector2Int.right); // (1,0)
+        StartCoroutine(RotateTo(Vector2Int.right));
+    }
+
+    public void Hold(float delay)
+    {
+
         StartCoroutine(HandleHold(delay));
     }
 
@@ -120,7 +148,6 @@ public class PlayerController : MonoBehaviour
         transform.position = end;
         gridPosition = newPos;
         isMoving = false;
-
     }
     
     private IEnumerator RotateTo(Vector2Int newDir)
