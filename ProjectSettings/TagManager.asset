@@ -42,11 +42,11 @@ TagManager:
   - name: Background
     uniqueID: 3592135545
     locked: 0
-  - name: Grid Layer
-    uniqueID: 1312019567
-    locked: 0
   - name: Racetrack
     uniqueID: 377066157
+    locked: 0
+  - name: Grid Layer
+    uniqueID: 1312019567
     locked: 0
   - name: Default
     uniqueID: 0
