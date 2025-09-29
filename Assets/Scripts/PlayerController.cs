@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     // Set the logic for the Clear button to respawn to the current Start piece
     public void RespawnToCurrentStart()
     {
+        animator.SetBool("isCrashing", false); // reset crash animation
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
         {
@@ -158,7 +159,7 @@ public class PlayerController : MonoBehaviour
         isCrashed = true;
         if (animator != null)
         {
-            animator.SetBool("isCrashing", true);
+            animator.SetBool("isCrashing", true); // trigger crash animation
         }
         // Optionally, add sound or UI feedback here
     }
@@ -170,7 +171,7 @@ public class PlayerController : MonoBehaviour
         faceDirection = Vector2Int.up;
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
         isCrashed = false; // Allow movement again
-        animator.SetBool("isCrashing", false);
+        animator.SetBool("isCrashing", false); // reset crash animation
 
     }
 
