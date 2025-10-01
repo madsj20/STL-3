@@ -25,12 +25,15 @@ public class BrickQueManager : MonoBehaviour
         queue.Clear();
         RefreshLabel();
     }
+
     //play the queued commands
     public void Play()
     {
         if (isPaused)
         {
             isPaused = false;
+            AudioListener.pause = false; // Resume all audio
+            PlayFromPanel(); // Plays from the rebuilt queue
             return; // Run() will continue from where it left off
         }
 
@@ -41,17 +44,25 @@ public class BrickQueManager : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
+        if (isPlaying)
+        {
+            StopAllCoroutines();
+            isPlaying = false;
+        }
+
         AudioListener.pause = true; // Pause all audio
     }
 
     public void PlayFromPanel()
     {
 
-         if (isPaused)
+        if (isPaused)
         {
             isPaused = false;
-            AudioListener.pause = false; // Resume all audio
-            return;
+            AudioListener.pause = false; // mute all audio
+            if (!isPlaying)
+                StartCoroutine(Run());
+                
         }
 
         if (isPlaying) return;
