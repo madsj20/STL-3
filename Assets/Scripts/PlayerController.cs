@@ -11,10 +11,13 @@ public class PlayerController : MonoBehaviour
     public float moveDuration = 1f; //Car speed from one tile to another
 
     private GridManager gridManager;
+    private Animator animator;
+
 
     private bool isMoving = false;
     private bool isHolding = false;
     private bool isRotating = false;
+    private bool isCrashed = false; // Prevent further movement after collision
     public bool isIdle => !isMoving && !isRotating && !isHolding;
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
+        animator = GetComponent<Animator>();
         //transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
         //transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Set initial facing direction
         //startGridPosition = gridPosition;
@@ -41,6 +45,7 @@ public class PlayerController : MonoBehaviour
     // Set the logic for the Clear button to respawn to the current Start piece
     public void RespawnToCurrentStart()
     {
+        animator.SetBool("isCrashing", false); // reset crash animation
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
         {
@@ -58,7 +63,7 @@ public class PlayerController : MonoBehaviour
     // Makes the car drive forward if possible
     private bool TryMove(Vector2Int delta)
     {
-        if (isMoving || isRotating || isHolding) return false;
+        if (isMoving || isRotating || isHolding || isCrashed) return false;
 
         Vector2Int newPos = gridPosition + delta;
         Tile targetTile = gridManager.GetTileAtPosition(newPos);
@@ -83,7 +88,7 @@ public class PlayerController : MonoBehaviour
         // 90° Left: (x,y) -> (-y, x)
         Vector2Int left = new Vector2Int(-faceDirection.y, faceDirection.x);  // 90° ccw
 
-        if (isMoving || isRotating || isHolding) return;
+        if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(left); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(left));
     }
@@ -92,7 +97,7 @@ public class PlayerController : MonoBehaviour
         // 90° Right: (x,y) -> (y, -x)
         Vector2Int right = new Vector2Int(faceDirection.y, -faceDirection.x); // 90° cw
 
-        if (isMoving || isRotating || isHolding) return;
+        if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(right); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(right));
     }
@@ -149,12 +154,34 @@ public class PlayerController : MonoBehaviour
         isHolding = false;
     }
 
+    private void HandleCollision()
+    {
+        isCrashed = true;
+        if (animator != null)
+        {
+            animator.SetBool("isCrashing", true); // trigger crash animation
+        }
+        // Optionally, add sound or UI feedback here
+    }
+
     public void ResetPosition()
     {
         gridPosition = startGridPosition; // Reset logical position
         transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
         faceDirection = Vector2Int.up;
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
+        isCrashed = false; // Allow movement again
+        animator.SetBool("isCrashing", false); // reset crash animation
+
     }
 
-}
+    // --- COLLISION HANDLING ---
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Obstacle") && !isCrashed)
+        {
+            HandleCollision();
+        }
+    }
+
+    }
