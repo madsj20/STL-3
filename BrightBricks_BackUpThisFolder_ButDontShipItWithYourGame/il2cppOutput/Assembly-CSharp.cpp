@@ -4155,7 +4155,7 @@ IL_0095:
 		int32_t L_35 = __this->___height;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
 		memset((&L_36), 0, sizeof(L_36));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_36), ((float)il2cpp_codegen_subtract(((float)(((float)L_34)/(2.0f))), (0.5f))), ((float)il2cpp_codegen_subtract(((float)(((float)L_35)/(2.0f))), (0.5f))), (-10.0f), NULL);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_36), ((float)il2cpp_codegen_subtract(((float)(((float)L_34)/(2.0f))), (0.5f))), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(((float)(((float)L_35)/(2.0f))), (0.5f))), (1.0f))), (-10.0f), NULL);
 		NullCheck(L_33);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_33, L_36, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/GridManager.cs:38>
