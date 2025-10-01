@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
     public void MoveDown()
     {
         if (isMoving || isRotating || isHolding || isCrashed) return;
-        TryMove(-faceDirection); // (0,-1)
+        TryMove(Vector2Int.down); // (0,-1)
         StartCoroutine(RotateTo(Vector2Int.down)); // Optional: Rotate to face downwards when moving down
         //TryMove(Vector2Int.down); // (0,-1)
     }

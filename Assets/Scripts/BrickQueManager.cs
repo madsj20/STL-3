@@ -17,6 +17,7 @@ public class BrickQueManager : MonoBehaviour
 
     private readonly Queue<ActionType> queue = new Queue<ActionType>();
     private bool isPlaying = false;
+    private bool isPaused = false;
 
 
     public void ClearQueue()
@@ -27,12 +28,32 @@ public class BrickQueManager : MonoBehaviour
     //play the queued commands
     public void Play()
     {
+        if (isPaused)
+        {
+            isPaused = false;
+            return; // Run() will continue from where it left off
+        }
+
         if (!isPlaying)
             StartCoroutine(Run());
     }
 
+    public void Pause()
+    {
+        isPaused = true;
+        AudioListener.pause = true; // Pause all audio
+    }
+
     public void PlayFromPanel()
     {
+
+         if (isPaused)
+        {
+            isPaused = false;
+            AudioListener.pause = false; // Resume all audio
+            return;
+        }
+
         if (isPlaying) return;
 
         // remove any previous commands
@@ -69,6 +90,9 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = true;
         while (queue.Count > 0)
         {
+
+            yield return new WaitUntil(() => !isPaused);
+
             var a = queue.Dequeue();
 
             switch (a)
@@ -113,7 +137,7 @@ public class BrickQueManager : MonoBehaviour
             StopAllCoroutines();
             isPlaying = false;
         }
-
+        isPaused = false;
         // clear the logical queue & label
         queue.Clear();
         RefreshLabel();
