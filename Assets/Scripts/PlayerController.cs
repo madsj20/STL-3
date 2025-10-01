@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     public void RespawnToCurrentStart()
     {
         animator.SetBool("isCrashing", false); // reset crash animation
+        isCrashed = false; // Allow movement again
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
         {
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(MoveTo(newPos)); // Start the movement coroutine
         return true;
     }
-    
+    /*
     public void MoveForward()
     {
         TryMove(faceDirection); // Move one step in the current direction
@@ -100,6 +101,33 @@ public class PlayerController : MonoBehaviour
         if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(right); // Move when turning (Can be removed if we want to turn in place)
         StartCoroutine(RotateTo(right));
+    }
+    */
+
+    public void MoveUp()
+    {
+        if (isMoving || isRotating || isHolding || isCrashed) return;
+        TryMove(Vector2Int.up); // (0,1)
+        StartCoroutine(RotateTo(Vector2Int.up));
+    }
+    public void MoveDown()
+    {
+        if (isMoving || isRotating || isHolding || isCrashed) return;
+        TryMove(-faceDirection); // (0,-1)
+        StartCoroutine(RotateTo(Vector2Int.down)); // Optional: Rotate to face downwards when moving down
+        //TryMove(Vector2Int.down); // (0,-1)
+    }
+    public void MoveLeft()
+    {
+        if (isMoving || isRotating || isHolding || isCrashed) return;
+        TryMove(Vector2Int.left); // (-1,0)
+        StartCoroutine(RotateTo(Vector2Int.left));
+    }
+    public void MoveRight()
+    {
+        if (isMoving || isRotating || isHolding || isCrashed) return;
+        TryMove(Vector2Int.right); // (1,0)
+        StartCoroutine(RotateTo(Vector2Int.right));
     }
 
     public void Hold (float delay)
