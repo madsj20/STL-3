@@ -2117,10 +2117,10 @@ inline int32_t Queue_1_Dequeue_m306DF87380228F9D7E59C8B44931D2D5CE3C2054 (Queue_
 {
 	return ((  int32_t (*) (Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287*, const RuntimeMethod*))Queue_1_Dequeue_mEC106FE8A94CC61A7B5148FABEC01F6DB6AA991F_gshared)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveForward_m79D64B0CF26BC22C03E960B9E780E86B9EBF6B97 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_TurnLeft_m5437EEA0435D8E89866584204546B1B2F8C5C717 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_TurnRight_m82C57675256B785E1F7E11D1C15F866A212A457E (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveBackward_mF81B7A0E766D17C1976FF234D188D7F499875C1E (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveUp_m41EFE6CE52EF2506EC98620ED2299F61957F84F2 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveLeft_m35C99AF42CF84424196F7C3D7DEEA7B6C7428508 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveRight_m98678E680E583355C2152EC52D96B29487067F5C (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveDown_mD892CB66E04FC6F510E89C42A95ADB432BA62126 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
 inline void Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22 (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
 {
 	((  void (*) (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22_gshared)(__this, ___0_object, ___1_method, method);
@@ -2180,6 +2180,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_x_mA2CACB1
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_up_m1FBA5A97E5057747AC027AD5897EDE80A554D554 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_RoundToInt_m3105CCF1283211D549DEB4C84AEEB1D8034E7A4E_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, bool ___1_value, const RuntimeMethod* method) ;
 inline RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793 (int32_t ___0_sortMode, const RuntimeMethod* method)
 {
 	return ((  RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* (*) (int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_m9F3B83321CD4E4F4F764805ADCEF338CF2BA8409_gshared)(___0_sortMode, method);
@@ -2190,16 +2191,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B8805
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Int_op_Implicit_m5B9FB268943E6CAB6E40E13D30BA49A9AC7D2059_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_v, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* GridManager_GetTileAtPosition_mA4683D229B9FD98E76804C38BC102EE7D535C715 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_pos, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_MoveTo_m8F3CDA29338C55C78F230B1E1C0611ECA6ACCEC1 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_newPos, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_delta, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_op_UnaryNegation_m0D7EF0319357DF616984CB320DC77C62C69E8C40_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_v, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_newDir, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_op_UnaryNegation_m0D7EF0319357DF616984CB320DC77C62C69E8C40_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_v, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_down_mFF0B88529FB9F6C86CBAB295D8B11C18C860EE1B_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_left_mB2CDF544B3456F9382CE37E389609E9D23D19397_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_right_mB98E50C7FD8F672101A541E8E85F0DF79AEB3BF4_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_HandleHold_m68EC2C9A829B961F0BC2630F77F3A487A014B80F (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, float ___0_delay, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22__ctor_mDC1A98B1EC48B9D65847E1BE4BD983838CF53E4B (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23__ctor_mC91707BDBD2757A4313FAFF716A00AE5F751311D (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24__ctor_mAB9388B8CD6CB99B63EE92EA78D062AE22DF9646 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, bool ___1_value, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, String_t* ___0_tag, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_HandleCollision_m6328622F0BDEB311FC435EE041146B217C2F7172 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) ;
@@ -2237,6 +2239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -2251,7 +2254,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA83
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73552
+// Method Definition Index: 73555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_Start_mBF2579664A9AE1D13F54EBA3895253007D0349CD (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2270,7 +2273,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_Start_mBF2579664A9AE1D1
 		return;
 	}
 }
-// Method Definition Index: 73553
+// Method Definition Index: 73556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_OnBeginDrag_mB95D95EC867ECD9AA8156F20769A8AE8D6715DB7 (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2513,7 +2516,7 @@ IL_0174:
 		return;
 	}
 }
-// Method Definition Index: 73554
+// Method Definition Index: 73557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_OnDrag_mE2EECB7AF9D9CA78928D2E0BD068064996733517 (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2587,7 +2590,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 73555
+// Method Definition Index: 73558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_OnEndDrag_m1B0D61687AF3E47EB0AE9E1DC6F52E670C9875E8 (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2848,7 +2851,7 @@ IL_011f:
 		return;
 	}
 }
-// Method Definition Index: 73556
+// Method Definition Index: 73559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_SnapUI_m8571D4231AA80F43E7A7A8C801D686A0007FC775 (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2950,7 +2953,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 73557
+// Method Definition Index: 73560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler__ctor_m09323026447092B02697F2B560DC7C8C89DE02CE (BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2966,7 +2969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler__ctor_m09323026447092B0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73558
+// Method Definition Index: 73561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickPiece__ctor_m2ACAF8A5C66E14B9FF8D8C8A36A701364B72A3CF (BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2982,7 +2985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickPiece__ctor_m2ACAF8A5C66E14B9FF8D8C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73559
+// Method Definition Index: 73562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearQueue_m8C94C5507A99CF8D150848F29FB2235A79D759C3 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3002,7 +3005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearQueue_m8C94C5507A99
 		return;
 	}
 }
-// Method Definition Index: 73560
+// Method Definition Index: 73563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Play_mBA68EF9719057DAEA2616311F2BD3B3B6383281A (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3027,7 +3030,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 73561
+// Method Definition Index: 73564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_PlayFromPanel_mFB80EE79284DC3D843B60E5B7606F865AD64B3B7 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3176,7 +3179,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 73562
+// Method Definition Index: 73565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Enqueue_m474B3220A3592FC241B4EAB9318EF276AE21132D (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, int32_t ___0_a, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3197,7 +3200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Enqueue_m474B3220A3592FC
 		return;
 	}
 }
-// Method Definition Index: 73563
+// Method Definition Index: 73566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3216,7 +3219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickQueManager_Run_mA997E085C
 		return L_1;
 	}
 }
-// Method Definition Index: 73564
+// Method Definition Index: 73567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearAll_m70326CBCB1A1BFA5BA841DC514E5F26E90AE6328 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3254,7 +3257,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 73565
+// Method Definition Index: 73568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ResetPlayerPosition_mAB758EB0864846646C2C48AED4FBEDA088715191 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3287,7 +3290,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 73566
+// Method Definition Index: 73569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3442,7 +3445,7 @@ IL_0080:
 		return;
 	}
 }
-// Method Definition Index: 73567
+// Method Definition Index: 73570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3650,7 +3653,7 @@ IL_00ab:
 		return;
 	}
 }
-// Method Definition Index: 73568
+// Method Definition Index: 73571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager__ctor_m466B8856E8D6CA558224FE98C707CAB3670E22D3 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3672,7 +3675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager__ctor_m466B8856E8D6CA558
 		return;
 	}
 }
-// Method Definition Index: 73569
+// Method Definition Index: 73572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__11_0_m6B12BDA5E9DD14E9DA608E64314E9F595B5FAFDF (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3700,7 +3703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__11_0_m6B12BD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73570
+// Method Definition Index: 73573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__11__ctor_m0A4B0068ABEC8BED7959BE0B8772F40EF0E0EBC9 (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -3710,14 +3713,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__11__ctor_m0A4B0068ABEC8BED79
 		return;
 	}
 }
-// Method Definition Index: 73571
+// Method Definition Index: 73574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__11_System_IDisposable_Dispose_mC8B4619429C6D67AB1F0E33F87338702DCBDC86D (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 73572
+// Method Definition Index: 73575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRunU3Ed__11_MoveNext_m30D874CF4BBE6128B1BD929528A5B6B16380A73C (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3748,11 +3751,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRunU3Ed__11_MoveNext_m30D874CF4BBE612
 			}
 			case 1:
 			{
-				goto IL_00af;
+				goto IL_00bf;
 			}
 			case 2:
 			{
-				goto IL_00dd;
+				goto IL_00ed;
 			}
 		}
 	}
@@ -3767,7 +3770,7 @@ IL_0022:
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_3 = V_1;
 		NullCheck(L_3);
 		L_3->___isPlaying = (bool)1;
-		goto IL_00ea;
+		goto IL_00fa;
 	}
 
 IL_0035:
@@ -3785,77 +3788,93 @@ IL_0035:
 		{
 			case 0:
 			{
-				goto IL_005d;
+				goto IL_006d;
 			}
 			case 1:
 			{
-				goto IL_006a;
+				goto IL_007a;
 			}
 			case 2:
 			{
-				goto IL_0077;
+				goto IL_0087;
 			}
 			case 3:
 			{
-				goto IL_0084;
+				goto IL_0094;
 			}
 			case 4:
 			{
-				goto IL_008f;
+				goto IL_009f;
+			}
+			case 5:
+			{
+				goto IL_009f;
+			}
+			case 6:
+			{
+				goto IL_009f;
+			}
+			case 7:
+			{
+				goto IL_009f;
+			}
+			case 8:
+			{
+				goto IL_009f;
 			}
 		}
 	}
 	{
-		goto IL_008f;
+		goto IL_009f;
 	}
 
-IL_005d:
+IL_006d:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:81>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_8 = V_1;
 		NullCheck(L_8);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_9 = L_8->___player;
 		NullCheck(L_9);
-		PlayerController_MoveForward_m79D64B0CF26BC22C03E960B9E780E86B9EBF6B97(L_9, NULL);
+		PlayerController_MoveUp_m41EFE6CE52EF2506EC98620ED2299F61957F84F2(L_9, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:82>
-		goto IL_008f;
+		goto IL_009f;
 	}
 
-IL_006a:
+IL_007a:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:85>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_10 = V_1;
 		NullCheck(L_10);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_11 = L_10->___player;
 		NullCheck(L_11);
-		PlayerController_TurnLeft_m5437EEA0435D8E89866584204546B1B2F8C5C717(L_11, NULL);
+		PlayerController_MoveLeft_m35C99AF42CF84424196F7C3D7DEEA7B6C7428508(L_11, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:86>
-		goto IL_008f;
+		goto IL_009f;
 	}
 
-IL_0077:
+IL_0087:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:89>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_12 = V_1;
 		NullCheck(L_12);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_13 = L_12->___player;
 		NullCheck(L_13);
-		PlayerController_TurnRight_m82C57675256B785E1F7E11D1C15F866A212A457E(L_13, NULL);
+		PlayerController_MoveRight_m98678E680E583355C2152EC52D96B29487067F5C(L_13, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:90>
-		goto IL_008f;
+		goto IL_009f;
 	}
 
-IL_0084:
+IL_0094:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:93>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_14 = V_1;
 		NullCheck(L_14);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_15 = L_14->___player;
 		NullCheck(L_15);
-		PlayerController_MoveBackward_mF81B7A0E766D17C1976FF234D188D7F499875C1E(L_15, NULL);
+		PlayerController_MoveDown_mD892CB66E04FC6F510E89C42A95ADB432BA62126(L_15, NULL);
 	}
 
-IL_008f:
+IL_009f:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:98>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_16 = V_1;
@@ -3869,7 +3888,7 @@ IL_008f:
 		return (bool)1;
 	}
 
-IL_00af:
+IL_00bf:
 	{
 		__this->___U3CU3E1__state = (-1);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:100>
@@ -3878,7 +3897,7 @@ IL_00af:
 		float L_20 = L_19->___commandDelay;
 		if ((!(((float)L_20) > ((float)(0.0f)))))
 		{
-			goto IL_00e4;
+			goto IL_00f4;
 		}
 	}
 	{
@@ -3894,12 +3913,12 @@ IL_00af:
 		return (bool)1;
 	}
 
-IL_00dd:
+IL_00ed:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_00e4:
+IL_00f4:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:103>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_24 = V_1;
@@ -3907,7 +3926,7 @@ IL_00e4:
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(L_24, NULL);
 	}
 
-IL_00ea:
+IL_00fa:
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:70>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_25 = V_1;
@@ -3930,7 +3949,7 @@ IL_00ea:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73573
+// Method Definition Index: 73576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m38C204025F8512BE860D1E525F3EA369838D0EA6 (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3938,7 +3957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__11_System_Collecti
 		return L_0;
 	}
 }
-// Method Definition Index: 73574
+// Method Definition Index: 73577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__11_System_Collections_IEnumerator_Reset_m1CC2B3BB45292A1B4E292760A669EE6B5EF506D4 (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3947,7 +3966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__11_System_Collections_IEnume
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRunU3Ed__11_System_Collections_IEnumerator_Reset_m1CC2B3BB45292A1B4E292760A669EE6B5EF506D4_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73575
+// Method Definition Index: 73578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__11_System_Collections_IEnumerator_get_Current_m8BAC73A3ACCE93EE727DAA972F9C4F81781BB79F (U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3963,7 +3982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__11_System_Collecti
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73576
+// Method Definition Index: 73579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_Start_m2EEB40FFB2B5B141143459C523EDDEDF9D4AED1F (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3973,7 +3992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_Start_m2EEB40FFB2B5B14114345
 		return;
 	}
 }
-// Method Definition Index: 73577
+// Method Definition Index: 73580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_GenerateGrid_m59DA6023B05764DA3D4A6BEF36735416B0C59863 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4167,7 +4186,7 @@ IL_0095:
 		return;
 	}
 }
-// Method Definition Index: 73578
+// Method Definition Index: 73581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* GridManager_GetTileAtPosition_mA4683D229B9FD98E76804C38BC102EE7D535C715 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4201,7 +4220,7 @@ IL_0012:
 		return (Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64*)NULL;
 	}
 }
-// Method Definition Index: 73579
+// Method Definition Index: 73582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 GridManager_GetGridOrigin_m26A16EBF3DCB27AE2A98073F757C41C4540B0A16 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -4232,7 +4251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		return L_8;
 	}
 }
-// Method Definition Index: 73580
+// Method Definition Index: 73583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GridManager_GetTileSize_mAA47D5DCFD5CB6BBB165AA0A4DA9F09B686C11CF (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4260,7 +4279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		return L_4;
 	}
 }
-// Method Definition Index: 73581
+// Method Definition Index: 73584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager__ctor_m95147960FF399FEFE47E590512C6C825C3AD782E (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4276,7 +4295,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager__ctor_m95147960FF399FEFE47E5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73582
+// Method Definition Index: 73585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventoryController_Start_mA04F6DCBE3E13B350E621B0B7ED21B7E33B91923 (InventoryController_t8B5491FE071FF1A7FAA98CD913189A09FE0D7125* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4482,7 +4501,7 @@ IL_0117:
 		return;
 	}
 }
-// Method Definition Index: 73583
+// Method Definition Index: 73586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventoryController__ctor_m7326D04734CDFE58567C5349A9F06DEE4D55D17E (InventoryController_t8B5491FE071FF1A7FAA98CD913189A09FE0D7125* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4498,7 +4517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventoryController__ctor_m7326D04734CDF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73584
+// Method Definition Index: 73587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerController_get_isIdle_m58EBDBD39CB6040E54112B805661B54F78659B97 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4526,7 +4545,7 @@ IL_001a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73585
+// Method Definition Index: 73588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4553,7 +4572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71
 		return;
 	}
 }
-// Method Definition Index: 73586
+// Method Definition Index: 73589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetSpawnWorld_m2969796E742AE40E31DE1B2B340BFF30857C9898 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_worldPos, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___1_dir, const RuntimeMethod* method) 
 {
 	{
@@ -4593,7 +4612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetSpawnWorld_m2969796E
 		return;
 	}
 }
-// Method Definition Index: 73587
+// Method Definition Index: 73590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RespawnToCurrentStart_m18F5A7B73240BCB3F914DD1E496732B771C051B4 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4601,6 +4620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RespawnToCurrentStart_m
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42C2AADBCFA22B77304A1F0B22E6585114BCA20D);
 		s_Il2CppMethodInitialized = true;
 	}
 	RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* V_0 = NULL;
@@ -4608,104 +4628,110 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RespawnToCurrentStart_m
 	RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* V_2 = NULL;
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:48>
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_0;
-		L_0 = Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793(0, Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793_RuntimeMethod_var);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___animator;
+		NullCheck(L_0);
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_0, _stringLiteral42C2AADBCFA22B77304A1F0B22E6585114BCA20D, (bool)0, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:49>
-		V_0 = L_0;
+		__this->___isCrashed = (bool)0;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:50>
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_1;
+		L_1 = Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793(0, Object_FindObjectsByType_TisRoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974_mB2851EAEB8FEAFD7483BD96501F1CED08934A793_RuntimeMethod_var);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:51>
+		V_0 = L_1;
 		V_1 = 0;
-		goto IL_005a;
+		goto IL_0072;
 	}
 
-IL_000b:
+IL_0023:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:49>
-		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_1 = V_0;
-		int32_t L_2 = V_1;
-		NullCheck(L_1);
-		int32_t L_3 = L_2;
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		V_2 = L_4;
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:51>
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_5 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_6;
-		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_6)
-		{
-			goto IL_0056;
-		}
-	}
-	{
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_7 = V_2;
-		NullCheck(L_7);
-		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_8 = L_7->___data;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_9;
-		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_9)
-		{
-			goto IL_0056;
-		}
-	}
-	{
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_10 = V_2;
-		NullCheck(L_10);
-		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_11 = L_10->___data;
-		NullCheck(L_11);
-		int32_t L_12 = L_11->___type;
-		if ((!(((uint32_t)L_12) == ((uint32_t)1))))
-		{
-			goto IL_0056;
-		}
-	}
-	{
+		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_2 = V_0;
+		int32_t L_3 = V_1;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_2 = L_5;
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:53>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:54>
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_13 = V_2;
-		NullCheck(L_13);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
-		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_13, NULL);
-		NullCheck(L_14);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
-		L_15 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_14, NULL);
-		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_16 = V_2;
-		NullCheck(L_16);
-		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_17 = L_16->___data;
-		NullCheck(L_17);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_18 = L_17->___startDirection;
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_19;
-		L_19 = Vector2Int_RoundToInt_m3105CCF1283211D549DEB4C84AEEB1D8034E7A4E_inline(L_18, NULL);
-		PlayerController_SetSpawnWorld_m2969796E742AE40E31DE1B2B340BFF30857C9898(__this, L_15, L_19, NULL);
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_6 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_7;
+		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_7)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_8 = V_2;
+		NullCheck(L_8);
+		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_9 = L_8->___data;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_10)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_11 = V_2;
+		NullCheck(L_11);
+		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_12 = L_11->___data;
+		NullCheck(L_12);
+		int32_t L_13 = L_12->___type;
+		if ((!(((uint32_t)L_13) == ((uint32_t)1))))
+		{
+			goto IL_006e;
+		}
+	}
+	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:55>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:56>
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_14 = V_2;
+		NullCheck(L_14);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
+		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_14, NULL);
+		NullCheck(L_15);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
+		RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* L_17 = V_2;
+		NullCheck(L_17);
+		RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* L_18 = L_17->___data;
+		NullCheck(L_18);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19 = L_18->___startDirection;
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_20;
+		L_20 = Vector2Int_RoundToInt_m3105CCF1283211D549DEB4C84AEEB1D8034E7A4E_inline(L_19, NULL);
+		PlayerController_SetSpawnWorld_m2969796E742AE40E31DE1B2B340BFF30857C9898(__this, L_16, L_20, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:57>
 		return;
 	}
 
-IL_0056:
+IL_006e:
 	{
-		int32_t L_20 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_20, 1));
+		int32_t L_21 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_21, 1));
 	}
 
-IL_005a:
+IL_0072:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:49>
-		int32_t L_21 = V_1;
-		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_22 = V_0;
-		NullCheck(L_22);
-		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:51>
+		int32_t L_22 = V_1;
+		RoadPieceU5BU5D_tA314649BC696FFF8FBE985CC148390EAB5F05304* L_23 = V_0;
+		NullCheck(L_23);
+		if ((((int32_t)L_22) < ((int32_t)((int32_t)(((RuntimeArray*)L_23)->max_length)))))
 		{
-			goto IL_000b;
+			goto IL_0023;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:59>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:61>
 		PlayerController_ResetPosition_mA929647F2F1D0D3EFE9E66F7E8D2284390990470(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:60>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 73588
+// Method Definition Index: 73591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_delta, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4717,7 +4743,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerController_TryMove_mA99A01D9F7C941
 	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:65>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:67>
 		bool L_0 = __this->___isMoving;
 		if (L_0)
 		{
@@ -4748,19 +4774,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerController_TryMove_mA99A01D9F7C941
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:65>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:67>
 		return (bool)0;
 	}
 
 IL_0022:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:67>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:69>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4 = __this->___gridPosition;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_5 = ___0_delta;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6;
 		L_6 = Vector2Int_op_Addition_m6358133A28BA913D2080FD44472D1FD1CE1AC28F_inline(L_4, L_5, NULL);
 		V_0 = L_6;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:68>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:70>
 		GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* L_7 = __this->___gridManager;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9;
@@ -4768,7 +4794,7 @@ IL_0022:
 		NullCheck(L_7);
 		Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* L_10;
 		L_10 = GridManager_GetTileAtPosition_mA4683D229B9FD98E76804C38BC102EE7D535C715(L_7, L_9, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:69>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:71>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
 		L_11 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -4778,193 +4804,266 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:69>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:71>
 		return (bool)0;
 	}
 
 IL_004a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:71>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:73>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_12 = V_0;
 		RuntimeObject* L_13;
 		L_13 = PlayerController_MoveTo_m8F3CDA29338C55C78F230B1E1C0611ECA6ACCEC1(__this, L_12, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_14;
 		L_14 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_13, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:72>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:74>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 73589
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveForward_m79D64B0CF26BC22C03E960B9E780E86B9EBF6B97 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:77>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = __this->___faceDirection;
-		bool L_1;
-		L_1 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_0, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:78>
-		return;
-	}
-}
-// Method Definition Index: 73590
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveBackward_mF81B7A0E766D17C1976FF234D188D7F499875C1E (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:82>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = __this->___faceDirection;
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1;
-		L_1 = Vector2Int_op_UnaryNegation_m0D7EF0319357DF616984CB320DC77C62C69E8C40_inline(L_0, NULL);
-		bool L_2;
-		L_2 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_1, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:83>
-		return;
-	}
-}
-// Method Definition Index: 73591
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_TurnLeft_m5437EEA0435D8E89866584204546B1B2F8C5C717 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
-{
-	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:88>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_0 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___faceDirection);
-		int32_t L_1;
-		L_1 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_0, NULL);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_2 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___faceDirection);
-		int32_t L_3;
-		L_3 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_2, NULL);
-		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_0), ((-L_1)), L_3, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:90>
-		bool L_4 = __this->___isMoving;
-		if (L_4)
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		bool L_5 = __this->___isRotating;
-		if (L_5)
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		bool L_6 = __this->___isHolding;
-		if (L_6)
-		{
-			goto IL_003e;
-		}
-	}
-	{
-		bool L_7 = __this->___isCrashed;
-		if (!L_7)
-		{
-			goto IL_003f;
-		}
-	}
-
-IL_003e:
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:90>
-		return;
-	}
-
-IL_003f:
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:91>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_0;
-		bool L_9;
-		L_9 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_8, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:92>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10 = V_0;
-		RuntimeObject* L_11;
-		L_11 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_10, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_12;
-		L_12 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_11, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:93>
-		return;
-	}
-}
 // Method Definition Index: 73592
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_TurnRight_m82C57675256B785E1F7E11D1C15F866A212A457E (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveUp_m41EFE6CE52EF2506EC98620ED2299F61957F84F2 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
-	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
-	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:97>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_0 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___faceDirection);
-		int32_t L_1;
-		L_1 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_0, NULL);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_2 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___faceDirection);
-		int32_t L_3;
-		L_3 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_2, NULL);
-		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_0), L_1, ((-L_3)), NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:99>
-		bool L_4 = __this->___isMoving;
-		if (L_4)
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:109>
+		bool L_0 = __this->___isMoving;
+		if (L_0)
 		{
-			goto IL_003e;
+			goto IL_0020;
 		}
 	}
 	{
-		bool L_5 = __this->___isRotating;
-		if (L_5)
+		bool L_1 = __this->___isRotating;
+		if (L_1)
 		{
-			goto IL_003e;
+			goto IL_0020;
 		}
 	}
 	{
-		bool L_6 = __this->___isHolding;
-		if (L_6)
+		bool L_2 = __this->___isHolding;
+		if (L_2)
 		{
-			goto IL_003e;
+			goto IL_0020;
 		}
 	}
 	{
-		bool L_7 = __this->___isCrashed;
-		if (!L_7)
+		bool L_3 = __this->___isCrashed;
+		if (!L_3)
 		{
-			goto IL_003f;
+			goto IL_0021;
 		}
 	}
 
-IL_003e:
+IL_0020:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:99>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:109>
 		return;
 	}
 
-IL_003f:
+IL_0021:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:100>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_0;
-		bool L_9;
-		L_9 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_8, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:101>
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10 = V_0;
-		RuntimeObject* L_11;
-		L_11 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_10, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_12;
-		L_12 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_11, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:102>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:110>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4;
+		L_4 = Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline(NULL);
+		bool L_5;
+		L_5 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_4, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:111>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6;
+		L_6 = Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline(NULL);
+		RuntimeObject* L_7;
+		L_7 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_6, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8;
+		L_8 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_7, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:112>
 		return;
 	}
 }
 // Method Definition Index: 73593
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveDown_mD892CB66E04FC6F510E89C42A95ADB432BA62126 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:115>
+		bool L_0 = __this->___isMoving;
+		if (L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_1 = __this->___isRotating;
+		if (L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_2 = __this->___isHolding;
+		if (L_2)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_3 = __this->___isCrashed;
+		if (!L_3)
+		{
+			goto IL_0021;
+		}
+	}
+
+IL_0020:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:115>
+		return;
+	}
+
+IL_0021:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:116>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4 = __this->___faceDirection;
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_5;
+		L_5 = Vector2Int_op_UnaryNegation_m0D7EF0319357DF616984CB320DC77C62C69E8C40_inline(L_4, NULL);
+		bool L_6;
+		L_6 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_5, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:117>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_7;
+		L_7 = Vector2Int_get_down_mFF0B88529FB9F6C86CBAB295D8B11C18C860EE1B_inline(NULL);
+		RuntimeObject* L_8;
+		L_8 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_7, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_9;
+		L_9 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_8, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:119>
+		return;
+	}
+}
+// Method Definition Index: 73594
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveLeft_m35C99AF42CF84424196F7C3D7DEEA7B6C7428508 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:122>
+		bool L_0 = __this->___isMoving;
+		if (L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_1 = __this->___isRotating;
+		if (L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_2 = __this->___isHolding;
+		if (L_2)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_3 = __this->___isCrashed;
+		if (!L_3)
+		{
+			goto IL_0021;
+		}
+	}
+
+IL_0020:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:122>
+		return;
+	}
+
+IL_0021:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:123>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4;
+		L_4 = Vector2Int_get_left_mB2CDF544B3456F9382CE37E389609E9D23D19397_inline(NULL);
+		bool L_5;
+		L_5 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_4, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:124>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6;
+		L_6 = Vector2Int_get_left_mB2CDF544B3456F9382CE37E389609E9D23D19397_inline(NULL);
+		RuntimeObject* L_7;
+		L_7 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_6, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8;
+		L_8 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_7, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:125>
+		return;
+	}
+}
+// Method Definition Index: 73595
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_MoveRight_m98678E680E583355C2152EC52D96B29487067F5C (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:128>
+		bool L_0 = __this->___isMoving;
+		if (L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_1 = __this->___isRotating;
+		if (L_1)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_2 = __this->___isHolding;
+		if (L_2)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		bool L_3 = __this->___isCrashed;
+		if (!L_3)
+		{
+			goto IL_0021;
+		}
+	}
+
+IL_0020:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:128>
+		return;
+	}
+
+IL_0021:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:129>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4;
+		L_4 = Vector2Int_get_right_mB98E50C7FD8F672101A541E8E85F0DF79AEB3BF4_inline(NULL);
+		bool L_5;
+		L_5 = PlayerController_TryMove_mA99A01D9F7C941C88FCC1EB627EC8FFB09561098(__this, L_4, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:130>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6;
+		L_6 = Vector2Int_get_right_mB98E50C7FD8F672101A541E8E85F0DF79AEB3BF4_inline(NULL);
+		RuntimeObject* L_7;
+		L_7 = PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52(__this, L_6, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8;
+		L_8 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_7, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:131>
+		return;
+	}
+}
+// Method Definition Index: 73596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Hold_m3352AC13020235043909B46410C62AC85EBB3F14 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, float ___0_delay, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:107>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:136>
 		float L_0 = ___0_delay;
 		RuntimeObject* L_1;
 		L_1 = PlayerController_HandleHold_m68EC2C9A829B961F0BC2630F77F3A487A014B80F(__this, L_0, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
 		L_2 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_1, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:108>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:137>
 		return;
 	}
 }
-// Method Definition Index: 73594
+// Method Definition Index: 73597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_MoveTo_m8F3CDA29338C55C78F230B1E1C0611ECA6ACCEC1 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_newPos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4987,7 +5086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_MoveTo_m8F3CD
 		return L_2;
 	}
 }
-// Method Definition Index: 73595
+// Method Definition Index: 73598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_RotateTo_m18D7482CDF85CA7310D2AF2EC55CF3D7BC219E52 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_newDir, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5010,7 +5109,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_RotateTo_m18D
 		return L_2;
 	}
 }
-// Method Definition Index: 73596
+// Method Definition Index: 73599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_HandleHold_m68EC2C9A829B961F0BC2630F77F3A487A014B80F (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, float ___0_delay, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5033,7 +5132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_HandleHold_m6
 		return L_2;
 	}
 }
-// Method Definition Index: 73597
+// Method Definition Index: 73600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_HandleCollision_m6328622F0BDEB311FC435EE041146B217C2F7172 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5044,9 +5143,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_HandleCollision_m632862
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:158>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:187>
 		__this->___isCrashed = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:159>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:188>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___animator;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5057,7 +5156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_HandleCollision_m632862
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:161>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:190>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_2 = __this->___animator;
 		NullCheck(L_2);
 		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_2, _stringLiteral42C2AADBCFA22B77304A1F0B22E6585114BCA20D, (bool)1, NULL);
@@ -5065,11 +5164,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_HandleCollision_m632862
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:164>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:193>
 		return;
 	}
 }
-// Method Definition Index: 73598
+// Method Definition Index: 73601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ResetPosition_mA929647F2F1D0D3EFE9E66F7E8D2284390990470 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5079,10 +5178,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ResetPosition_mA929647F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:168>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:197>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = __this->___startGridPosition;
 		__this->___gridPosition = L_0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:169>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:198>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_2 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridPosition);
@@ -5096,11 +5195,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ResetPosition_mA929647F
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_6), ((float)L_3), ((float)L_5), (0.0f), NULL);
 		NullCheck(L_1);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_1, L_6, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:170>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:199>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_7;
 		L_7 = Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline(NULL);
 		__this->___faceDirection = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:171>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:200>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_9 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___faceDirection);
@@ -5114,17 +5213,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_ResetPosition_mA929647F
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_13), ((float)L_10), ((float)L_12), (0.0f), NULL);
 		NullCheck(L_8);
 		Transform_set_up_m1FBA5A97E5057747AC027AD5897EDE80A554D554(L_8, L_13, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:172>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:201>
 		__this->___isCrashed = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:173>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:202>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_14 = __this->___animator;
 		NullCheck(L_14);
 		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_14, _stringLiteral42C2AADBCFA22B77304A1F0B22E6585114BCA20D, (bool)0, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:175>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:204>
 		return;
 	}
 }
-// Method Definition Index: 73599
+// Method Definition Index: 73602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnTriggerEnter2D_mB82BB8D400DC3E0E6B7117AE1A94E72E99CF53FB (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5134,7 +5233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnTriggerEnter2D_mB82BB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:180>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:209>
 		Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* L_0 = ___0_other;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -5155,17 +5254,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnTriggerEnter2D_mB82BB
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:182>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:211>
 		PlayerController_HandleCollision_m6328622F0BDEB311FC435EE041146B217C2F7172(__this, NULL);
 	}
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:184>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:213>
 		return;
 	}
 }
-// Method Definition Index: 73600
+// Method Definition Index: 73603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5189,7 +5288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController__ctor_mDDAB7C7D82E1A5B3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73601
+// Method Definition Index: 73604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24__ctor_mAB9388B8CD6CB99B63EE92EA78D062AE22DF9646 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5199,14 +5298,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24__ctor_mAB9388B8CD6
 		return;
 	}
 }
-// Method Definition Index: 73602
+// Method Definition Index: 73605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24_System_IDisposable_Dispose_m3107DAC5A2C2FA50B27E433A7A559AAD8A36A458 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 73603
+// Method Definition Index: 73606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CHandleHoldU3Ed__24_MoveNext_mB3F8C2093163F515162FFC6D93ABA8288973D071 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5242,11 +5341,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CHandleHoldU3Ed__24_MoveNext_mB3F8C209
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:151>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:180>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_4 = V_1;
 		NullCheck(L_4);
 		L_4->___isHolding = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:152>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:181>
 		float L_5 = __this->___delay;
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_6 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_6, L_5, NULL);
@@ -5259,15 +5358,15 @@ IL_0017:
 IL_003f:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:153>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:182>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_7 = V_1;
 		NullCheck(L_7);
 		L_7->___isHolding = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:154>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:183>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73604
+// Method Definition Index: 73607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleHoldU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB48FF92C967EE4BAC731A1602EB7CF2FFB1F9184 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5275,7 +5374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleHoldU3Ed__24_System_C
 		return L_0;
 	}
 }
-// Method Definition Index: 73605
+// Method Definition Index: 73608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24_System_Collections_IEnumerator_Reset_mB41546C306B4CA415669957694C2E3CF24D02EB8 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5284,7 +5383,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleHoldU3Ed__24_System_Collections
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CHandleHoldU3Ed__24_System_Collections_IEnumerator_Reset_mB41546C306B4CA415669957694C2E3CF24D02EB8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73606
+// Method Definition Index: 73609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleHoldU3Ed__24_System_Collections_IEnumerator_get_Current_m612C5F512A5C7F6EA91CB0352BB3FB9FAFE94FB0 (U3CHandleHoldU3Ed__24_t75BAAD821677BEE1DE36AD6707E339E2562193E3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5300,7 +5399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleHoldU3Ed__24_System_C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73607
+// Method Definition Index: 73610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22__ctor_mDC1A98B1EC48B9D65847E1BE4BD983838CF53E4B (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5310,14 +5409,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22__ctor_mDC1A98B1EC48B9D
 		return;
 	}
 }
-// Method Definition Index: 73608
+// Method Definition Index: 73611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22_System_IDisposable_Dispose_m9DBF36F1431F2F0614A18887A25AAFAFE5E101D8 (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 73609
+// Method Definition Index: 73612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMoveToU3Ed__22_MoveNext_m4B9CF51C11529D7C67531E9E733E0C4CE7EC3820 (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5347,11 +5446,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMoveToU3Ed__22_MoveNext_m4B9CF51C1152
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:112>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:141>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_4 = V_1;
 		NullCheck(L_4);
 		L_4->___isMoving = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:113>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:142>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_5 = V_1;
 		NullCheck(L_5);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
@@ -5360,7 +5459,7 @@ IL_001a:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
 		__this->___U3CstartU3E5__2 = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:114>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:143>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_8 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___newPos);
 		int32_t L_9;
 		L_9 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_8, NULL);
@@ -5371,14 +5470,14 @@ IL_001a:
 		memset((&L_12), 0, sizeof(L_12));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), ((float)L_9), ((float)L_11), (0.0f), NULL);
 		__this->___U3CendU3E5__3 = L_12;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:116>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:145>
 		__this->___U3CelapsedU3E5__4 = (0.0f);
 		goto IL_00c0;
 	}
 
 IL_006e:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:119>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:148>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_13 = V_1;
 		NullCheck(L_13);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
@@ -5393,12 +5492,12 @@ IL_006e:
 		L_20 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_15, L_16, ((float)(L_17/L_19)), NULL);
 		NullCheck(L_14);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_14, L_20, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:120>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:149>
 		float L_21 = __this->___U3CelapsedU3E5__4;
 		float L_22;
 		L_22 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__4 = ((float)il2cpp_codegen_add(L_21, L_22));
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:121>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:150>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -5412,7 +5511,7 @@ IL_00b9:
 
 IL_00c0:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:117>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:146>
 		float L_23 = __this->___U3CelapsedU3E5__4;
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_24 = V_1;
 		NullCheck(L_24);
@@ -5423,7 +5522,7 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:124>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:153>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_26 = V_1;
 		NullCheck(L_26);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
@@ -5431,20 +5530,20 @@ IL_00c0:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = __this->___U3CendU3E5__3;
 		NullCheck(L_27);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_27, L_28, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:125>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:154>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_29 = V_1;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_30 = __this->___newPos;
 		NullCheck(L_29);
 		L_29->___gridPosition = L_30;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:126>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:155>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_31 = V_1;
 		NullCheck(L_31);
 		L_31->___isMoving = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:128>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:157>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73610
+// Method Definition Index: 73613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMoveToU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9175B8CCD429B9FFC85370DAABD861BD851D7797 (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5452,7 +5551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMoveToU3Ed__22_System_Colle
 		return L_0;
 	}
 }
-// Method Definition Index: 73611
+// Method Definition Index: 73614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22_System_Collections_IEnumerator_Reset_mFFBE79A432BE30BEF96559A2133E8C4860AD8DB4 (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5461,7 +5560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMoveToU3Ed__22_System_Collections_IEn
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMoveToU3Ed__22_System_Collections_IEnumerator_Reset_mFFBE79A432BE30BEF96559A2133E8C4860AD8DB4_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73612
+// Method Definition Index: 73615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMoveToU3Ed__22_System_Collections_IEnumerator_get_Current_m3BAB1D613D3895FB00B721CBF1BEDCE84B4C3F1A (U3CMoveToU3Ed__22_t75FBAFBA71CA6D322C7D155A46144F7235CA4A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5477,7 +5576,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMoveToU3Ed__22_System_Colle
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73613
+// Method Definition Index: 73616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23__ctor_mC91707BDBD2757A4313FAFF716A00AE5F751311D (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5487,14 +5586,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23__ctor_mC91707BDBD275
 		return;
 	}
 }
-// Method Definition Index: 73614
+// Method Definition Index: 73617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23_System_IDisposable_Dispose_m2131F0AE660E09A72923DD853D72DD5DFF11F578 (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 73615
+// Method Definition Index: 73618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRotateToU3Ed__23_MoveNext_mA39552A18C9ACA287E677E974308F880C0D5280F (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5524,11 +5623,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRotateToU3Ed__23_MoveNext_mA39552A18C
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:132>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:161>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_4 = V_1;
 		NullCheck(L_4);
 		L_4->___isRotating = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:133>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:162>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_5 = V_1;
 		NullCheck(L_5);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
@@ -5537,7 +5636,7 @@ IL_001a:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7;
 		L_7 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_6, NULL);
 		__this->___U3CstartU3E5__2 = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:134>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:163>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Vector3_get_forward_mAA55A7034304DF8B2152EAD49AE779FC4CA2EB4A_inline(NULL);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_9 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___newDir);
@@ -5552,14 +5651,14 @@ IL_001a:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14;
 		L_14 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307(L_8, L_13, NULL);
 		__this->___U3CgoalU3E5__3 = L_14;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:136>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:165>
 		__this->___U3CtU3E5__4 = (0.0f);
 		goto IL_00ca;
 	}
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:139>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:168>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_15 = V_1;
 		NullCheck(L_15);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
@@ -5574,12 +5673,12 @@ IL_0078:
 		L_22 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15(L_17, L_18, ((float)(L_19/L_21)), NULL);
 		NullCheck(L_16);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_16, L_22, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:140>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:169>
 		float L_23 = __this->___U3CtU3E5__4;
 		float L_24;
 		L_24 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CtU3E5__4 = ((float)il2cpp_codegen_add(L_23, L_24));
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:141>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:170>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -5593,7 +5692,7 @@ IL_00c3:
 
 IL_00ca:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:137>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:166>
 		float L_25 = __this->___U3CtU3E5__4;
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_26 = V_1;
 		NullCheck(L_26);
@@ -5604,7 +5703,7 @@ IL_00ca:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:143>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:172>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_28 = V_1;
 		NullCheck(L_28);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29;
@@ -5612,20 +5711,20 @@ IL_00ca:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_30 = __this->___U3CgoalU3E5__3;
 		NullCheck(L_29);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_29, L_30, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:145>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:174>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_31 = V_1;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_32 = __this->___newDir;
 		NullCheck(L_31);
 		L_31->___faceDirection = L_32;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:146>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:175>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_33 = V_1;
 		NullCheck(L_33);
 		L_33->___isRotating = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:147>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/PlayerController.cs:176>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73616
+// Method Definition Index: 73619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotateToU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE9D07796C09235B823850937F5D89371576A5F03 (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5633,7 +5732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotateToU3Ed__23_System_Col
 		return L_0;
 	}
 }
-// Method Definition Index: 73617
+// Method Definition Index: 73620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23_System_Collections_IEnumerator_Reset_mCE788071887FFC7EDD62C59115496C6A4CCBAB38 (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5642,7 +5741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotateToU3Ed__23_System_Collections_I
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRotateToU3Ed__23_System_Collections_IEnumerator_Reset_mCE788071887FFC7EDD62C59115496C6A4CCBAB38_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73618
+// Method Definition Index: 73621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotateToU3Ed__23_System_Collections_IEnumerator_get_Current_m3B31AE542AD2C549637F53725B20233463D1F367 (U3CRotateToU3Ed__23_t2229D85D52067BC177ACA5EA694B60899F804BF9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5658,7 +5757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotateToU3Ed__23_System_Col
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73619
+// Method Definition Index: 73622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Slot__ctor_m67B2CD572C432B806CDC5EEE03B93D62B001CCDB (Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5674,7 +5773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Slot__ctor_m67B2CD572C432B806CDC5EEE03B9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73620
+// Method Definition Index: 73623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile_Init_m2990DC53DAD944ABB62D9DFFD2B5AA98A964B1B7 (Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* __this, bool ___0_isOffset, const RuntimeMethod* method) 
 {
 	SpriteRenderer_t1DD7FE258F072E1FA87D6577BA27225892B8047B* G_B2_0 = NULL;
@@ -5715,7 +5814,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 73621
+// Method Definition Index: 73624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile_OnMouseEnter_mB9ADAFAD74E39BC5BC7744FAFF056DA81594DC45 (Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5727,7 +5826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile_OnMouseEnter_mB9ADAFAD74E39BC5BC774
 		return;
 	}
 }
-// Method Definition Index: 73622
+// Method Definition Index: 73625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile_OnMouseExit_m1E9CE9ECE3BB5B41B57A94912C7C8E80082A7331 (Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5739,7 +5838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile_OnMouseExit_m1E9CE9ECE3BB5B41B57A94
 		return;
 	}
 }
-// Method Definition Index: 73623
+// Method Definition Index: 73626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile__ctor_mB2C904B47040471552C938AE751AC0BF80B369E7 (Tile_t192D2F5511792792FB74C37341AFAA9F6B77AE64* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5755,7 +5854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tile__ctor_mB2C904B47040471552C938AE751A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73624
+// Method Definition Index: 73627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPiece_Start_mF7B56ABCB83035DA5D46F5A478A421DD41FF68D9 (RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5839,7 +5938,7 @@ IL_0073:
 		return;
 	}
 }
-// Method Definition Index: 73625
+// Method Definition Index: 73628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RoadPiece_SetSpawnNextFrame_m3F43E5705B28401E071DD31F58A402CF59A231D6 (RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5858,7 +5957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* RoadPiece_SetSpawnNextFrame_m3
 		return L_1;
 	}
 }
-// Method Definition Index: 73626
+// Method Definition Index: 73629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPiece_OnTriggerEnter2D_m537CBFC5FD59ACFA842A3FFA818DD30404D5F462 (RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* __this, Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___0_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5892,7 +5991,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 73627
+// Method Definition Index: 73630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPiece__ctor_mD98C5C1CEE89DAC2FB26E9C8483BD3CEC3DC97A3 (RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5908,7 +6007,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPiece__ctor_mD98C5C1CEE89DAC2FB26E9C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73628
+// Method Definition Index: 73631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetSpawnNextFrameU3Ed__2__ctor_m9BEA929168B5906E3D25352B8623A7A5B1EB947E (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5918,14 +6017,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetSpawnNextFrameU3Ed__2__ctor_m9BEA9
 		return;
 	}
 }
-// Method Definition Index: 73629
+// Method Definition Index: 73632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetSpawnNextFrameU3Ed__2_System_IDisposable_Dispose_m1D5F792CC6BB373E831209F246729416EC809D56 (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 73630
+// Method Definition Index: 73633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSetSpawnNextFrameU3Ed__2_MoveNext_mE3AAFA537E5973D2F963E1A1FF0623D9416AC89E (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6014,7 +6113,7 @@ IL_0065:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 73631
+// Method Definition Index: 73634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetSpawnNextFrameU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m92AAF1BCCF66C68CB2C3A7F6F20B1EF8B94C9135 (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6022,7 +6121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetSpawnNextFrameU3Ed__2_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 73632
+// Method Definition Index: 73635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetSpawnNextFrameU3Ed__2_System_Collections_IEnumerator_Reset_m00F5CED68A0B9F5BBA28028D70428AFE70F9BA76 (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6031,7 +6130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetSpawnNextFrameU3Ed__2_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSetSpawnNextFrameU3Ed__2_System_Collections_IEnumerator_Reset_m00F5CED68A0B9F5BBA28028D70428AFE70F9BA76_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 73633
+// Method Definition Index: 73636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetSpawnNextFrameU3Ed__2_System_Collections_IEnumerator_get_Current_m9190DC689459D4BB808BE76C5AEF0F65DF14D823 (U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6055,7 +6154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetSpawnNextFrameU3Ed__2_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73634
+// Method Definition Index: 73637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPieceData_OnEnter_m50D858E4BC2CBA8C94DADD573022CA49620457E3 (RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* __this, RoadPiece_t3C67536D36C8AC0969633F365C7FDAD2E1712974* ___0_piece, Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___1_other, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6160,7 +6259,7 @@ IL_0065:
 		return;
 	}
 }
-// Method Definition Index: 73635
+// Method Definition Index: 73638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPieceData__ctor_m5B17963465183214070B2168AC745DA62A5DE700 (RoadPieceData_tC30F7FC38681984C22227D481AFA4374F4D4BFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6182,7 +6281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadPieceData__ctor_m5B17963465183214070
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73636
+// Method Definition Index: 73639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6216,7 +6315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 73637
+// Method Definition Index: 73640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6401,7 +6500,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 64418
+// Method Definition Index: 64421
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6433,7 +6532,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 64408
+// Method Definition Index: 64411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 PointerEventData_get_pointerCurrentRaycast_m1C6B7D707CEE9C6574DD443289D90102EDC7A2C4_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6442,7 +6541,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RaycastResult_tEC6A7B7CABA99C386F
 		return L_0;
 	}
 }
-// Method Definition Index: 64751
+// Method Definition Index: 64754
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* RaycastResult_get_gameObject_m77014B442B9E2D10F2CC3AEEDC07AA95CDE1E2F1_inline (RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6650,6 +6749,29 @@ IL_0019:
 		return L_3;
 	}
 }
+// Method Definition Index: 37790
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Up;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1 = V_0;
+		return L_1;
+	}
+}
 // Method Definition Index: 37777
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_op_UnaryNegation_m0D7EF0319357DF616984CB320DC77C62C69E8C40_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_v, const RuntimeMethod* method) 
 {
@@ -6673,19 +6795,8 @@ IL_0019:
 		return L_3;
 	}
 }
-// Method Definition Index: 37771
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = ___0_x;
-		__this->___m_X = L_0;
-		int32_t L_1 = ___1_y;
-		__this->___m_Y = L_1;
-		return;
-	}
-}
-// Method Definition Index: 37790
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_up_m524DD5EA6FCE52C78A4B123AA5B17CBC80F6CDEE_inline (const RuntimeMethod* method) 
+// Method Definition Index: 37791
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_down_mFF0B88529FB9F6C86CBAB295D8B11C18C860EE1B_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -6696,7 +6807,53 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B8805
 	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Up;
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Down;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 37792
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_left_mB2CDF544B3456F9382CE37E389609E9D23D19397_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Left;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 37793
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_right_mB98E50C7FD8F672101A541E8E85F0DF79AEB3BF4_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Right;
 		V_0 = L_0;
 		goto IL_0009;
 	}
@@ -6856,6 +7013,17 @@ IL_000c:
 	{
 		int32_t L_2 = V_0;
 		return L_2;
+	}
+}
+// Method Definition Index: 37771
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_x;
+		__this->___m_X = L_0;
+		int32_t L_1 = ___1_y;
+		__this->___m_Y = L_1;
+		return;
 	}
 }
 // Method Definition Index: 37709

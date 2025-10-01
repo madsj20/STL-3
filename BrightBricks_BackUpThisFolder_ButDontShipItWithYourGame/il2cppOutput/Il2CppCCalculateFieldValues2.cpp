@@ -45475,9 +45475,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8906[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8907[1] = 
 {
 	static_cast<int32_t>(offsetof(BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F, ___action)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8908[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8908[10] = 
 {
-	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,0,};
+	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8909[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CRunU3Ed__11_t3E793F4FF37206CE0CC7F41FD10DEB18D87594B5, ___U3CU3E4__this)),};
