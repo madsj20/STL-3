@@ -129,10 +129,18 @@ public class PlayerController : MonoBehaviour
         TryMove(Vector2Int.right); // (1,0)
         StartCoroutine(RotateTo(Vector2Int.right));
     }
-
-    public void Hold (float delay)
+    
+    public void SetSpeed(float newSpeed)
     {
-        
+        // Clamp speed to avoid division by zero or extreme speeds
+        float roundedSpeed = Mathf.Round(newSpeed); // Snap to nearest whole number
+        float clampedSpeed = Mathf.Clamp(roundedSpeed, 0.5f, 5f);
+        moveDuration = 1f / clampedSpeed;
+    }
+
+    public void Hold(float delay)
+    {
+
         StartCoroutine(HandleHold(delay));
     }
 
