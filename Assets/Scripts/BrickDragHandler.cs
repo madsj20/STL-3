@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections;
 
 public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -8,6 +9,12 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     CanvasGroup canvasGroup;
     int originalSiblingIndex;
     BrickPiece pieceData;
+
+    // Squeeze-in detection
+    private Slot hoveredSlot;
+    private Coroutine squeezeCoroutine;
+    private const float SQUEEZE_DELAY = 1f; // Time to hold before squeeze-in
+    private bool squeezeTriggered = false;
 
     void Start()
     {
@@ -17,6 +24,15 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // Reset squeeze state
+        squeezeTriggered = false;
+        hoveredSlot = null;
+        if (squeezeCoroutine != null)
+        {
+            StopCoroutine(squeezeCoroutine);
+            squeezeCoroutine = null;
+        }
+
         // Normalize RectTransform for dragging
         var rt = GetComponent<RectTransform>();
         if (rt)
@@ -77,10 +93,139 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         RectTransformUtility.ScreenPointToWorldPointInRectangle(
             rt.parent as RectTransform, eventData.position, eventData.pressEventCamera, out worldPos);
         rt.position = worldPos;
+
+        // Check if hovering over a slot OR find nearest slot for squeeze-in
+        var hit = eventData.pointerCurrentRaycast.gameObject;
+        Slot currentSlot = hit ? hit.GetComponentInParent<Slot>() : null;
+        Slot originalSlot = originalParent ? originalParent.GetComponent<Slot>() : null;
+
+        // If not directly over a slot, try to find the nearest slot for squeeze-in
+        if (currentSlot == null)
+        {
+            currentSlot = FindNearestSlot(eventData.position, eventData.pressEventCamera);
+        }
+
+        // Only trigger squeeze-in for occupied slots (and don't squeeze into your own original slot)
+        if (currentSlot != null && currentSlot.brickPrefab != null && currentSlot != hoveredSlot && currentSlot != originalSlot)
+        {
+            // New slot detected
+            hoveredSlot = currentSlot;
+            squeezeTriggered = false;
+            
+            // Stop previous coroutine if any
+            if (squeezeCoroutine != null)
+                StopCoroutine(squeezeCoroutine);
+            
+            // Start new squeeze timer
+            squeezeCoroutine = StartCoroutine(SqueezeInTimer(currentSlot));
+        }
+        else if (currentSlot != hoveredSlot)
+        {
+            // Moved away from the slot
+            if (squeezeCoroutine != null)
+            {
+                StopCoroutine(squeezeCoroutine);
+                squeezeCoroutine = null;
+            }
+            hoveredSlot = null;
+            squeezeTriggered = false;
+        }
+    }
+
+    private Slot FindNearestSlot(Vector2 screenPos, Camera camera)
+    {
+        // Find the inventory panel that contains slots
+        var manager = FindFirstObjectByType<BrickQueManager>();
+        if (manager == null || manager.PanelThatPlaysTheSequence == null) return null;
+
+        Transform slotsPanel = manager.PanelThatPlaysTheSequence;
+        Slot nearestSlot = null;
+        float nearestDist = float.MaxValue;
+        float maxDetectionDist = 100f; // Maximum distance to detect squeeze-in
+
+        for (int i = 0; i < slotsPanel.childCount; i++)
+        {
+            var slot = slotsPanel.GetChild(i).GetComponent<Slot>();
+            if (slot == null) continue;
+
+            var slotRT = slot.GetComponent<RectTransform>();
+            if (slotRT == null) continue;
+
+            // Get slot's screen position
+            Vector2 slotScreenPos = RectTransformUtility.WorldToScreenPoint(camera, slotRT.position);
+            float dist = Vector2.Distance(screenPos, slotScreenPos);
+
+            if (dist < nearestDist && dist < maxDetectionDist)
+            {
+                nearestDist = dist;
+                nearestSlot = slot;
+            }
+        }
+
+        return nearestSlot;
+    }
+
+    private IEnumerator SqueezeInTimer(Slot targetSlot)
+    {
+        yield return new WaitForSeconds(SQUEEZE_DELAY);
+        
+        // After delay, perform the squeeze-in
+        if (targetSlot != null && targetSlot.brickPrefab != null)
+        {
+            PerformSqueezeIn(targetSlot);
+            squeezeTriggered = true;
+        }
+    }
+
+    private void PerformSqueezeIn(Slot targetSlot)
+    {
+        // Find the parent panel that contains all slots
+        Transform slotsPanel = targetSlot.transform.parent;
+        if (slotsPanel == null) return;
+
+        int targetIndex = targetSlot.transform.GetSiblingIndex();
+        
+        // Check if the last slot is occupied - if so, create a new slot
+        var lastSlot = slotsPanel.GetChild(slotsPanel.childCount - 1).GetComponent<Slot>();
+        if (lastSlot != null && lastSlot.brickPrefab != null)
+        {
+            // Need to create a new slot at the end
+            var inventoryController = FindFirstObjectByType<InventoryController>();
+            if (inventoryController != null && inventoryController.slotPrefab != null)
+            {
+                Slot newSlot = Instantiate(inventoryController.slotPrefab, slotsPanel, false);
+            }
+        }
+        
+        // Shift all bricks from targetIndex onwards to the right
+        for (int i = slotsPanel.childCount - 1; i > targetIndex; i--)
+        {
+            var currentSlot = slotsPanel.GetChild(i).GetComponent<Slot>();
+            var previousSlot = slotsPanel.GetChild(i - 1).GetComponent<Slot>();
+            
+            if (currentSlot == null || previousSlot == null) continue;
+
+            // Move brick from previous slot to current slot
+            if (previousSlot.brickPrefab != null)
+            {
+                currentSlot.brickPrefab = previousSlot.brickPrefab;
+                currentSlot.brickPrefab.transform.SetParent(currentSlot.transform, false);
+                SnapUI(currentSlot.brickPrefab.transform as RectTransform);
+            }
+        }
+
+        // Clear the target slot (we'll place the dragged brick here on drop)
+        targetSlot.brickPrefab = null;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // Stop squeeze timer
+        if (squeezeCoroutine != null)
+        {
+            StopCoroutine(squeezeCoroutine);
+            squeezeCoroutine = null;
+        }
 
         // Hide hint arrow no matter how the drag ends
         if (ArrowHintController.Instance != null)
@@ -100,7 +245,23 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
         if (dropSlot != null)
         {
-            // If a slot was hit, handle swapping logic
+            // If squeeze was triggered, the slot should already be empty
+            if (squeezeTriggered)
+            {
+                // Clear original slot if dragging from a slot
+                if (originalSlot != null)
+                {
+                    originalSlot.brickPrefab = null;
+                }
+
+                // Place the dragged brick in the now-empty slot
+                dropSlot.brickPrefab = gameObject;
+                transform.SetParent(dropSlot.transform, false);
+                SnapUI(transform as RectTransform);
+                return;
+            }
+
+            // Normal swap logic if no squeeze occurred
             GameObject droppedBrick = dropSlot.brickPrefab;
 
             // Assign dragged brick to the drop slot
@@ -131,15 +292,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             originalSlot.brickPrefab = null;
 
         Destroy(gameObject);
-        
-        /*
-        else
-        {
-            // If no valid slot was hit, return to the original parent
-            transform.SetParent(originalParent, false);
-            SnapUI(transform as RectTransform);
-        }
-        */
     }
 
     // Ensure the UI element is centered inside its parent

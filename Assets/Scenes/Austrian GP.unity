@@ -478,7 +478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryController
   inventoryPanel: {fileID: 165779640}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
-  slotCount: 30
+  slotCount: 5
   brickPrefabs:
   - {fileID: 8664433607397383791, guid: 11c8182bc1ba4a142bf6676d4ee1fe30, type: 3}
   - {fileID: 8628905314089425671, guid: d45cad85eb358874a91b65c934a849a0, type: 3}
@@ -3635,6 +3635,10 @@ PrefabInstance:
     - target: {fileID: 1752869900264150564, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665382703565800234, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_Spacing
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3006131754595868008, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_Pivot.x
