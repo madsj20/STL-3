@@ -7,10 +7,12 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     Transform originalParent;
     CanvasGroup canvasGroup;
     int originalSiblingIndex;
+    BrickPiece pieceData;
 
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        pieceData = GetComponent<BrickPiece>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -46,6 +48,13 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             }
         }
 
+        var piece = GetComponent<BrickPiece>();
+        if (piece != null && ArrowHintController.Instance != null)
+        {
+            ArrowHintController.Instance.ShowForAction(piece.action);
+        }
+    
+
         // Re-parent to the nearest Canvas so the brick can be dragged across all UI
         var canvas = GetComponentInParent<Canvas>();
         if (canvas) transform.SetParent(canvas.transform, true);
@@ -56,6 +65,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             canvasGroup.blocksRaycasts = false;
             canvasGroup.alpha = 0.6f;
         }
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -71,6 +81,11 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     public void OnEndDrag(PointerEventData eventData)
     {
+
+        // Hide hint arrow no matter how the drag ends
+        if (ArrowHintController.Instance != null)
+            ArrowHintController.Instance.HideAll();
+
         // Restore raycast blocking and full opacity
         if (canvasGroup)
         {
@@ -107,6 +122,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             // Re-parent dragged brick to the drop slot and center it
             transform.SetParent(dropSlot.transform, false);
             SnapUI(transform as RectTransform);
+
             return;
         }
 
@@ -115,6 +131,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             originalSlot.brickPrefab = null;
 
         Destroy(gameObject);
+        
         /*
         else
         {
