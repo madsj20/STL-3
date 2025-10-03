@@ -14,11 +14,17 @@ public class BrickQueManager : MonoBehaviour
     public float commandDelay = 0.05f; // small gap between commands
 
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
+    public Slot slotPrefab; // prefab used to create additional slots when needed
 
     private readonly Queue<ActionType> queue = new Queue<ActionType>();
     private bool isPlaying = false;
     private bool isPaused = false;
 
+    private void Update()
+    {
+        // Ensure there's always more than one empty slot available
+        EnsureSlots();
+    }
 
     public void ClearQueue()
     {
@@ -138,6 +144,26 @@ public class BrickQueManager : MonoBehaviour
             RefreshLabel(); // show remaining
         }
         isPlaying = false;
+    }
+
+    // If there is only one empty slot left in the play panel, create another slot
+    private void EnsureSlots()
+    {
+        if (PanelThatPlaysTheSequence == null || slotPrefab == null) return;
+
+        int emptyCount = 0;
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot == null) continue;
+            if (slot.brickPrefab == null) emptyCount++;
+        }
+
+        if (emptyCount <= 0)
+        {
+            // Instantiate one new slot at the end
+            var newSlot = Instantiate(slotPrefab, PanelThatPlaysTheSequence, false);
+        }
     }
 
     public void ClearAll()
