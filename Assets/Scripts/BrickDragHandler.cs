@@ -185,6 +185,18 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
         int targetIndex = targetSlot.transform.GetSiblingIndex();
         
+        // Check if the last slot is occupied - if so, create a new slot
+        var lastSlot = slotsPanel.GetChild(slotsPanel.childCount - 1).GetComponent<Slot>();
+        if (lastSlot != null && lastSlot.brickPrefab != null)
+        {
+            // Need to create a new slot at the end
+            var inventoryController = FindFirstObjectByType<InventoryController>();
+            if (inventoryController != null && inventoryController.slotPrefab != null)
+            {
+                Slot newSlot = Instantiate(inventoryController.slotPrefab, slotsPanel, false);
+            }
+        }
+        
         // Shift all bricks from targetIndex onwards to the right
         for (int i = slotsPanel.childCount - 1; i > targetIndex; i--)
         {
@@ -196,12 +208,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             // Move brick from previous slot to current slot
             if (previousSlot.brickPrefab != null)
             {
-                // If current slot has a brick, destroy it (gets pushed off the end)
-                if (currentSlot.brickPrefab != null)
-                {
-                    Destroy(currentSlot.brickPrefab);
-                }
-
                 currentSlot.brickPrefab = previousSlot.brickPrefab;
                 currentSlot.brickPrefab.transform.SetParent(currentSlot.transform, false);
                 SnapUI(currentSlot.brickPrefab.transform as RectTransform);
