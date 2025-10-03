@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum RoadPieceType
 {
@@ -13,6 +14,7 @@ public class RoadPieceData : ScriptableObject
     public RoadPieceType type;
     public Sprite sprite;
 
+
     public Vector2 startDirection = Vector2.left; // car starts facing this way
     
     [Header("Pit Settings")]
@@ -26,7 +28,8 @@ public class RoadPieceData : ScriptableObject
 
             case RoadPieceType.Goal:
                 Debug.Log("GOAL!");
-
+                if (UIManager.Instance != null && UIManager.Instance.WinningUI != null)
+                    UIManager.Instance.WinningUI.SetActive(true);
                 break;
 
 
