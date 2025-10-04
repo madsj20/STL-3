@@ -25,6 +25,19 @@ public class BrickQueManager : MonoBehaviour
     private bool isPaused = false;
     private int currentExecutingIndex = -1; // Track which slot is currently executing
 
+    private void Start()
+    {
+        // Make sure all slot backgrounds are OFF at scene start
+        if (PanelThatPlaysTheSequence == null) return;
+
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot != null)
+                slot.SetBackgroundActive(false);
+        }
+    }
+
     private void Update()
     {
         // Ensure there's always more than one empty slot available
@@ -182,13 +195,18 @@ public class BrickQueManager : MonoBehaviour
     {
         if (slot == null || slot.brickPrefab == null) return;
 
-        // Scale the brick
         var brickTransform = slot.brickPrefab.transform;
         if (brickTransform != null)
-        {
             brickTransform.localScale = highlight ? Vector3.one * highlightScale : Vector3.one;
-        }
+
+        // EITHER use the helper on Slot:
+        slot.SetBackgroundActive(highlight);
+
+        // OR (equivalent) toggle directly:
+        // if (slot.backgroundImage != null) slot.backgroundImage.enabled = highlight;
     }
+
+
 
     // Helper class to remember original colors
     private class ColorMemory : MonoBehaviour
