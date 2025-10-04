@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BrickQueManager : MonoBehaviour
 {
@@ -16,9 +17,13 @@ public class BrickQueManager : MonoBehaviour
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
     public Slot slotPrefab; // prefab used to create additional slots when needed
 
+    // Highlight settings
+    public float highlightScale = 1.1f; // Slight scale increase
+
     private readonly Queue<ActionType> queue = new Queue<ActionType>();
     private bool isPlaying = false;
     private bool isPaused = false;
+    private int currentExecutingIndex = -1; // Track which slot is currently executing
 
     private void Update()
     {
@@ -105,10 +110,28 @@ public class BrickQueManager : MonoBehaviour
     private IEnumerator Run()
     {
         isPlaying = true;
+        currentExecutingIndex = 0;
+
+        // Find all slots with bricks
+        List<Slot> occupiedSlots = new List<Slot>();
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot != null && slot.brickPrefab != null)
+            {
+                occupiedSlots.Add(slot);
+            }
+        }
+
         while (queue.Count > 0)
         {
-
             yield return new WaitUntil(() => !isPaused);
+
+            // Highlight current slot
+            if (currentExecutingIndex < occupiedSlots.Count)
+            {
+                HighlightSlot(occupiedSlots[currentExecutingIndex], true);
+            }
 
             var a = queue.Dequeue();
 
@@ -133,17 +156,44 @@ public class BrickQueManager : MonoBehaviour
                 case ActionType.MoveBackward:
                     player.MoveDown();
                     break;
-                }
+            }
 
             // Wait until the car finishes moving/rotating
             yield return new WaitUntil(() => player.isIdle);
 
+            // Remove highlight from current slot
+            if (currentExecutingIndex < occupiedSlots.Count)
+            {
+                HighlightSlot(occupiedSlots[currentExecutingIndex], false);
+            }
+
             if (commandDelay > 0f)
                 yield return new WaitForSeconds(commandDelay);
 
+            currentExecutingIndex++;
             RefreshLabel(); // show remaining
         }
+
         isPlaying = false;
+        currentExecutingIndex = -1;
+    }
+
+    private void HighlightSlot(Slot slot, bool highlight)
+    {
+        if (slot == null || slot.brickPrefab == null) return;
+
+        // Scale the brick
+        var brickTransform = slot.brickPrefab.transform;
+        if (brickTransform != null)
+        {
+            brickTransform.localScale = highlight ? Vector3.one * highlightScale : Vector3.one;
+        }
+    }
+
+    // Helper class to remember original colors
+    private class ColorMemory : MonoBehaviour
+    {
+        public Color originalColor;
     }
 
     // If there is only one empty slot left in the play panel, create another slot
@@ -175,6 +225,8 @@ public class BrickQueManager : MonoBehaviour
             isPlaying = false;
         }
         isPaused = false;
+        currentExecutingIndex = -1;
+        
         // clear the logical queue & label
         queue.Clear();
         RefreshLabel();
