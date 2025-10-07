@@ -307,7 +307,10 @@ public class BrickQueManager : MonoBehaviour
     public void ResetPlayerPosition()
     {
         if (player != null)
+        {
             player.RespawnToCurrentStart();
+            RemoveAllHighlights();
+        }
     }
 
     // Remove any bricks from each slot in PanelThatPlaysTheSequence
