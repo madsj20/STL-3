@@ -60,9 +60,9 @@ public class BrickQueManager : MonoBehaviour
             isPaused = false;
             AudioListener.pause = false;
 
-            int occupiedStartIndex = pausedAtIndex; // udgangspunkt
+            int occupiedStartIndex = pausedAtIndex;
 
-            // Tjek: er brikken ændret?
+            // Check if the brick has changed
             int pausedPanelIndex = PanelIndexFromOccupiedIndex(pausedAtIndex);
             Slot pausedSlot = null;
             if (pausedPanelIndex >= 0 && pausedPanelIndex < PanelThatPlaysTheSequence.childCount)
@@ -71,13 +71,13 @@ public class BrickQueManager : MonoBehaviour
             bool unchanged = (pausedSlot != null && pausedSlot.brickPrefab == pausedBrickGO);
 
             if (unchanged)
-                occupiedStartIndex = pausedAtIndex + 1; // ← SKIP hvis uændret
+                occupiedStartIndex = pausedAtIndex + 1; // ← SKIP if unchanged
 
-            // Genbyg køen fra tilsvarende PANEL-indeks
+            // rebuild the sequence from the corresponding panel-index
             int panelStartIndex = PanelIndexFromOccupiedIndex(occupiedStartIndex);
-            RebuildQueueFromIndex(panelStartIndex); // bygger resten fra korrekt sted
+            RebuildQueueFromIndex(panelStartIndex); // builds the rest form the correct place
 
-            // Fortæl Run() at starte på samme occupied-indeks (ingen ekstra +1 dér)
+            // Tell Run() to start on the same occipied-index (no extra +1)
             pausedAtIndex = occupiedStartIndex;
 
             RemoveAllHighlights();
@@ -97,7 +97,7 @@ public class BrickQueManager : MonoBehaviour
         isPaused = true;
         pausedAtIndex = currentExecutingIndex; // Remember current position
 
-        // Svave the reference to the brick we stood on
+        // Save the reference to the brick we stood on
         var pausedPanelIndex = PanelIndexFromOccupiedIndex(pausedAtIndex);
         if (pausedPanelIndex >= 0 && pausedPanelIndex < PanelThatPlaysTheSequence.childCount)
         {
@@ -110,8 +110,6 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = false;
 
         AudioListener.pause = true; // Pause all audio
-        
-        // Keep the highlight visible during pause - don't remove it!
     }
 
     public void PlayFromPanel()
@@ -183,11 +181,11 @@ public class BrickQueManager : MonoBehaviour
             var s = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (s != null && s.brickPrefab != null)
             {
-                if (count == occupiedIndex) return i; // panel-indeks fundet
+                if (count == occupiedIndex) return i; // panel-index found
                 count++;
             }
         }
-        return PanelThatPlaysTheSequence.childCount; // efter sidste brik
+        return PanelThatPlaysTheSequence.childCount; // after last brick
     }
 
 
