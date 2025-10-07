@@ -77,7 +77,7 @@ public class BrickQueManager : MonoBehaviour
         
         isPaused = true;
         pausedAtIndex = currentExecutingIndex; // Remember current position
-        
+        RemoveAllHighlights();
         StopAllCoroutines();
         isPlaying = false;
 
@@ -256,12 +256,6 @@ public class BrickQueManager : MonoBehaviour
                 HighlightSlot(slot, false);
             }
         }
-    }
-
-    // Helper class to remember original colors
-    private class ColorMemory : MonoBehaviour
-    {
-        public Color originalColor;
     }
 
     // If there is only one empty slot left in the play panel, create another slot
