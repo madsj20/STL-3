@@ -343,10 +343,32 @@ public class BrickQueManager : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
-        if (player != null)
+         if (player != null)
         {
+            // Stop any running playback
+            if (isPlaying)
+            {
+                StopAllCoroutines();
+                isPlaying = false;
+            }
+            
+            // Reset pause and execution state
+            isPaused = false;
+            currentExecutingIndex = -1;
+            pausedAtIndex = -1;
+            pausedBrickGO = null;
+            
+            // Unpause audio if it was paused
+            AudioListener.pause = false;
+            
+            // Reset player position
             player.RespawnToCurrentStart();
+            
+            // Remove all visual highlights
             RemoveAllHighlights();
+            
+            // Rebuild the queue from the beginning
+            RebuildQueueFromIndex(0);
         }
     }
 
