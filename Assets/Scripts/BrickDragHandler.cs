@@ -261,24 +261,23 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
                 return;
             }
 
-            // Normal swap logic if no squeeze occurred
-            GameObject droppedBrick = dropSlot.brickPrefab;
+            // MODIFIED: Destroy old brick instead of swapping
+            GameObject oldBrick = dropSlot.brickPrefab;
+
+            // If slot already had a brick, destroy it
+            if (oldBrick != null)
+            {
+                Destroy(oldBrick);
+            }
+
+            // Clear the original slot if dragging from a slot
+            if (originalSlot != null)
+            {
+                originalSlot.brickPrefab = null;
+            }
 
             // Assign dragged brick to the drop slot
             dropSlot.brickPrefab = gameObject;
-
-            // If slot already had a brick, move it back to the original slot
-            if (droppedBrick != null && originalSlot != null)
-            {
-                originalSlot.brickPrefab = droppedBrick;
-                droppedBrick.transform.SetParent(originalSlot.transform, false);
-                SnapUI(droppedBrick.transform as RectTransform);
-            }
-            else if (originalSlot != null)
-            {
-                // Otherwise, clear the original slot
-                originalSlot.brickPrefab = null;
-            }
 
             // Re-parent dragged brick to the drop slot and center it
             transform.SetParent(dropSlot.transform, false);

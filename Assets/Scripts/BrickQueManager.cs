@@ -25,6 +25,7 @@ public class BrickQueManager : MonoBehaviour
     private bool isPaused = false;
     private int currentExecutingIndex = -1; // Track which slot is currently executing
     private int pausedAtIndex = -1; // Remember where we paused
+    private GameObject pausedBrickGO; // remeber the brick that was paused on
 
     private void Start()
     {
@@ -57,18 +58,36 @@ public class BrickQueManager : MonoBehaviour
         if (isPaused)
         {
             isPaused = false;
-            AudioListener.pause = false; // Resume all audio
-            
-            // Rebuild queue from where we left off
-            RebuildQueueFromIndex(pausedAtIndex);
-            
-            if (!isPlaying)
-                StartCoroutine(Run());
+            AudioListener.pause = false;
+
+            int occupiedStartIndex = pausedAtIndex;
+
+            // Check if the brick has changed
+            int pausedPanelIndex = PanelIndexFromOccupiedIndex(pausedAtIndex);
+            Slot pausedSlot = null;
+            if (pausedPanelIndex >= 0 && pausedPanelIndex < PanelThatPlaysTheSequence.childCount)
+                pausedSlot = PanelThatPlaysTheSequence.GetChild(pausedPanelIndex).GetComponent<Slot>();
+
+            bool unchanged = (pausedSlot != null && pausedSlot.brickPrefab == pausedBrickGO);
+
+            if (unchanged)
+                occupiedStartIndex = pausedAtIndex + 1; // ← SKIP if unchanged
+
+            // rebuild the sequence from the corresponding panel-index
+            int panelStartIndex = PanelIndexFromOccupiedIndex(occupiedStartIndex);
+            RebuildQueueFromIndex(panelStartIndex); // builds the rest form the correct place
+
+            // Tell Run() to start on the same occipied-index (no extra +1)
+            pausedAtIndex = occupiedStartIndex;
+
+            RemoveAllHighlights();
+            if (!isPlaying) StartCoroutine(Run());
+
+            pausedBrickGO = null;
             return;
         }
 
-        if (!isPlaying)
-            StartCoroutine(Run());
+        if (!isPlaying) StartCoroutine(Run());
     }
 
     public void Pause()
@@ -77,13 +96,20 @@ public class BrickQueManager : MonoBehaviour
         
         isPaused = true;
         pausedAtIndex = currentExecutingIndex; // Remember current position
-        RemoveAllHighlights();
+
+        // Save the reference to the brick we stood on
+        var pausedPanelIndex = PanelIndexFromOccupiedIndex(pausedAtIndex);
+        if (pausedPanelIndex >= 0 && pausedPanelIndex < PanelThatPlaysTheSequence.childCount)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(pausedPanelIndex).GetComponent<Slot>();
+            pausedBrickGO = slot != null ? slot.brickPrefab : null;
+        }
+
+
         StopAllCoroutines();
         isPlaying = false;
 
         AudioListener.pause = true; // Pause all audio
-        
-        // Keep the highlight visible during pause - don't remove it!
     }
 
     public void PlayFromPanel()
@@ -145,6 +171,24 @@ public class BrickQueManager : MonoBehaviour
         RefreshLabel();
     }
 
+    // Finder panel-indekset for det N'te udfyldte slot (occupiedIndex).
+    private int PanelIndexFromOccupiedIndex(int occupiedIndex)
+    {
+        if (occupiedIndex <= 0) return 0;
+        int count = 0;
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var s = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (s != null && s.brickPrefab != null)
+            {
+                if (count == occupiedIndex) return i; // panel-index found
+                count++;
+            }
+        }
+        return PanelThatPlaysTheSequence.childCount; // after last brick
+    }
+
+
     private void Enqueue(ActionType a)
     {
         queue.Enqueue(a);
@@ -155,7 +199,6 @@ public class BrickQueManager : MonoBehaviour
     {
         isPlaying = true;
         
-        // If resuming from pause, continue from where we left off
         if (pausedAtIndex >= 0)
         {
             currentExecutingIndex = pausedAtIndex;
