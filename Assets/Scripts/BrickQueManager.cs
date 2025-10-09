@@ -62,22 +62,22 @@ public class BrickQueManager : MonoBehaviour
 
             int occupiedStartIndex = pausedAtIndex;
 
-            // Check if the brick has changed
+            //1 Check which brick slot we have pauseed on
             int pausedPanelIndex = PanelIndexFromOccupiedIndex(pausedAtIndex);
             Slot pausedSlot = null;
             if (pausedPanelIndex >= 0 && pausedPanelIndex < PanelThatPlaysTheSequence.childCount)
                 pausedSlot = PanelThatPlaysTheSequence.GetChild(pausedPanelIndex).GetComponent<Slot>();
 
+            //2 Is it the same brick as before paused?
             bool unchanged = (pausedSlot != null && pausedSlot.brickPrefab == pausedBrickGO);
 
+            //3 If the brick is unchanged -> skip by +1
             if (unchanged)
-                occupiedStartIndex = pausedAtIndex + 1; // ← SKIP if unchanged
+                occupiedStartIndex = pausedAtIndex + 1;
 
-            // rebuild the sequence from the corresponding panel-index
+            //4 if the brick is changed -> Run the code from the current position
             int panelStartIndex = PanelIndexFromOccupiedIndex(occupiedStartIndex);
             RebuildQueueFromIndex(panelStartIndex); // builds the rest form the correct place
-
-            // Tell Run() to start on the same occipied-index (no extra +1)
             pausedAtIndex = occupiedStartIndex;
 
             RemoveAllHighlights();
@@ -176,12 +176,14 @@ public class BrickQueManager : MonoBehaviour
     {
         if (occupiedIndex <= 0) return 0;
         int count = 0;
-        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++) // loop through all the slots empty/filled slot, from left to right
         {
+            //Check if there is a slot valid and if it has a brick inside it
+            // If yes -> Continue. If not (empty) -> skip one, and try next
             var s = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (s != null && s.brickPrefab != null)
             {
-                if (count == occupiedIndex) return i; // panel-index found
+                if (count == occupiedIndex) return i; // panel-index found and return the actual panel-position
                 count++;
             }
         }
