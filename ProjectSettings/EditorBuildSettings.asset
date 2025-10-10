@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro Track.unity
     guid: 2c42663b3b7bb814ea40c57727ddd9fc
   - enabled: 1
+    path: Assets/Scenes/Spanish GP.unity
+    guid: ac91cb647ae0a5e42a6fbbe5507965d4
+  - enabled: 1
     path: Assets/Scenes/Austrian GP.unity
     guid: add4c21b16db4384283aaef63b0e21f3
   m_configObjects:

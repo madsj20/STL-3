@@ -12,7 +12,8 @@
             "name": "AnimationClip",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -21,7 +22,8 @@
             "name": "Animator",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -30,7 +32,8 @@
             "name": "AnimatorController",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -63,7 +66,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -72,7 +76,8 @@
             "name": "AudioClip",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -82,7 +87,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -97,7 +103,8 @@
             "name": "AudioResource",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -136,7 +143,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -178,7 +186,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -194,7 +203,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -228,7 +238,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -262,7 +273,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -278,7 +290,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -306,7 +319,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -322,7 +336,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -332,7 +347,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -372,7 +388,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -388,7 +405,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -404,7 +422,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -426,7 +445,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -454,7 +474,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -469,7 +490,8 @@
             "name": "SpriteRenderer",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -491,7 +513,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -501,7 +524,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -784,7 +808,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1035,7 +1060,8 @@
             "name": "BoxCollider2D",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1051,7 +1077,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1079,7 +1106,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1467,7 +1495,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1512,7 +1541,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1522,7 +1552,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1532,7 +1563,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1553,7 +1585,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1562,7 +1595,8 @@
             "name": "CanvasGroup",
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity"
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1572,7 +1606,8 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
             "icon": null

@@ -428,6 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrackSelectManager
   tracks:
   - {fileID: 11400000, guid: 317a1aaefc370e849ad3d48698b72ea9, type: 2}
+  - {fileID: 11400000, guid: eb76f2cb6f3353d44a0a23d8364227de, type: 2}
   - {fileID: 11400000, guid: 6ab068667ca7fbc4a97e2505360562b3, type: 2}
   contentRoot: {fileID: 101283521}
   itemPrefab: {fileID: -7707753693204747715, guid: d9d76d1b9a4689e4288598a820449170, type: 3}

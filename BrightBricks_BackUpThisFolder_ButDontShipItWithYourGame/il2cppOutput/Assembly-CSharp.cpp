@@ -192,8 +192,7 @@ struct WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD;
 struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
 struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
 struct U3CSqueezeInTimerU3Ed__12_t36406AB475D41D972B9F03A640FAB58FE6829004;
-struct U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE;
-struct ColorMemory_t69DF3F9D201FD2A05602A7DFC131CBD119613991;
+struct U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14;
 struct ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 struct WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC;
@@ -229,7 +228,7 @@ IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB
 IL2CPP_EXTERN_C RuntimeClass* U3CHandleHoldU3Ed__25_tA8C8285C4BB52FAB0E36B442620D49722FDD8ED0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CMoveToU3Ed__23_t3F7B55205E5FB9D97DC601868ACC4378946DA47C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CRotateToU3Ed__24_tF18FE537319ADBE941CC146A74CF66111CD06CA8_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSetSpawnNextFrameU3Ed__2_tA2F20857849D7706DC6901C7B9FF67E028DB02E9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSqueezeInTimerU3Ed__12_t36406AB475D41D972B9F03A640FAB58FE6829004_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass8_0_tE85A0CA36D1D2AAF7D3EEAAC820AD9206C47B963_il2cpp_TypeInfo_var;
@@ -240,8 +239,8 @@ IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____99F961DE60F11CB253608087F520889D2A0A467451E2F841A6DEB1758BCA7968_FieldInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F1C178285D4AFD6706642675CCF15D8441536C722A4E5810CB26442100D27F2C_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____8D056966F81BF9802277EA75DAD03D05FC4AE19E8575FAB9F595E5973DDC5245_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____B716EF3DC6A7799CE78E35032AB6F65E534720726A586F6B2CC827E5C5176F6F_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral0C10E47675493434D04CD8025C8303AF94F7BA5A;
 IL2CPP_EXTERN_C String_t* _stringLiteral26B2C483E0474F172C5049AAD9FA9B75AC5E5BDE;
 IL2CPP_EXTERN_C String_t* _stringLiteral2C3D4826D5236B3C9A914C5CE2E3D8CEA48AC7CE;
@@ -259,8 +258,8 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD86072660D36169D57F3DBFF16C289D4EAD57856
 IL2CPP_EXTERN_C String_t* _stringLiteralDDB91D5B0BDD1824A4CC18C279F4CF0A96D4A900;
 IL2CPP_EXTERN_C String_t* _stringLiteralF199779018BB81EAAD7F3094DA3EEB332395680E;
 IL2CPP_EXTERN_C String_t* _stringLiteralFD60316EE3ADB7B16A998DF8AE0D68C293F6622E;
-IL2CPP_EXTERN_C const RuntimeMethod* BrickQueManager_U3CRunU3Eb__20_0_mF29E4E5E78FA76B377D17E44D282DE1175F2F5C3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* BrickQueManager_U3CRunU3Eb__20_1_m9516D66C353E06B729AF030A2F401A9D9F6920DB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BrickQueManager_U3CRunU3Eb__22_0_m9C21F16512C50E2E7186A24CCF0671004B63E8B8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BrickQueManager_U3CRunU3Eb__22_1_mBCCE5BB5574493EF1764CC93F3FC6131B3D20140_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m5FB554DD7C0F662DAB84C0F292B221CAE3F0A5B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisBrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F_mDDA7A9456A67C185E1B7770D127E59856ABFB7AB_RuntimeMethod_var;
@@ -308,7 +307,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* TrackSelectManager_OnPlayPressed_m0A7C1DCE3
 IL2CPP_EXTERN_C const RuntimeMethod* U3CHandleHoldU3Ed__25_System_Collections_IEnumerator_Reset_m91C8754578397D0B934D95676EEF5202C0D1704B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CMoveToU3Ed__23_System_Collections_IEnumerator_Reset_mB680AEEA8741A86B4B4E246F34658521A921C13F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CRotateToU3Ed__24_System_Collections_IEnumerator_Reset_m7C80D2CE0AB3C5339882BF804EEED6EA719EE2FF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CRunU3Ed__20_System_Collections_IEnumerator_Reset_mF5D813D4F441668BEAE30862763CAFBB7F98768C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CRunU3Ed__22_System_Collections_IEnumerator_Reset_m906ED26D38B40811FDD2488C15E7B4C9129CBBCD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSetSpawnNextFrameU3Ed__2_System_Collections_IEnumerator_Reset_m00F5CED68A0B9F5BBA28028D70428AFE70F9BA76_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSqueezeInTimerU3Ed__12_System_Collections_IEnumerator_Reset_m211C2B4B9E50E79061303E8BA7AC5AC29BBD927F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass8_0_U3CBuildTrackListU3Eb__0_m2D3FF057D370B53F1A7E398703E71F85B52AC716_RuntimeMethod_var;
@@ -451,7 +450,7 @@ struct U3CSqueezeInTimerU3Ed__12_t36406AB475D41D972B9F03A640FAB58FE6829004  : pu
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* ___targetSlot;
 	BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* ___U3CU3E4__this;
 };
-struct U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE  : public RuntimeObject
+struct U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -747,7 +746,7 @@ struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : 
 	float ___m_Seconds;
 };
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D346_t5F232E4950FF3DCB034F0CF7AE67E4D09504698B 
+struct __StaticArrayInitTypeSizeU3D314_t351E6D0087198F7F7CF4DA0EEBFA7B1E9D87E05F 
 {
 	union
 	{
@@ -757,7 +756,7 @@ struct __StaticArrayInitTypeSizeU3D346_t5F232E4950FF3DCB034F0CF7AE67E4D09504698B
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D346_t5F232E4950FF3DCB034F0CF7AE67E4D09504698B__padding[346];
+		uint8_t __StaticArrayInitTypeSizeU3D314_t351E6D0087198F7F7CF4DA0EEBFA7B1E9D87E05F__padding[314];
 	};
 };
 #pragma pack(pop, tp)
@@ -1687,6 +1686,7 @@ struct BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A  : public MonoB
 	bool ___isPaused;
 	int32_t ___currentExecutingIndex;
 	int32_t ___pausedAtIndex;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pausedBrickGO;
 };
 struct GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1761,10 +1761,6 @@ struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehav
 struct UIManager_t16825A2483574F37D7D47AB939A6FA639678B1F3  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___WinningUI;
-};
-struct ColorMemory_t69DF3F9D201FD2A05602A7DFC131CBD119613991  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___originalColor;
 };
 struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
 {
@@ -2086,8 +2082,8 @@ struct List_1_tD91C2BDA5AFD3CCD9CBFA2B8C7E290A2335CD73E_StaticFields
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D712_t3B8328D8E32E11810A909023CDB08F74715D5EEC ___99F961DE60F11CB253608087F520889D2A0A467451E2F841A6DEB1758BCA7968;
-	__StaticArrayInitTypeSizeU3D346_t5F232E4950FF3DCB034F0CF7AE67E4D09504698B ___F1C178285D4AFD6706642675CCF15D8441536C722A4E5810CB26442100D27F2C;
+	__StaticArrayInitTypeSizeU3D712_t3B8328D8E32E11810A909023CDB08F74715D5EEC ___8D056966F81BF9802277EA75DAD03D05FC4AE19E8575FAB9F595E5973DDC5245;
+	__StaticArrayInitTypeSizeU3D314_t351E6D0087198F7F7CF4DA0EEBFA7B1E9D87E05F ___B716EF3DC6A7799CE78E35032AB6F65E534720726A586F6B2CC827E5C5176F6F;
 };
 struct String_t_StaticFields
 {
@@ -2582,7 +2578,9 @@ inline void Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977 (Queue_1_tD2
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioListener_set_pause_m4D52C9FFC6B10B0F281329FA0FB3CE2C64894F33 (bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BrickQueManager_PanelIndexFromOccupiedIndex_m4B1B19FA81478A1E0F73446745794FB5C281F432 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, int32_t ___0_occupiedIndex, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RebuildQueueFromIndex_m205E5F327F283D72B08439EF7A1E3C3C26141DFD (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, int32_t ___0_startIndex, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Play_mBA68EF9719057DAEA2616311F2BD3B3B6383281A (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
@@ -2595,12 +2593,11 @@ inline void Queue_1_Enqueue_mEB5E07D93DA81A0453653D8AB7BB8E01529F8CF8 (Queue_1_t
 {
 	((  void (*) (Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287*, int32_t, const RuntimeMethod*))Queue_1_Enqueue_mEF5F26AF547C41BEC36EFF00081850A6F7A7C0B1_gshared)(__this, ___0_item, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__20__ctor_m989B7942F913DF768F4BF3BF19AA76464A9A5B8E (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__22__ctor_mCB27CF9162ECC7179B8E052C47EBF7B50A29C9FB (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_HighlightSlot_m1F021CC4A19A7A662828CEFDC6D0A5D0D1D8189A (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* ___0_slot, bool ___1_highlight, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_RespawnToCurrentStart_m18F5A7B73240BCB3F914DD1E496732B771C051B4 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) ;
 inline ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* Queue_1_ToArray_m986C9B9134B1FA95289BB5A8633A3C82C0EEE7FE (Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* __this, const RuntimeMethod* method)
 {
 	return ((  ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* (*) (Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287*, const RuntimeMethod*))Queue_1_ToArray_mDDD97A5DBC6DA336D0EA0F15FCE3E7276FC41A8C_gshared)(__this, method);
@@ -4704,7 +4701,7 @@ IL_0097:
 		L_21 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_20, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_21)
 		{
-			goto IL_0176;
+			goto IL_0145;
 		}
 	}
 	{
@@ -4768,140 +4765,110 @@ IL_00ec:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = L_32->___brickPrefab;
 		V_4 = L_33;
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:268>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_34 = V_1;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
-		L_35 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_34);
-		L_34->___brickPrefab = L_35;
-		Il2CppCodeGenWriteBarrier((void**)(&L_34->___brickPrefab), (void*)L_35);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:271>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_35;
+		L_35 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_34, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_35)
+		{
+			goto IL_0105;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:270>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_37;
-		L_37 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_36, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_37)
-		{
-			goto IL_0142;
-		}
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_36, NULL);
 	}
+
+IL_0105:
 	{
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_38 = V_2;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:274>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_37 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_39;
-		L_39 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_38, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_39)
+		bool L_38;
+		L_38 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_37, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_38)
 		{
-			goto IL_0142;
+			goto IL_0115;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:273>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_40 = V_2;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = V_4;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:276>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_39 = V_2;
+		NullCheck(L_39);
+		L_39->___brickPrefab = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_39->___brickPrefab), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+	}
+
+IL_0115:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:280>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_40 = V_1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41;
+		L_41 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_40);
 		L_40->___brickPrefab = L_41;
 		Il2CppCodeGenWriteBarrier((void**)(&L_40->___brickPrefab), (void*)L_41);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:274>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42 = V_4;
-		NullCheck(L_42);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43;
-		L_43 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_42, NULL);
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_44 = V_2;
-		NullCheck(L_44);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
-		L_45 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_44, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:283>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42;
+		L_42 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_43 = V_1;
 		NullCheck(L_43);
-		Transform_SetParent_m9BDD7B7476714B2D7919B10BDC22CE75C0A0A195(L_43, L_45, (bool)0, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:275>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_46 = V_4;
-		NullCheck(L_46);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_47;
-		L_47 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_46, NULL);
-		BrickDragHandler_SnapUI_m8571D4231AA80F43E7A7A8C801D686A0007FC775(__this, ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_47, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var)), NULL);
-		goto IL_0152;
-	}
-
-IL_0142:
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:277>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_48 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_49;
-		L_49 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_48, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_49)
-		{
-			goto IL_0152;
-		}
-	}
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:280>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_50 = V_2;
-		NullCheck(L_50);
-		L_50->___brickPrefab = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&L_50->___brickPrefab), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-	}
-
-IL_0152:
-	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_44;
+		L_44 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_43, NULL);
+		NullCheck(L_42);
+		Transform_SetParent_m9BDD7B7476714B2D7919B10BDC22CE75C0A0A195(L_42, L_44, (bool)0, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:284>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51;
-		L_51 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_52 = V_1;
-		NullCheck(L_52);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_53;
-		L_53 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_52, NULL);
-		NullCheck(L_51);
-		Transform_SetParent_m9BDD7B7476714B2D7919B10BDC22CE75C0A0A195(L_51, L_53, (bool)0, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:285>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_54;
-		L_54 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		BrickDragHandler_SnapUI_m8571D4231AA80F43E7A7A8C801D686A0007FC775(__this, ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_54, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var)), NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:287>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
+		L_45 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		BrickDragHandler_SnapUI_m8571D4231AA80F43E7A7A8C801D686A0007FC775(__this, ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_45, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var)), NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:286>
 		return;
 	}
 
-IL_0176:
+IL_0145:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:290>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_46 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_47;
+		L_47 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_46, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_47)
+		{
+			goto IL_0168;
+		}
+	}
+	{
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_48 = V_2;
+		NullCheck(L_48);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_49 = L_48->___brickPrefab;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_50;
+		L_50 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_51;
+		L_51 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_49, L_50, NULL);
+		if (!L_51)
+		{
+			goto IL_0168;
+		}
+	}
 	{
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:291>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_55 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_56;
-		L_56 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_55, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_56)
-		{
-			goto IL_0199;
-		}
-	}
-	{
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_57 = V_2;
-		NullCheck(L_57);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = L_57->___brickPrefab;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59;
-		L_59 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_60;
-		L_60 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_58, L_59, NULL);
-		if (!L_60)
-		{
-			goto IL_0199;
-		}
-	}
-	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:292>
-		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_61 = V_2;
-		NullCheck(L_61);
-		L_61->___brickPrefab = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&L_61->___brickPrefab), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_52 = V_2;
+		NullCheck(L_52);
+		L_52->___brickPrefab = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_52->___brickPrefab), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
 	}
 
-IL_0199:
+IL_0168:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:294>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62;
-		L_62 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:293>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53;
+		L_53 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_62, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:295>
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_53, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:294>
 		return;
 	}
 }
@@ -4919,7 +4886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_SnapUI_m8571D4231AA80F4
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:300>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:299>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = ___0_rt;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4930,26 +4897,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickDragHandler_SnapUI_m8571D4231AA80F4
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:300>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:299>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_2);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_2, L_3, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:300>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:299>
 		return;
 	}
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:303>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:302>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_4 = ___0_rt;
 		NullCheck(L_4);
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_5;
 		L_5 = Component_GetComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mBEDAB0EBAEF4ADA5377B97FC2318DE8020F2D639(L_4, Component_GetComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mBEDAB0EBAEF4ADA5377B97FC2318DE8020F2D639_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:304>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:303>
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_6 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -4960,7 +4927,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:304>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:303>
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_8 = V_0;
 		NullCheck(L_8);
 		VirtualActionInvoker1< bool >::Invoke(28, L_8, (bool)1);
@@ -4968,7 +4935,7 @@ IL_001a:
 
 IL_0030:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:307>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:306>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = ___0_rt;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_10 = ___0_rt;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_1), (0.5f), (0.5f), NULL);
@@ -4978,32 +4945,32 @@ IL_0030:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = V_1;
 		NullCheck(L_9);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_9, L_12, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:308>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:307>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_13 = ___0_rt;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14;
 		memset((&L_14), 0, sizeof(L_14));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_14), (0.5f), (0.5f), NULL);
 		NullCheck(L_13);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_13, L_14, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:309>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:308>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_15 = ___0_rt;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_16;
 		L_16 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		NullCheck(L_15);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_15, L_16, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:310>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:309>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_17 = ___0_rt;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
 		L_18 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		NullCheck(L_17);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_17, L_18, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:311>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:310>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_19 = ___0_rt;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
 		L_20 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_19);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_19, L_20, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:312>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickDragHandler.cs:311>
 		return;
 	}
 }
@@ -5191,7 +5158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Start_m50956B833EC45BA9C
 	int32_t V_0 = 0;
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_1 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:32>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:33>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5202,20 +5169,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Start_m50956B833EC45BA9C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:32>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:33>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:34>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:35>
 		V_0 = 0;
 		goto IL_0039;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:36>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_3 = V_0;
 		NullCheck(L_2);
@@ -5225,7 +5192,7 @@ IL_0013:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_5;
 		L_5 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_4, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_1 = L_5;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:37>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:38>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_6 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -5236,7 +5203,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:38>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:39>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8 = V_1;
 		NullCheck(L_8);
 		Slot_SetBackgroundActive_mF8E68AA32D3950554865308CD90F7C004E528773(L_8, (bool)0, NULL);
@@ -5244,14 +5211,14 @@ IL_0013:
 
 IL_0035:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:34>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:35>
 		int32_t L_9 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_9, 1));
 	}
 
 IL_0039:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:34>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:35>
 		int32_t L_10 = V_0;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_11);
@@ -5263,7 +5230,7 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:40>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:41>
 		return;
 	}
 }
@@ -5271,9 +5238,9 @@ IL_0039:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Update_m5CA542B074C2426DCE3E2569F4B1CE37C164A711 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:45>
-		BrickQueManager_EnsureSlots_m2D7286C05CB7924AB493262A124D63015F92D5C8(__this, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:46>
+		BrickQueManager_EnsureSlots_m2D7286C05CB7924AB493262A124D63015F92D5C8(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:47>
 		return;
 	}
 }
@@ -5287,84 +5254,208 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearQueue_m8C94C5507A99
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:50>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:51>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_0 = __this->___queue;
 		NullCheck(L_0);
 		Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977(L_0, Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977_RuntimeMethod_var);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:51>
-		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:52>
+		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:53>
 		return;
 	}
 }
 // Method Definition Index: 73099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Play_mBA68EF9719057DAEA2616311F2BD3B3B6383281A (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:57>
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_2 = NULL;
+	int32_t V_3 = 0;
+	int32_t G_B7_0 = 0;
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:58>
 		bool L_0 = __this->___isPaused;
 		if (!L_0)
 		{
-			goto IL_0037;
+			goto IL_00b3;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:59>
-		__this->___isPaused = (bool)0;
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:60>
+		__this->___isPaused = (bool)0;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:61>
 		AudioListener_set_pause_m4D52C9FFC6B10B0F281329FA0FB3CE2C64894F33((bool)0, NULL);
 		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:63>
 		int32_t L_1 = __this->___pausedAtIndex;
-		BrickQueManager_RebuildQueueFromIndex_m205E5F327F283D72B08439EF7A1E3C3C26141DFD(__this, L_1, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:65>
-		bool L_2 = __this->___isPlaying;
-		if (L_2)
+		V_0 = L_1;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:66>
+		int32_t L_2 = __this->___pausedAtIndex;
+		int32_t L_3;
+		L_3 = BrickQueManager_PanelIndexFromOccupiedIndex_m4B1B19FA81478A1E0F73446745794FB5C281F432(__this, L_2, NULL);
+		V_1 = L_3;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:67>
+		V_2 = (Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2*)NULL;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:68>
+		int32_t L_4 = V_1;
+		if ((((int32_t)L_4) < ((int32_t)0)))
 		{
-			goto IL_0036;
+			goto IL_0052;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:66>
-		RuntimeObject* L_3;
-		L_3 = BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4;
-		L_4 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_3, NULL);
+		int32_t L_5 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___PanelThatPlaysTheSequence;
+		NullCheck(L_6);
+		int32_t L_7;
+		L_7 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_6, NULL);
+		if ((((int32_t)L_5) >= ((int32_t)L_7)))
+		{
+			goto IL_0052;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:69>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = __this->___PanelThatPlaysTheSequence;
+		int32_t L_9 = V_1;
+		NullCheck(L_8);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_8, L_9, NULL);
+		NullCheck(L_10);
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_11;
+		L_11 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_10, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		V_2 = L_11;
 	}
 
-IL_0036:
+IL_0052:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:67>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:72>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_12 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_13;
+		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_13)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_14 = V_2;
+		NullCheck(L_14);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = L_14->___brickPrefab;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = __this->___pausedBrickGO;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_17;
+		L_17 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_15, L_16, NULL);
+		G_B7_0 = ((int32_t)(L_17));
+		goto IL_006f;
+	}
+
+IL_006e:
+	{
+		G_B7_0 = 0;
+	}
+
+IL_006f:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:75>
+		if (!G_B7_0)
+		{
+			goto IL_007a;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:76>
+		int32_t L_18 = __this->___pausedAtIndex;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_18, 1));
+	}
+
+IL_007a:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:79>
+		int32_t L_19 = V_0;
+		int32_t L_20;
+		L_20 = BrickQueManager_PanelIndexFromOccupiedIndex_m4B1B19FA81478A1E0F73446745794FB5C281F432(__this, L_19, NULL);
+		V_3 = L_20;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:80>
+		int32_t L_21 = V_3;
+		BrickQueManager_RebuildQueueFromIndex_m205E5F327F283D72B08439EF7A1E3C3C26141DFD(__this, L_21, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:81>
+		int32_t L_22 = V_0;
+		__this->___pausedAtIndex = L_22;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:83>
+		BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:84>
+		bool L_23 = __this->___isPlaying;
+		if (L_23)
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:84>
+		RuntimeObject* L_24;
+		L_24 = BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_25;
+		L_25 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_24, NULL);
+	}
+
+IL_00ab:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:86>
+		__this->___pausedBrickGO = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pausedBrickGO), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:87>
 		return;
 	}
 
-IL_0037:
+IL_00b3:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:70>
-		bool L_5 = __this->___isPlaying;
-		if (L_5)
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:90>
+		bool L_26 = __this->___isPlaying;
+		if (L_26)
 		{
-			goto IL_004c;
+			goto IL_00c8;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:71>
-		RuntimeObject* L_6;
-		L_6 = BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
-		L_7 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_6, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:90>
+		RuntimeObject* L_27;
+		L_27 = BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_28;
+		L_28 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_27, NULL);
 	}
 
-IL_004c:
+IL_00c8:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:72>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:91>
 		return;
 	}
 }
 // Method Definition Index: 73100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Pause_m2DC92095D02CAE97CA28059D74DD9036BBCC8752 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:76>
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_1 = NULL;
+	BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* G_B6_0 = NULL;
+	BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* G_B5_0 = NULL;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B7_0 = NULL;
+	BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* G_B7_1 = NULL;
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:95>
 		bool L_0 = __this->___isPlaying;
 		if (L_0)
 		{
@@ -5372,24 +5463,94 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Pause_m2DC92095D02CAE97C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:76>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:95>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:78>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:97>
 		__this->___isPaused = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:79>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:98>
 		int32_t L_1 = __this->___currentExecutingIndex;
 		__this->___pausedAtIndex = L_1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:81>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:101>
+		int32_t L_2 = __this->___pausedAtIndex;
+		int32_t L_3;
+		L_3 = BrickQueManager_PanelIndexFromOccupiedIndex_m4B1B19FA81478A1E0F73446745794FB5C281F432(__this, L_2, NULL);
+		V_0 = L_3;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:102>
+		int32_t L_4 = V_0;
+		if ((((int32_t)L_4) < ((int32_t)0)))
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		int32_t L_5 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___PanelThatPlaysTheSequence;
+		NullCheck(L_6);
+		int32_t L_7;
+		L_7 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_6, NULL);
+		if ((((int32_t)L_5) >= ((int32_t)L_7)))
+		{
+			goto IL_0065;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:104>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = __this->___PanelThatPlaysTheSequence;
+		int32_t L_9 = V_0;
+		NullCheck(L_8);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_8, L_9, NULL);
+		NullCheck(L_10);
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_11;
+		L_11 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_10, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		V_1 = L_11;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:105>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_12 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_13;
+		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_13)
+		{
+			G_B6_0 = __this;
+			goto IL_005a;
+		}
+		G_B5_0 = __this;
+	}
+	{
+		G_B7_0 = ((GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)(NULL));
+		G_B7_1 = G_B5_0;
+		goto IL_0060;
+	}
+
+IL_005a:
+	{
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_14 = V_1;
+		NullCheck(L_14);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = L_14->___brickPrefab;
+		G_B7_0 = L_15;
+		G_B7_1 = G_B6_0;
+	}
+
+IL_0060:
+	{
+		NullCheck(G_B7_1);
+		G_B7_1->___pausedBrickGO = G_B7_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B7_1->___pausedBrickGO), (void*)G_B7_0);
+	}
+
+IL_0065:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:109>
 		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:82>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:110>
 		__this->___isPlaying = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:84>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:112>
 		AudioListener_set_pause_m4D52C9FFC6B10B0F281329FA0FB3CE2C64894F33((bool)1, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:87>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:113>
 		return;
 	}
 }
@@ -5410,7 +5571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_PlayFromPanel_mFB80EE792
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* V_3 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:91>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:117>
 		bool L_0 = __this->___isPaused;
 		if (!L_0)
 		{
@@ -5418,15 +5579,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_PlayFromPanel_mFB80EE792
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:93>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:119>
 		BrickQueManager_Play_mBA68EF9719057DAEA2616311F2BD3B3B6383281A(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:94>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:120>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:97>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:123>
 		bool L_1 = __this->___isPlaying;
 		if (!L_1)
 		{
@@ -5434,19 +5595,19 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:97>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:123>
 		return;
 	}
 
 IL_0018:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:100>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:126>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_2 = __this->___queue;
 		NullCheck(L_2);
 		Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977(L_2, Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977_RuntimeMethod_var);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:101>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:127>
 		__this->___pausedAtIndex = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:103>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:129>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -5457,22 +5618,22 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:103>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:129>
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:103>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:129>
 		return;
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:106>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:132>
 		V_0 = 0;
 		goto IL_008e;
 	}
 
 IL_0043:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:108>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:134>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_6 = V_0;
 		NullCheck(L_5);
@@ -5482,7 +5643,7 @@ IL_0043:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8;
 		L_8 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_7, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_1 = L_8;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:109>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:135>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_9 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -5493,12 +5654,12 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:111>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:137>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_11 = V_1;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = L_11->___brickPrefab;
 		V_2 = L_12;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:112>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:138>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -5509,13 +5670,13 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:114>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:140>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_2;
 		NullCheck(L_15);
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_16;
 		L_16 = GameObject_GetComponent_TisBrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F_mB70DBBFEDED5FA861D89B09A0537F097C4AA5C37(L_15, GameObject_GetComponent_TisBrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F_mB70DBBFEDED5FA861D89B09A0537F097C4AA5C37_RuntimeMethod_var);
 		V_3 = L_16;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:115>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:141>
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_17 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -5526,7 +5687,7 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:117>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:143>
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_19 = V_3;
 		NullCheck(L_19);
 		int32_t L_20 = L_19->___action;
@@ -5535,14 +5696,14 @@ IL_0043:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:106>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:132>
 		int32_t L_21 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_21, 1));
 	}
 
 IL_008e:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:106>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:132>
 		int32_t L_22 = V_0;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_23);
@@ -5554,9 +5715,9 @@ IL_008e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:120>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:146>
 		BrickQueManager_Play_mBA68EF9719057DAEA2616311F2BD3B3B6383281A(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:121>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:147>
 		return;
 	}
 }
@@ -5578,11 +5739,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RebuildQueueFromIndex_m2
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* V_3 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:126>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:152>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_0 = __this->___queue;
 		NullCheck(L_0);
 		Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977(L_0, Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977_RuntimeMethod_var);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:128>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:154>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -5593,15 +5754,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RebuildQueueFromIndex_m2
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:128>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:154>
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:128>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:154>
 		return;
 	}
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:131>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:157>
 		int32_t L_3 = ___0_startIndex;
 		V_0 = L_3;
 		goto IL_0074;
@@ -5609,7 +5770,7 @@ IL_0020:
 
 IL_0024:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:133>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:159>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -5619,7 +5780,7 @@ IL_0024:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_7;
 		L_7 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_6, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_1 = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:134>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:160>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -5630,12 +5791,12 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:136>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:162>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_10 = V_1;
 		NullCheck(L_10);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = L_10->___brickPrefab;
 		V_2 = L_11;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:137>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:163>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -5646,13 +5807,13 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:139>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:165>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = V_2;
 		NullCheck(L_14);
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_15;
 		L_15 = GameObject_GetComponent_TisBrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F_mB70DBBFEDED5FA861D89B09A0537F097C4AA5C37(L_14, GameObject_GetComponent_TisBrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F_mB70DBBFEDED5FA861D89B09A0537F097C4AA5C37_RuntimeMethod_var);
 		V_3 = L_15;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:140>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:166>
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_16 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -5663,7 +5824,7 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:142>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:168>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_18 = __this->___queue;
 		BrickPiece_tC25C3ED0CC94C7D81D4C850952ADB75BCD6EFD9F* L_19 = V_3;
 		NullCheck(L_19);
@@ -5674,14 +5835,14 @@ IL_0024:
 
 IL_0070:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:131>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:157>
 		int32_t L_21 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_21, 1));
 	}
 
 IL_0074:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:131>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:157>
 		int32_t L_22 = V_0;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_23);
@@ -5693,13 +5854,133 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:145>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:171>
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:146>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:172>
 		return;
 	}
 }
 // Method Definition Index: 73103
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BrickQueManager_PanelIndexFromOccupiedIndex_m4B1B19FA81478A1E0F73446745794FB5C281F432 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, int32_t ___0_occupiedIndex, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_2 = NULL;
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:177>
+		int32_t L_0 = ___0_occupiedIndex;
+		if ((((int32_t)L_0) > ((int32_t)0)))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:177>
+		return 0;
+	}
+
+IL_0006:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:178>
+		V_0 = 0;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:179>
+		V_1 = 0;
+		goto IL_0043;
+	}
+
+IL_000c:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:183>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___PanelThatPlaysTheSequence;
+		int32_t L_2 = V_1;
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_1, L_2, NULL);
+		NullCheck(L_3);
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_4;
+		L_4 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_3, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
+		V_2 = L_4;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:184>
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_5 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_003f;
+		}
+	}
+	{
+		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_7 = V_2;
+		NullCheck(L_7);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = L_7->___brickPrefab;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_9)
+		{
+			goto IL_003f;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:186>
+		int32_t L_10 = V_0;
+		int32_t L_11 = ___0_occupiedIndex;
+		if ((!(((uint32_t)L_10) == ((uint32_t)L_11))))
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:186>
+		int32_t L_12 = V_1;
+		return L_12;
+	}
+
+IL_003b:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:187>
+		int32_t L_13 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_13, 1));
+	}
+
+IL_003f:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:179>
+		int32_t L_14 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+	}
+
+IL_0043:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:179>
+		int32_t L_15 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___PanelThatPlaysTheSequence;
+		NullCheck(L_16);
+		int32_t L_17;
+		L_17 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_16, NULL);
+		if ((((int32_t)L_15) < ((int32_t)L_17)))
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:190>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18 = __this->___PanelThatPlaysTheSequence;
+		NullCheck(L_18);
+		int32_t L_19;
+		L_19 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_18, NULL);
+		return L_19;
+	}
+}
+// Method Definition Index: 73104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Enqueue_m474B3220A3592FC241B4EAB9318EF276AE21132D (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, int32_t ___0_a, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5709,37 +5990,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_Enqueue_m474B3220A3592FC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:150>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:196>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_0 = __this->___queue;
 		int32_t L_1 = ___0_a;
 		NullCheck(L_0);
 		Queue_1_Enqueue_mEB5E07D93DA81A0453653D8AB7BB8E01529F8CF8(L_0, L_1, Queue_1_Enqueue_mEB5E07D93DA81A0453653D8AB7BB8E01529F8CF8_RuntimeMethod_var);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:151>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:197>
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:152>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:198>
 		return;
 	}
 }
-// Method Definition Index: 73104
+// Method Definition Index: 73105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickQueManager_Run_mA997E085C806817226C3FE6BCEA2D1463E977517 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* L_0 = (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE*)il2cpp_codegen_object_new(U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE_il2cpp_TypeInfo_var);
-		U3CRunU3Ed__20__ctor_m989B7942F913DF768F4BF3BF19AA76464A9A5B8E(L_0, 0, NULL);
-		U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* L_1 = L_0;
+		U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* L_0 = (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14*)il2cpp_codegen_object_new(U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14_il2cpp_TypeInfo_var);
+		U3CRunU3Ed__22__ctor_mCB27CF9162ECC7179B8E052C47EBF7B50A29C9FB(L_0, 0, NULL);
+		U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
 		return L_1;
 	}
 }
-// Method Definition Index: 73105
+// Method Definition Index: 73106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_HighlightSlot_m1F021CC4A19A7A662828CEFDC6D0A5D0D1D8189A (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* ___0_slot, bool ___1_highlight, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5755,7 +6036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_HighlightSlot_m1F021CC4A
 	memset((&G_B7_0), 0, sizeof(G_B7_0));
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* G_B7_1 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:238>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:283>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_0 = ___0_slot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5780,13 +6061,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_HighlightSlot_m1F021CC4A
 
 IL_0017:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:238>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:283>
 		return;
 	}
 
 IL_0018:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:240>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:285>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_5 = ___0_slot;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5->___brickPrefab;
@@ -5794,7 +6075,7 @@ IL_0018:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:241>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:286>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -5805,7 +6086,7 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:242>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:287>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = V_0;
 		bool L_11 = ___1_highlight;
 		if (L_11)
@@ -5842,16 +6123,16 @@ IL_0048:
 
 IL_004d:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:244>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:289>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_16 = ___0_slot;
 		bool L_17 = ___1_highlight;
 		NullCheck(L_16);
 		Slot_SetBackgroundActive_mF8E68AA32D3950554865308CD90F7C004E528773(L_16, L_17, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:245>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:290>
 		return;
 	}
 }
-// Method Definition Index: 73106
+// Method Definition Index: 73107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5864,7 +6145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RemoveAllHighlights_mFC0
 	int32_t V_0 = 0;
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_1 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:249>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:294>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5875,20 +6156,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RemoveAllHighlights_mFC0
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:249>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:294>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:251>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:296>
 		V_0 = 0;
 		goto IL_003a;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:253>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:298>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_3 = V_0;
 		NullCheck(L_2);
@@ -5898,7 +6179,7 @@ IL_0013:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_5;
 		L_5 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_4, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_1 = L_5;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:254>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:299>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_6 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -5909,21 +6190,21 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:256>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:301>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8 = V_1;
 		BrickQueManager_HighlightSlot_m1F021CC4A19A7A662828CEFDC6D0A5D0D1D8189A(__this, L_8, (bool)0, NULL);
 	}
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:251>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:296>
 		int32_t L_9 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_9, 1));
 	}
 
 IL_003a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:251>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:296>
 		int32_t L_10 = V_0;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_11);
@@ -5935,11 +6216,11 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:259>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:304>
 		return;
 	}
 }
-// Method Definition Index: 73107
+// Method Definition Index: 73108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_EnsureSlots_m2D7286C05CB7924AB493262A124D63015F92D5C8 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5954,7 +6235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_EnsureSlots_m2D7286C05CB
 	int32_t V_1 = 0;
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:270>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:309>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5977,22 +6258,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_EnsureSlots_m2D7286C05CB
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:270>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:309>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:272>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:311>
 		V_0 = 0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:273>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:312>
 		V_1 = 0;
 		goto IL_0054;
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:275>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:314>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_5 = V_1;
 		NullCheck(L_4);
@@ -6002,7 +6283,7 @@ IL_0023:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_7;
 		L_7 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_6, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_2 = L_7;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:276>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:315>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -6013,7 +6294,7 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:277>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:316>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_10 = V_2;
 		NullCheck(L_10);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = L_10->___brickPrefab;
@@ -6026,21 +6307,21 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:277>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:316>
 		int32_t L_13 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
 IL_0050:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:273>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:312>
 		int32_t L_14 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_14, 1));
 	}
 
 IL_0054:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:273>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:312>
 		int32_t L_15 = V_1;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_16);
@@ -6052,7 +6333,7 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:280>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:319>
 		int32_t L_18 = V_0;
 		if ((((int32_t)L_18) > ((int32_t)0)))
 		{
@@ -6060,7 +6341,7 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:283>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:322>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_19 = __this->___slotPrefab;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -6070,11 +6351,11 @@ IL_0054:
 
 IL_0079:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:285>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:324>
 		return;
 	}
 }
-// Method Definition Index: 73108
+// Method Definition Index: 73109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearAll_m70326CBCB1A1BFA5BA841DC514E5F26E90AE6328 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6084,7 +6365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearAll_m70326CBCB1A1BF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:290>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:329>
 		bool L_0 = __this->___isPlaying;
 		if (!L_0)
 		{
@@ -6092,33 +6373,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearAll_m70326CBCB1A1BF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:292>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:331>
 		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:293>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:332>
 		__this->___isPlaying = (bool)0;
 	}
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:295>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:334>
 		__this->___isPaused = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:296>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:335>
 		__this->___currentExecutingIndex = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:297>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:336>
 		__this->___pausedAtIndex = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:300>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:339>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_1 = __this->___queue;
 		NullCheck(L_1);
 		Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977(L_1, Queue_1_Clear_m62EAFCAA024F412129A48D531E5BFD8F0459A977_RuntimeMethod_var);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:301>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:340>
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:304>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:343>
 		BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610(__this, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:305>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:344>
 		return;
 	}
 }
-// Method Definition Index: 73109
+// Method Definition Index: 73110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ResetPlayerPosition_mAB758EB0864846646C2C48AED4FBEDA088715191 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6128,32 +6409,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ResetPlayerPosition_mAB7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:309>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:348>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_0 = __this->___player;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_001f;
+			goto IL_005d;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:311>
-		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_2 = __this->___player;
-		NullCheck(L_2);
-		PlayerController_RespawnToCurrentStart_m18F5A7B73240BCB3F914DD1E496732B771C051B4(L_2, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:312>
-		BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:351>
+		bool L_2 = __this->___isPlaying;
+		if (!L_2)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:353>
+		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:354>
+		__this->___isPlaying = (bool)0;
 	}
 
-IL_001f:
+IL_0023:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:314>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:358>
+		__this->___isPaused = (bool)0;
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:359>
+		__this->___currentExecutingIndex = (-1);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:360>
+		__this->___pausedAtIndex = (-1);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:361>
+		__this->___pausedBrickGO = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pausedBrickGO), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:364>
+		AudioListener_set_pause_m4D52C9FFC6B10B0F281329FA0FB3CE2C64894F33((bool)0, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:367>
+		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_3 = __this->___player;
+		NullCheck(L_3);
+		PlayerController_RespawnToCurrentStart_m18F5A7B73240BCB3F914DD1E496732B771C051B4(L_3, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:370>
+		BrickQueManager_RemoveAllHighlights_mFC07795964FD4ADB42A5A5DB61AD9F1834F216B4(__this, NULL);
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:373>
+		BrickQueManager_RebuildQueueFromIndex_m205E5F327F283D72B08439EF7A1E3C3C26141DFD(__this, 0, NULL);
+	}
+
+IL_005d:
+	{
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:375>
 		return;
 	}
 }
-// Method Definition Index: 73110
+// Method Definition Index: 73111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearSlotsUI_mA205AC51A56C36D751682C5A4742DF4F00E57610 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6167,7 +6477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearSlotsUI_mA205AC51A5
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:319>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:380>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___PanelThatPlaysTheSequence;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6178,20 +6488,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_ClearSlotsUI_mA205AC51A5
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:319>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:380>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:321>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:382>
 		V_0 = 0;
 		goto IL_0080;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:323>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:384>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___PanelThatPlaysTheSequence;
 		int32_t L_3 = V_0;
 		NullCheck(L_2);
@@ -6201,7 +6511,7 @@ IL_0013:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_5;
 		L_5 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_4, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_1 = L_5;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:324>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:385>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_6 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -6212,7 +6522,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:327>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:388>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_8 = V_1;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = L_8->___brickPrefab;
@@ -6225,13 +6535,13 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:329>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:390>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_11 = V_1;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = L_11->___brickPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_12, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:330>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:391>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_13 = V_1;
 		NullCheck(L_13);
 		L_13->___brickPrefab = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
@@ -6240,7 +6550,7 @@ IL_0013:
 
 IL_004e:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:334>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:395>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_14 = V_1;
 		NullCheck(L_14);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
@@ -6254,7 +6564,7 @@ IL_004e:
 
 IL_005e:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:335>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:396>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_17 = V_1;
 		NullCheck(L_17);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
@@ -6268,14 +6578,14 @@ IL_005e:
 		L_21 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_20, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_21, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:334>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:395>
 		int32_t L_22 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_subtract(L_22, 1));
 	}
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:334>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:395>
 		int32_t L_23 = V_2;
 		if ((((int32_t)L_23) >= ((int32_t)0)))
 		{
@@ -6285,14 +6595,14 @@ IL_0078:
 
 IL_007c:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:321>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:382>
 		int32_t L_24 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_24, 1));
 	}
 
 IL_0080:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:321>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:382>
 		int32_t L_25 = V_0;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = __this->___PanelThatPlaysTheSequence;
 		NullCheck(L_26);
@@ -6304,11 +6614,11 @@ IL_0080:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:337>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:398>
 		return;
 	}
 }
-// Method Definition Index: 73111
+// Method Definition Index: 73112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6333,7 +6643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RefreshLabel_mFDD7BC5AD6
 	String_t* V_4 = NULL;
 	int32_t V_5 = 0;
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:342>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:403>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___queueLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6344,19 +6654,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager_RefreshLabel_mFDD7BC5AD6
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:342>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:403>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:344>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:405>
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_2 = __this->___queue;
 		NullCheck(L_2);
 		ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* L_3;
 		L_3 = Queue_1_ToArray_m986C9B9134B1FA95289BB5A8633A3C82C0EEE7FE(L_2, Queue_1_ToArray_m986C9B9134B1FA95289BB5A8633A3C82C0EEE7FE_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:345>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:406>
 		ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* L_4 = V_0;
 		NullCheck(L_4);
 		if ((((RuntimeArray*)L_4)->max_length))
@@ -6365,35 +6675,35 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:347>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:408>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___queueLabel;
 		NullCheck(L_5);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_5, _stringLiteralBF7A76F740900665AE8B72FC7F260D114B24B488);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:348>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:409>
 		return;
 	}
 
 IL_0030:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:351>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:412>
 		StringBuilder_t* L_6 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_mCD797D942316CB356205FD96415B0B7581CDAD60(L_6, _stringLiteralBF7A76F740900665AE8B72FC7F260D114B24B488, NULL);
 		V_1 = L_6;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:352>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:413>
 		V_2 = 0;
 		goto IL_00ab;
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:354>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:355>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:356>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:357>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:358>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:359>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:360>
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:361>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:415>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:416>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:417>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:418>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:419>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:420>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:421>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:422>
 		StringBuilder_t* L_7 = V_1;
 		V_3 = L_7;
 		ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* L_8 = V_0;
@@ -6429,35 +6739,35 @@ IL_003f:
 
 IL_005f:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:356>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:417>
 		V_4 = _stringLiteralFD60316EE3ADB7B16A998DF8AE0D68C293F6622E;
 		goto IL_008a;
 	}
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:357>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:418>
 		V_4 = _stringLiteral7E70AF961A2F88ADB9DB7B9C3B5F25A532C1570A;
 		goto IL_008a;
 	}
 
 IL_0071:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:358>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:419>
 		V_4 = _stringLiteral2C3D4826D5236B3C9A914C5CE2E3D8CEA48AC7CE;
 		goto IL_008a;
 	}
 
 IL_007a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:359>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:420>
 		V_4 = _stringLiteralAB69FA1AB6BB831506EFCAD83900FEE751E85F6F;
 		goto IL_008a;
 	}
 
 IL_0083:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:360>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:421>
 		V_4 = _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
 	}
 
@@ -6468,7 +6778,7 @@ IL_008a:
 		NullCheck(L_13);
 		StringBuilder_t* L_15;
 		L_15 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_13, L_14, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:362>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:423>
 		int32_t L_16 = V_2;
 		ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* L_17 = V_0;
 		NullCheck(L_17);
@@ -6478,7 +6788,7 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:362>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:423>
 		StringBuilder_t* L_18 = V_1;
 		NullCheck(L_18);
 		StringBuilder_t* L_19;
@@ -6487,14 +6797,14 @@ IL_008a:
 
 IL_00a7:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:352>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:413>
 		int32_t L_20 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_20, 1));
 	}
 
 IL_00ab:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:352>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:413>
 		int32_t L_21 = V_2;
 		ActionTypeU5BU5D_tEB651999C1FA296B48747B139A0183979A22B781* L_22 = V_0;
 		NullCheck(L_22);
@@ -6504,7 +6814,7 @@ IL_00ab:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:364>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:425>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_23 = __this->___queueLabel;
 		StringBuilder_t* L_24 = V_1;
 		NullCheck(L_24);
@@ -6512,11 +6822,11 @@ IL_00ab:
 		L_25 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_24);
 		NullCheck(L_23);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_23, L_25);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:365>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:426>
 		return;
 	}
 }
-// Method Definition Index: 73112
+// Method Definition Index: 73113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager__ctor_m466B8856E8D6CA558224FE98C707CAB3670E22D3 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6544,20 +6854,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickQueManager__ctor_m466B8856E8D6CA558
 		return;
 	}
 }
-// Method Definition Index: 73113
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__20_0_mF29E4E5E78FA76B377D17E44D282DE1175F2F5C3 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
+// Method Definition Index: 73114
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__22_0_m9C21F16512C50E2E7186A24CCF0671004B63E8B8 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:182>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:227>
 		bool L_0 = __this->___isPaused;
 		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 73114
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__20_1_m9516D66C353E06B729AF030A2F401A9D9F6920DB (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
+// Method Definition Index: 73115
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__22_1_mBCCE5BB5574493EF1764CC93F3FC6131B3D20140 (BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:216>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:261>
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_0 = __this->___player;
 		NullCheck(L_0);
 		bool L_1;
@@ -6581,24 +6891,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BrickQueManager_U3CRunU3Eb__20_1_m9516D6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 73115
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ColorMemory__ctor_m6418510FE4F428DAF8C8264C8B4C5A8638DEA069 (ColorMemory_t69DF3F9D201FD2A05602A7DFC131CBD119613991* __this, const RuntimeMethod* method) 
-{
-	{
-		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 // Method Definition Index: 73116
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__20__ctor_m989B7942F913DF768F4BF3BF19AA76464A9A5B8E (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__22__ctor_mCB27CF9162ECC7179B8E052C47EBF7B50A29C9FB (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -6608,20 +6902,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__20__ctor_m989B7942F913DF768F
 	}
 }
 // Method Definition Index: 73117
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__20_System_IDisposable_Dispose_m3E40DE2922D99E9363151CF752F9CF4C863BC653 (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__22_System_IDisposable_Dispose_mBC0C313C7EB04807D91CE5AD45939C0346AA016A (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
 // Method Definition Index: 73118
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRunU3Ed__20_MoveNext_m6CB55AB408B6D7845B01490E29CC12D858D5097F (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRunU3Ed__22_MoveNext_mDDC99FF30FAEFFBDD0AA5E47D9DCDBE5390B3258 (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BrickQueManager_U3CRunU3Eb__20_0_mF29E4E5E78FA76B377D17E44D282DE1175F2F5C3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BrickQueManager_U3CRunU3Eb__20_1_m9516D66C353E06B729AF030A2F401A9D9F6920DB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BrickQueManager_U3CRunU3Eb__22_0_m9C21F16512C50E2E7186A24CCF0671004B63E8B8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BrickQueManager_U3CRunU3Eb__22_1_mBCCE5BB5574493EF1764CC93F3FC6131B3D20140_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mBCDF019406F48CC205319ED2D01E8FE334026FDC_RuntimeMethod_var);
@@ -6674,11 +6968,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRunU3Ed__20_MoveNext_m6CB55AB408B6D78
 IL_0026:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:156>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:202>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_3 = V_1;
 		NullCheck(L_3);
 		L_3->___isPlaying = (bool)1;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:159>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:204>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_4 = V_1;
 		NullCheck(L_4);
 		int32_t L_5 = L_4->___pausedAtIndex;
@@ -6688,14 +6982,14 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:161>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:206>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_6 = V_1;
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_7 = V_1;
 		NullCheck(L_7);
 		int32_t L_8 = L_7->___pausedAtIndex;
 		NullCheck(L_6);
 		L_6->___currentExecutingIndex = L_8;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:162>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:207>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_9 = V_1;
 		NullCheck(L_9);
 		L_9->___pausedAtIndex = (-1);
@@ -6704,7 +6998,7 @@ IL_0026:
 
 IL_0052:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:166>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:211>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_10 = V_1;
 		NullCheck(L_10);
 		L_10->___currentExecutingIndex = 0;
@@ -6712,19 +7006,19 @@ IL_0052:
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:170>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:215>
 		List_1_t5154D6902FB1D46EEA04199588478750522E495C* L_11 = (List_1_t5154D6902FB1D46EEA04199588478750522E495C*)il2cpp_codegen_object_new(List_1_t5154D6902FB1D46EEA04199588478750522E495C_il2cpp_TypeInfo_var);
 		List_1__ctor_mD386C2688AD97164C2C1D51387AA3C1520A6E688(L_11, List_1__ctor_mD386C2688AD97164C2C1D51387AA3C1520A6E688_RuntimeMethod_var);
 		__this->___U3CoccupiedSlotsU3E5__2 = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CoccupiedSlotsU3E5__2), (void*)L_11);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:171>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:216>
 		V_2 = 0;
 		goto IL_00a1;
 	}
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:173>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:218>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_12 = V_1;
 		NullCheck(L_12);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = L_12->___PanelThatPlaysTheSequence;
@@ -6736,7 +7030,7 @@ IL_0068:
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_16;
 		L_16 = Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18(L_15, Component_GetComponent_TisSlot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2_mD3BE4C46DD6E3946D5AE6F0699318DCB1BCD1A18_RuntimeMethod_var);
 		V_3 = L_16;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:174>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:219>
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_17 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -6759,7 +7053,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:176>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:221>
 		List_1_t5154D6902FB1D46EEA04199588478750522E495C* L_22 = __this->___U3CoccupiedSlotsU3E5__2;
 		Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* L_23 = V_3;
 		NullCheck(L_22);
@@ -6768,14 +7062,14 @@ IL_0068:
 
 IL_009d:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:171>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:216>
 		int32_t L_24 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_24, 1));
 	}
 
 IL_00a1:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:171>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:216>
 		int32_t L_25 = V_2;
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_26 = V_1;
 		NullCheck(L_26);
@@ -6794,10 +7088,10 @@ IL_00a1:
 
 IL_00b4:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:182>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:227>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_29 = V_1;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_30 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_30, L_29, (intptr_t)((void*)BrickQueManager_U3CRunU3Eb__20_0_mF29E4E5E78FA76B377D17E44D282DE1175F2F5C3_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_30, L_29, (intptr_t)((void*)BrickQueManager_U3CRunU3Eb__22_0_m9C21F16512C50E2E7186A24CCF0671004B63E8B8_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_31 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_31, L_30, NULL);
 		__this->___U3CU3E2__current = L_31;
@@ -6809,7 +7103,7 @@ IL_00b4:
 IL_00d4:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:185>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:230>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_32 = V_1;
 		NullCheck(L_32);
 		int32_t L_33 = L_32->___currentExecutingIndex;
@@ -6823,7 +7117,7 @@ IL_00d4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:187>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:232>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_36 = V_1;
 		List_1_t5154D6902FB1D46EEA04199588478750522E495C* L_37 = __this->___U3CoccupiedSlotsU3E5__2;
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_38 = V_1;
@@ -6838,7 +7132,7 @@ IL_00d4:
 
 IL_0106:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:190>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:235>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_41 = V_1;
 		NullCheck(L_41);
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_42 = L_41->___queue;
@@ -6893,43 +7187,43 @@ IL_0106:
 
 IL_0140:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:199>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:244>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_45 = V_1;
 		NullCheck(L_45);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_46 = L_45->___player;
 		NullCheck(L_46);
 		PlayerController_MoveUp_m41EFE6CE52EF2506EC98620ED2299F61957F84F2(L_46, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:200>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:245>
 		goto IL_0172;
 	}
 
 IL_014d:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:203>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:248>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_47 = V_1;
 		NullCheck(L_47);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_48 = L_47->___player;
 		NullCheck(L_48);
 		PlayerController_MoveLeft_m35C99AF42CF84424196F7C3D7DEEA7B6C7428508(L_48, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:204>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:249>
 		goto IL_0172;
 	}
 
 IL_015a:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:207>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:252>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_49 = V_1;
 		NullCheck(L_49);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_50 = L_49->___player;
 		NullCheck(L_50);
 		PlayerController_MoveRight_m98678E680E583355C2152EC52D96B29487067F5C(L_50, NULL);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:208>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:253>
 		goto IL_0172;
 	}
 
 IL_0167:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:211>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:256>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_51 = V_1;
 		NullCheck(L_51);
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_52 = L_51->___player;
@@ -6939,10 +7233,10 @@ IL_0167:
 
 IL_0172:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:216>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:261>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_53 = V_1;
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_54 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_54, L_53, (intptr_t)((void*)BrickQueManager_U3CRunU3Eb__20_1_m9516D66C353E06B729AF030A2F401A9D9F6920DB_RuntimeMethod_var), NULL);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_54, L_53, (intptr_t)((void*)BrickQueManager_U3CRunU3Eb__22_1_mBCCE5BB5574493EF1764CC93F3FC6131B3D20140_RuntimeMethod_var), NULL);
 		WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* L_55 = (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD*)il2cpp_codegen_object_new(WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD_il2cpp_TypeInfo_var);
 		WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF(L_55, L_54, NULL);
 		__this->___U3CU3E2__current = L_55;
@@ -6954,7 +7248,7 @@ IL_0172:
 IL_0192:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:219>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:264>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_56 = V_1;
 		NullCheck(L_56);
 		int32_t L_57 = L_56->___currentExecutingIndex;
@@ -6968,7 +7262,7 @@ IL_0192:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:221>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:266>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_60 = V_1;
 		List_1_t5154D6902FB1D46EEA04199588478750522E495C* L_61 = __this->___U3CoccupiedSlotsU3E5__2;
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_62 = V_1;
@@ -6983,7 +7277,7 @@ IL_0192:
 
 IL_01c4:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:224>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:269>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_65 = V_1;
 		NullCheck(L_65);
 		float L_66 = L_65->___commandDelay;
@@ -6993,7 +7287,7 @@ IL_01c4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:225>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:270>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_67 = V_1;
 		NullCheck(L_67);
 		float L_68 = L_67->___commandDelay;
@@ -7012,14 +7306,14 @@ IL_01eb:
 
 IL_01f2:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:227>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:272>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_70 = V_1;
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_71 = V_1;
 		NullCheck(L_71);
 		int32_t L_72 = L_71->___currentExecutingIndex;
 		NullCheck(L_70);
 		L_70->___currentExecutingIndex = ((int32_t)il2cpp_codegen_add(L_72, 1));
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:228>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:273>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_73 = V_1;
 		NullCheck(L_73);
 		BrickQueManager_RefreshLabel_mFDD7BC5AD6E3377F01C7AC1DDF8559F2726A614C(L_73, NULL);
@@ -7027,7 +7321,7 @@ IL_01f2:
 
 IL_0206:
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:180>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:225>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_74 = V_1;
 		NullCheck(L_74);
 		Queue_1_tD2FCE6EBB462DB3D5A1BF8A4A4761F9F96D08287* L_75 = L_74->___queue;
@@ -7040,24 +7334,24 @@ IL_0206:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:231>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:276>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_77 = V_1;
 		NullCheck(L_77);
 		L_77->___isPlaying = (bool)0;
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:232>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:277>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_78 = V_1;
 		NullCheck(L_78);
 		L_78->___currentExecutingIndex = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:233>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:278>
 		BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A* L_79 = V_1;
 		NullCheck(L_79);
 		L_79->___pausedAtIndex = (-1);
-		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:234>
+		//<source_info:D:/Unity Projekter/STL 3/STL-3/Assets/Scripts/BrickQueManager.cs:279>
 		return (bool)0;
 	}
 }
 // Method Definition Index: 73119
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCF9D8CB80F8E952BEA970C2A6CFD33C56C009AE7 (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1B8B9D1FEAA7E4D6968E2C9F0C509800F773886F (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -7065,16 +7359,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__20_System_Collecti
 	}
 }
 // Method Definition Index: 73120
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__20_System_Collections_IEnumerator_Reset_mF5D813D4F441668BEAE30862763CAFBB7F98768C (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRunU3Ed__22_System_Collections_IEnumerator_Reset_m906ED26D38B40811FDD2488C15E7B4C9129CBBCD (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRunU3Ed__20_System_Collections_IEnumerator_Reset_mF5D813D4F441668BEAE30862763CAFBB7F98768C_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRunU3Ed__22_System_Collections_IEnumerator_Reset_m906ED26D38B40811FDD2488C15E7B4C9129CBBCD_RuntimeMethod_var)));
 	}
 }
 // Method Definition Index: 73121
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__20_System_Collections_IEnumerator_get_Current_m462E551C9DA2464FBB48EAF862212723A73EEF4A (U3CRunU3Ed__20_t972B257FE44BA2CBE22CD750BCC2C5DEBA6BBAFE* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRunU3Ed__22_System_Collections_IEnumerator_get_Current_mB8948460D20208B58E14291A290BD9A726C5158C (U3CRunU3Ed__22_t2CAA2F22D6830807913CA76F4582882EAA650B14* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -10247,8 +10541,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____99F961DE60F11CB253608087F520889D2A0A467451E2F841A6DEB1758BCA7968_FieldInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F1C178285D4AFD6706642675CCF15D8441536C722A4E5810CB26442100D27F2C_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____8D056966F81BF9802277EA75DAD03D05FC4AE19E8575FAB9F595E5973DDC5245_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____B716EF3DC6A7799CE78E35032AB6F65E534720726A586F6B2CC827E5C5176F6F_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E V_0;
@@ -10257,18 +10551,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)712));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____99F961DE60F11CB253608087F520889D2A0A467451E2F841A6DEB1758BCA7968_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____8D056966F81BF9802277EA75DAD03D05FC4AE19E8575FAB9F595E5973DDC5245_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)346));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)314));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____F1C178285D4AFD6706642675CCF15D8441536C722A4E5810CB26442100D27F2C_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____B716EF3DC6A7799CE78E35032AB6F65E534720726A586F6B2CC827E5C5176F6F_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
 		(&V_0)->___TypesData = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
 		(&V_0)->___TotalFiles = ((int32_t)17);
-		(&V_0)->___TotalTypes = ((int32_t)18);
+		(&V_0)->___TotalTypes = ((int32_t)17);
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E L_6 = V_0;
 		return L_6;
