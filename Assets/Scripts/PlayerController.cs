@@ -7,25 +7,27 @@ public class PlayerController : MonoBehaviour
     public Vector2Int gridPosition; //Current grid position
     private Vector2Int startGridPosition;
     public Vector2Int faceDirection = Vector2Int.up; //The car facing direction
-
+    public Vector2Int lastMoveDirection = Vector2Int.up;
+    
     public float moveDuration = 1f; //Car speed from one tile to another
 
     private GridManager gridManager;
-    private Animator animator;
-
-
+    [SerializeField] private Animator animator;
+    
     private bool isMoving = false;
     private bool isHolding = false;
     private bool isRotating = false;
     private bool isCrashed = false; // Prevent further movement after collision
+    private bool isSliding = false;
     public bool isIdle => !isMoving && !isRotating && !isHolding;
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
 
+    
     void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         //transform.position = new Vector3(gridPosition.x, gridPosition.y, 0);
         //transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Set initial facing direction
         //startGridPosition = gridPosition;
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         transform.position = worldPos; // exact prefab position
         transform.up = new Vector3(dir.x, dir.y, 0);
         faceDirection = dir;
+        lastMoveDirection = dir; // Initialize last move direction
 
         // logical grid for movement
         gridPosition = Vector2Int.RoundToInt(new Vector2(worldPos.x, worldPos.y));
@@ -45,8 +48,9 @@ public class PlayerController : MonoBehaviour
     // Set the logic for the Clear button to respawn to the current Start piece
     public void RespawnToCurrentStart()
     {
-        animator.SetBool("isCrashing", false); // reset crash animation
+        if (animator != null) animator.SetBool("isCrashing", false); // reset crash animation
         isCrashed = false; // Allow movement again
+        isSliding = false; // Reset sliding state
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
         {
@@ -66,6 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isMoving || isRotating || isHolding || isCrashed) return false;
 
+        lastMoveDirection = delta;
         Vector2Int newPos = gridPosition + delta;
         Tile targetTile = gridManager.GetTileAtPosition(newPos);
         if (targetTile == null) return false;
@@ -73,36 +78,6 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(MoveTo(newPos)); // Start the movement coroutine
         return true;
     }
-    /*
-    public void MoveForward()
-    {
-        TryMove(faceDirection); // Move one step in the current direction
-    }
-
-    public void MoveBackward()
-    {
-        TryMove(-faceDirection);
-    }
-
-    public void TurnLeft()
-    {
-        // 90° Left: (x,y) -> (-y, x)
-        Vector2Int left = new Vector2Int(-faceDirection.y, faceDirection.x);  // 90° ccw
-
-        if (isMoving || isRotating || isHolding || isCrashed) return;
-        TryMove(left); // Move when turning (Can be removed if we want to turn in place)
-        StartCoroutine(RotateTo(left));
-    }
-    public void TurnRight()
-    {
-        // 90° Right: (x,y) -> (y, -x)
-        Vector2Int right = new Vector2Int(faceDirection.y, -faceDirection.x); // 90° cw
-
-        if (isMoving || isRotating || isHolding || isCrashed) return;
-        TryMove(right); // Move when turning (Can be removed if we want to turn in place)
-        StartCoroutine(RotateTo(right));
-    }
-    */
 
     public void MoveUp()
     {
@@ -143,6 +118,34 @@ public class PlayerController : MonoBehaviour
 
         StartCoroutine(HandleHold(delay));
     }
+
+    public void PlayOilAnimation()
+    {
+        if (isSliding) return; // Prevent multiple oil slides at the same time
+        
+        if (animator != null)
+            animator.SetTrigger("OilSlide");
+        
+        StartCoroutine(HandleOilSlide());
+    }
+
+    private IEnumerator HandleOilSlide()
+    {
+        isSliding = true;
+        
+        // Wait a frame to let the trigger be consumed
+        yield return null;
+        
+        // Reset the trigger to prevent it from firing again immediately
+        if (animator != null)
+            animator.ResetTrigger("OilSlide");
+        
+        // Wait for the oil slide animation to complete
+        yield return new WaitForSeconds(0.5f); // Short delay just to prevent double-triggering
+        
+        isSliding = false;
+    }
+
 
     private IEnumerator MoveTo(Vector2Int newPos)
     {
@@ -190,6 +193,7 @@ public class PlayerController : MonoBehaviour
         isHolding = false;
     }
 
+    
     private void HandleCollision()
     {
         isCrashed = true;
@@ -207,7 +211,8 @@ public class PlayerController : MonoBehaviour
         faceDirection = Vector2Int.up;
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
         isCrashed = false; // Allow movement again
-        animator.SetBool("isCrashing", false); // reset crash animation
+        isSliding = false; // Reset sliding state
+        if (animator != null) animator.SetBool("isCrashing", false); // reset crash animation
 
     }
 
@@ -220,4 +225,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    }
+}

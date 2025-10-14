@@ -6,6 +6,7 @@ public enum RoadPieceType
     Goal,
     Start,
     Pit,
+    Oil,
 }
 
 [CreateAssetMenu(fileName = "RoadPieceData", menuName = "Scriptable Objects/RoadPieceData")]
@@ -21,8 +22,14 @@ public class RoadPieceData : ScriptableObject
     public AudioClip pitAudio;
     public float pitDelay = 3f; // seconds to wait in pit
 
+    [Header("Oil Settings")]
+    public AudioClip oilAudio;
+    public float oilSlideDuration = 1.5f; // how long the slide takes
+    
+
     public void OnEnter(RoadPiece piece, Collider2D other)
     {
+        
         switch (type)
         {
 
@@ -51,7 +58,22 @@ public class RoadPieceData : ScriptableObject
                     player.Hold(pitDelay);
                     break;
                 }
-            
+            case RoadPieceType.Oil:
+                {
+                    var player = other.GetComponentInParent<PlayerController>();
+                    if (player == null) break;
+                    if (other.gameObject != player.gameObject) break;
+
+                    if (oilAudio != null)
+                        AudioSource.PlayClipAtPoint(oilAudio, piece.transform.position);
+
+                    var col = piece.GetComponent<Collider2D>();
+                    //if (col) col.enabled = false;  // disable collider to prevent double-trigger
+
+                    player.PlayOilAnimation();
+
+                    break;
+                }
         }
     }
 }
