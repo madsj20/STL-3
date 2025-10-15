@@ -391,9 +391,25 @@ public class BrickQueManager : MonoBehaviour
                 slot.brickPrefab = null;
             }
 
-            // safety: if anything else was parented under the slot, remove it too
+            // Turn off the background highlight
+            slot.SetBackgroundActive(false);
+            
+            // Also hide the "Background (1)" child object if it exists
+            Transform bgTransform = slot.transform.Find("Background (1)");
+            if (bgTransform != null)
+            {
+                bgTransform.gameObject.SetActive(false);
+            }
+
+            // Remove any other GameObjects that have BrickPiece component (but keep slot UI elements)
             for (int c = slot.transform.childCount - 1; c >= 0; c--)
-                Destroy(slot.transform.GetChild(c).gameObject);
+            {
+                GameObject child = slot.transform.GetChild(c).gameObject;
+                if (child.GetComponent<BrickPiece>() != null)
+                {
+                    Destroy(child);
+                }
+            }
         }
     }
     
