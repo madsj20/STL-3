@@ -114,6 +114,10 @@ MonoBehaviour:
   gridPosition: {x: 7, y: 1}
   faceDirection: {x: 0, y: 1}
   moveDuration: 1
+  driveSound: {fileID: 0}
+  crashSound: {fileID: 0}
+  driveSoundVolume: 0.5
+  crashSoundVolume: 0.8
   rotateDuration: 0.25
 --- !u!61 &7665659089439074654
 BoxCollider2D:
