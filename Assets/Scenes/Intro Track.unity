@@ -436,6 +436,7 @@ MonoBehaviour:
   PanelThatPlaysTheSequence: {fileID: 165779641}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
   highlightScale: 1.1
+  WarningUI: {fileID: 1752065214}
 --- !u!4 &664639922
 Transform:
   m_ObjectHideFlags: 0
@@ -773,6 +774,11 @@ MonoBehaviour:
 --- !u!1 &1627199549 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6380031288750993777, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1752065214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4811364322544152598, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
   m_PrefabInstance: {fileID: 5974452862740654176}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2035723173 stripped
@@ -9330,10 +9336,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 664639921}
-    - target: {fileID: 6455967026054707500, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6675700516908841371, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9358,10 +9360,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7574705597065840867, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 664639921}
+    - target: {fileID: 7574705597065840867, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 664639921}
     - target: {fileID: 8017801731898282972, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000076293945
+      value: -0.000025406756
       objectReference: {fileID: 0}
+    - target: {fileID: 8177971087120896619, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 664639921}
     - target: {fileID: 8962753766340433226, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

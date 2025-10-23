@@ -27,6 +27,8 @@ public class BrickQueManager : MonoBehaviour
     private int pausedAtIndex = -1; // Remember where we paused
     private GameObject pausedBrickGO; // remeber the brick that was paused on
 
+    public GameObject WarningUI;
+
     private void Start()
     {
         // Make sure all slot backgrounds are OFF at scene start
@@ -439,5 +441,21 @@ public class BrickQueManager : MonoBehaviour
             if (i < arr.Length - 1) sb.Append(" → ");
         }
         queueLabel.text = sb.ToString();
+    }
+
+    public void ShowWarning()
+    {
+        if (WarningUI != null)
+        {
+            WarningUI.SetActive(true);
+        }
+    }
+
+    public void RemoveWarning()
+        {
+        if (WarningUI != null)
+        {
+            WarningUI.SetActive(false);
+        }
     }
 }
