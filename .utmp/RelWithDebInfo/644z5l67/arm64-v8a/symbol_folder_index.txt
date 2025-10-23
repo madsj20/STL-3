@@ -1,0 +1,1 @@
+C:\STL3\STL-3\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\644z5l67\obj\arm64-v8a
