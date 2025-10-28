@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, MoveUp, MoveDown, MoveRight, MoveLeft, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, MoveUp, MoveDown, MoveRight, MoveLeft, PlayHorn, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -256,6 +256,9 @@ public class BrickQueManager : MonoBehaviour
                         
                 case ActionType.MoveBackward:
                     player.MoveDown();
+                    break;
+                case ActionType.PlayHorn:
+                    player.PlayHorn();
                     break;
             }
 

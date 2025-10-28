@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     // Audio clips and settings
     public AudioClip driveSound;
     public AudioClip crashSound;
+    public AudioClip hornSound;
     [Range(0f, 1f)]
     public float driveSoundVolume = 0.5f;
     [Range(0f, 1f)]
@@ -138,6 +139,12 @@ public class PlayerController : MonoBehaviour
         float roundedSpeed = Mathf.Round(newSpeed); // Snap to nearest whole number
         float clampedSpeed = Mathf.Clamp(roundedSpeed, 0.5f, 5f);
         moveDuration = 1f / clampedSpeed;
+    }
+
+    public void PlayHorn()
+    {
+        if (sfxSource == null || hornSound == null) return;
+        sfxSource.PlayOneShot(hornSound, 0.5f);
     }
 
     public void Hold(float delay)

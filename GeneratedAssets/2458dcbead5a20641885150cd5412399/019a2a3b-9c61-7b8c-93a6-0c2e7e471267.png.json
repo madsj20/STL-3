@@ -1,0 +1,20 @@
+{
+    "asset": "2458dcbead5a20641885150cd5412399",
+    "fileName": "019a2a3b-9c61-7b8c-93a6-0c2e7e471267.png",
+    "prompt": "Make the lego brik purple",
+    "negativePrompt": "",
+    "model": "5b5b2af1-6ea4-4266-b087-cc9f3bf4f450",
+    "modelName": "Flux.1 Dev",
+    "customSeed": -1,
+    "w3CTraceId": "c385235483a692f044ab69cdf6875981",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}
