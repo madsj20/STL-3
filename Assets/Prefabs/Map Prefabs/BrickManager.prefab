@@ -50,6 +50,8 @@ MonoBehaviour:
   commandDelay: 0.05
   PanelThatPlaysTheSequence: {fileID: 0}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
+  highlightScale: 1.1
+  WarningUI: {fileID: 0}
 --- !u!114 &6996014634606488612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,4 +72,5 @@ MonoBehaviour:
   - {fileID: 8628905314089425671, guid: d45cad85eb358874a91b65c934a849a0, type: 3}
   - {fileID: 4683543359870968786, guid: e458f11ea8bee844dbd78f150e772cab, type: 3}
   - {fileID: 8664433607397383791, guid: 58931740031fbc94899e9a451f7b1100, type: 3}
+  - {fileID: 8664433607397383791, guid: 8c8a8ee456119324f9e82a957dcfa213, type: 3}
   pickablePanel: {fileID: 0}
