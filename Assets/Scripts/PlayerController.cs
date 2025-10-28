@@ -32,6 +32,13 @@ public class PlayerController : MonoBehaviour
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
 
+    [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+
+    private void Awake()
+    {
+        if (!timer) timer = FindFirstObjectByType<RaceTimer>();
+    }
+
     void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
@@ -273,6 +280,13 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle") && !isCrashed)
         {
             HandleCollision();
+        }
+
+        // Only react if the object entering is tagged as "Goal"
+        if (other.CompareTag("Goal") && timer != null)
+        {
+            timer.StopTimer(); // Stop counting
+            Debug.Log("Final time: " + timer.GetFormattedTime());
         }
     }
 }

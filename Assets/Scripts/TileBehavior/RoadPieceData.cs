@@ -13,6 +13,7 @@ public class RoadPieceData : ScriptableObject
 {
     public RoadPieceType type;
     public Sprite sprite;
+    [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
 
 
     public Vector2 startDirection = Vector2.left; // car starts facing this way
@@ -20,6 +21,7 @@ public class RoadPieceData : ScriptableObject
     [Header("Pit Settings")]
     public AudioClip pitAudio;
     public float pitDelay = 3f; // seconds to wait in pit
+
 
     public void OnEnter(RoadPiece piece, Collider2D other)
     {

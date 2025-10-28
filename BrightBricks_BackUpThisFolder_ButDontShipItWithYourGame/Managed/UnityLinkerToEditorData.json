@@ -111,7 +111,11 @@
           },
           {
             "name": "AudioSource",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Austrian GP.unity",
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -298,7 +302,11 @@
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Austrian GP.unity",
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -419,13 +427,8 @@
           },
           {
             "name": "Renderer",
-            "scenes": [
-              "Assets/Scenes/Austrian GP.unity",
-              "Assets/Scenes/Intro Track.unity",
-              "Assets/Scenes/Menu.unity",
-              "Assets/Scenes/Spanish GP.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -637,6 +640,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -1007,6 +1016,31 @@
         ]
       },
       {
+        "name": "ParticleSystem",
+        "dependencies": [
+          {
+            "name": "ParticleSystem",
+            "scenes": [
+              "Assets/Scenes/Austrian GP.unity",
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "ParticleSystemRenderer",
+            "scenes": [
+              "Assets/Scenes/Austrian GP.unity",
+              "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Spanish GP.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "Physics",
         "dependencies": [
           {
@@ -1234,6 +1268,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
