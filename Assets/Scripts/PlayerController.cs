@@ -13,14 +13,10 @@ public class PlayerController : MonoBehaviour
     private GridManager gridManager;
     private Animator animator;
     private AudioSource sfxSource;
-    private AudioSource audioSource;
 
     // Audio clips and settings
-    public AudioClip driveSound;
     public AudioClip crashSound;
     public AudioClip hornSound;
-    [Range(0f, 1f)]
-    public float driveSoundVolume = 0.5f;
     [Range(0f, 1f)]
     public float crashSoundVolume = 0.8f;
 
@@ -44,19 +40,7 @@ public class PlayerController : MonoBehaviour
         gridManager = FindAnyObjectByType<GridManager>();
         animator = GetComponent<Animator>();
         
-        // Get or add AudioSource component
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-        
-        // Configure AudioSource for looping drive sound
-        audioSource.loop = true;
-        audioSource.playOnAwake = false;
-        audioSource.volume = driveSoundVolume;
-
-        // Separate SFX source (not looping)
+        // Setup SFX AudioSource for crash sound
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
@@ -78,12 +62,6 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isCrashing", false); // reset crash animation
         isCrashed = false; // Allow movement again
-        
-        // Stop any audio
-        if (audioSource != null && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
         
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
@@ -139,13 +117,18 @@ public class PlayerController : MonoBehaviour
         TryMove(Vector2Int.right); // (1,0)
         StartCoroutine(RotateTo(Vector2Int.right));
     }
-    
+
     public void SetSpeed(float newSpeed)
     {
         // Clamp speed to avoid division by zero or extreme speeds
         float roundedSpeed = Mathf.Round(newSpeed); // Snap to nearest whole number
         float clampedSpeed = Mathf.Clamp(roundedSpeed, 0.5f, 5f);
         moveDuration = 1f / clampedSpeed;
+    }
+    
+    public void SpinOnOil(float duration)
+    {
+        StartCoroutine(HandleOilSpin(duration));
     }
 
     public void PlayHorn()
@@ -163,9 +146,6 @@ public class PlayerController : MonoBehaviour
     {
         isMoving = true;
         
-        // Play drive sound when starting movement
-        PlayDriveSound();
-        
         Vector3 start = transform.position;
         Vector3 end = new Vector3(newPos.x, newPos.y, 0);
 
@@ -180,9 +160,6 @@ public class PlayerController : MonoBehaviour
         transform.position = end;
         gridPosition = newPos;
         isMoving = false;
-        
-        // Stop drive sound when movement ends
-        StopDriveSound();
     }
     
     private IEnumerator RotateTo(Vector2Int newDir)
@@ -207,35 +184,34 @@ public class PlayerController : MonoBehaviour
     public IEnumerator HandleHold(float delay)
     {
         isHolding = true;
-        
-        // Stop drive sound during hold
-        StopDriveSound();
-        
         yield return new WaitForSeconds(delay);
         isHolding = false;
     }
-
-    private void PlayDriveSound()
+    
+    private IEnumerator HandleOilSpin(float duration)
     {
-        if (audioSource == null || driveSound == null) return;
+        isHolding = true; // Prevent other actions during spin
+            
+        // Get current facing direction as a quaternion
+        Quaternion startRotation = transform.rotation;
         
-        if (!audioSource.isPlaying)
+        float elapsed = 0f;
+        while (elapsed < duration)
         {
-            audioSource.clip = driveSound;
-            audioSource.volume = driveSoundVolume;
-            audioSource.Play();
+            // Rotate 540 degrees over the duration
+            float angle = Mathf.Lerp(0f, 540f, elapsed / duration);
+            transform.rotation = startRotation * Quaternion.Euler(0, 0, -angle);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
-    }
-
-    private void StopDriveSound()
-    {
-        if (audioSource == null) return;
         
-        // Only stop if not moving and not rotating
-        if (!isMoving && !isRotating && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
+        // After 540° rotation (1.5 spins), flip the face direction to backwards
+        faceDirection = -faceDirection;
+        
+        // THEN set final rotation to match the NEW face direction
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(faceDirection.x, faceDirection.y, 0));
+        
+        isHolding = false;
     }
 
     private void PlayCrashSound()
@@ -247,9 +223,6 @@ public class PlayerController : MonoBehaviour
     private void HandleCollision()
     {
         isCrashed = true;
-        
-        // Stop drive sound and play crash sound
-        StopDriveSound();
         PlayCrashSound();
         
         if (animator != null)
@@ -266,12 +239,6 @@ public class PlayerController : MonoBehaviour
         transform.up = new Vector3(faceDirection.x, faceDirection.y, 0); // Reset facing direction
         isCrashed = false; // Allow movement again
         animator.SetBool("isCrashing", false); // reset crash animation
-        
-        // Stop any audio
-        if (audioSource != null && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
     }
 
     // --- COLLISION HANDLING ---
