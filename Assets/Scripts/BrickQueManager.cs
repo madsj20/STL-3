@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, DropOil, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -17,6 +17,10 @@ public class BrickQueManager : MonoBehaviour
 
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
     public Slot slotPrefab; // prefab used to create additional slots when needed
+
+    // Oil drop settings
+    public GameObject oilPrefab; // Assign your oil road piece prefab in inspector
+    public AudioClip oilDropSound; // Sound when dropping oil
 
     // Highlight settings
     public float highlightScale = 1.1f; // Slight scale increase
@@ -268,8 +272,13 @@ public class BrickQueManager : MonoBehaviour
                 case ActionType.MoveBackward:
                     player.MoveDown();
                     break;
+                    
                 case ActionType.PlayHorn:
                     player.PlayHorn();
+                    break;
+                    
+                case ActionType.DropOil:
+                    player.DropOil(oilPrefab, oilDropSound);
                     break;
             }
 
@@ -375,6 +384,13 @@ public class BrickQueManager : MonoBehaviour
 
         // clear the placed bricks from the bottom panel
         ClearSlotsUI();
+
+        // remove any dropped oil from the scene
+        GameObject oilContainer = GameObject.Find("DroppedOils");
+        if (oilContainer != null)
+        {
+            Destroy(oilContainer);
+        }
     }
 
     public void ResetPlayerPosition()
@@ -407,6 +423,13 @@ public class BrickQueManager : MonoBehaviour
             RebuildQueueFromIndex(0);
 
             timer.ResetTimer(0f); // reset the timer to 0
+
+            // remove any dropped oil from the scene
+            GameObject oilContainer = GameObject.Find("DroppedOils");
+            if (oilContainer != null)
+            {
+                Destroy(oilContainer);
+            }
         }
     }
 
@@ -470,6 +493,7 @@ public class BrickQueManager : MonoBehaviour
                 ActionType.TurnLeft => "L",
                 ActionType.TurnRight => "R",
                 ActionType.MoveBackward => "B",
+                ActionType.DropOil => "O",
                 _ => "?"
             });
             if (i < arr.Length - 1) sb.Append(" → ");

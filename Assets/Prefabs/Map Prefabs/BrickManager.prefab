@@ -48,9 +48,13 @@ MonoBehaviour:
   player: {fileID: 0}
   queueLabel: {fileID: 0}
   commandDelay: 0.05
+  playButtonPulse: {fileID: 0}
   PanelThatPlaysTheSequence: {fileID: 0}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
+  oilPrefab: {fileID: 2207018739544729475, guid: e6736fc88c88f0a4bb97779bf95dbdf0, type: 3}
+  oilDropSound: {fileID: 8300000, guid: c8ad2fd948722cd4580bcca3b9993804, type: 3}
   highlightScale: 1.1
+  timer: {fileID: 0}
   WarningUI: {fileID: 0}
 --- !u!114 &6996014634606488612
 MonoBehaviour:
@@ -73,4 +77,5 @@ MonoBehaviour:
   - {fileID: 4683543359870968786, guid: e458f11ea8bee844dbd78f150e772cab, type: 3}
   - {fileID: 8664433607397383791, guid: 58931740031fbc94899e9a451f7b1100, type: 3}
   - {fileID: 8664433607397383791, guid: 8c8a8ee456119324f9e82a957dcfa213, type: 3}
+  - {fileID: 8664433607397383791, guid: 0f097c4d35c33c648870efda37217073, type: 3}
   pickablePanel: {fileID: 0}
