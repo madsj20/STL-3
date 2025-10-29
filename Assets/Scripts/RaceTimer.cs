@@ -10,7 +10,7 @@ public class RaceTimer : MonoBehaviour
 
     [Header("Behaviour")]
     [Tooltip("Start timing automatically when the scene loads.")]
-    [SerializeField] private bool autoStartOnSceneLoad = true;
+    [SerializeField] private bool autoStartOnSceneLoad = false;
 
     [Tooltip("If true, timer ignores Time.timeScale (useful if you pause the game).")]
     [SerializeField] private bool useUnscaledTime = false;
