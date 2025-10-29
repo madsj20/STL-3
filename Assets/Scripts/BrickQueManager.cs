@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, MoveUp, MoveDown, MoveRight, MoveLeft, PlayHorn, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -25,9 +25,17 @@ public class BrickQueManager : MonoBehaviour
     private bool isPaused = false;
     private int currentExecutingIndex = -1; // Track which slot is currently executing
     private int pausedAtIndex = -1; // Remember where we paused
-    private GameObject pausedBrickGO; // remeber the brick that was paused on
+    private GameObject pausedBrickGO; // remember the brick that was paused on
+
+    [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+
 
     public GameObject WarningUI;
+
+    private void Awake()
+    {
+        if (!timer) timer = FindFirstObjectByType<RaceTimer>();
+    }
 
     private void Start()
     {
@@ -146,6 +154,8 @@ public class BrickQueManager : MonoBehaviour
         }
 
         Play();
+        timer.StartTimer(); // ensure timer is running
+        Debug.Log("Resuming from pause");
     }
 
     // Rebuild the queue starting from a specific index
@@ -376,6 +386,8 @@ public class BrickQueManager : MonoBehaviour
             
             // Rebuild the queue from the beginning
             RebuildQueueFromIndex(0);
+
+            timer.ResetTimer(0f); // reset the timer to 0
         }
     }
 

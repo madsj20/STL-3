@@ -84,19 +84,15 @@ public class ArrowHintController : MonoBehaviour
         switch (action)
         {
             case BrickQueManager.ActionType.MoveForward:
-            case BrickQueManager.ActionType.MoveUp:
                 return Vector2Int.up; // Grid Y+
 
             case BrickQueManager.ActionType.MoveBackward:
-            case BrickQueManager.ActionType.MoveDown:
                 return Vector2Int.down; // Grid Y-
 
             case BrickQueManager.ActionType.TurnLeft:
-            case BrickQueManager.ActionType.MoveLeft:
                 return Vector2Int.left; // Grid X-
 
             case BrickQueManager.ActionType.TurnRight:
-            case BrickQueManager.ActionType.MoveRight:
                 return Vector2Int.right; // Grid X+
 
             default:
