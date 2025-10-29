@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     // Audio clips and settings
     public AudioClip driveSound;
     public AudioClip crashSound;
+    public AudioClip hornSound;
     [Range(0f, 1f)]
     public float driveSoundVolume = 0.5f;
     [Range(0f, 1f)]
@@ -30,6 +31,13 @@ public class PlayerController : MonoBehaviour
     public bool isIdle => !isMoving && !isRotating && !isHolding;
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
+
+    [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+
+    private void Awake()
+    {
+        if (!timer) timer = FindFirstObjectByType<RaceTimer>();
+    }
 
     void Start()
     {
@@ -138,6 +146,12 @@ public class PlayerController : MonoBehaviour
         float roundedSpeed = Mathf.Round(newSpeed); // Snap to nearest whole number
         float clampedSpeed = Mathf.Clamp(roundedSpeed, 0.5f, 5f);
         moveDuration = 1f / clampedSpeed;
+    }
+
+    public void PlayHorn()
+    {
+        if (sfxSource == null || hornSound == null) return;
+        sfxSource.PlayOneShot(hornSound, 0.5f);
     }
 
     public void Hold(float delay)
@@ -266,6 +280,13 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle") && !isCrashed)
         {
             HandleCollision();
+        }
+
+        // Only react if the object entering is tagged as "Goal"
+        if (other.CompareTag("Goal") && timer != null)
+        {
+            timer.StopTimer(); // Stop counting
+            Debug.Log("Final time: " + timer.GetFormattedTime());
         }
     }
 }

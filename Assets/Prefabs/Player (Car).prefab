@@ -116,6 +116,7 @@ MonoBehaviour:
   moveDuration: 1
   driveSound: {fileID: 0}
   crashSound: {fileID: 0}
+  hornSound: {fileID: 8300000, guid: 7bb88caa0958ff641b64e75334fdc516, type: 3}
   driveSoundVolume: 0.5
   crashSoundVolume: 0.8
   rotateDuration: 0.25

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Toolbox
   - Obstacle
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Particles
   - 
   - 
   - 
@@ -54,6 +55,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2462084537
+    locked: 0
+  - name: Particles
+    uniqueID: 3471486913
+    locked: 0
+  - name: UI
+    uniqueID: 3202931965
     locked: 0
   m_RenderingLayers:
   - Default
