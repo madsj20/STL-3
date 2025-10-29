@@ -77,6 +77,7 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Menu.unity",
               "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
@@ -104,6 +105,7 @@
             "scenes": [
               "Assets/Scenes/Austrian GP.unity",
               "Assets/Scenes/Intro Track.unity",
+              "Assets/Scenes/Menu.unity",
               "Assets/Scenes/Spanish GP.unity"
             ],
             "dependencyType": 0,
