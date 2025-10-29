@@ -13,6 +13,7 @@ public class BrickQueManager : MonoBehaviour
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
     public float commandDelay = 0.05f; // small gap between commands
+    public PulseEffect playButtonPulse;
 
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
     public Slot slotPrefab; // prefab used to create additional slots when needed
@@ -324,16 +325,30 @@ public class BrickQueManager : MonoBehaviour
         if (PanelThatPlaysTheSequence == null || slotPrefab == null) return;
 
         int emptyCount = 0;
+        int filledCount = 0;
+        
         for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
         {
             var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (slot == null) continue;
-            if (slot.brickPrefab == null) emptyCount++;
+            
+            if (slot.brickPrefab == null) 
+                emptyCount++;
+            else 
+                filledCount++;
+        }
+
+        // Start pulsing if at least one brick is placed
+        if (playButtonPulse != null)
+        {
+            if (filledCount > 0)
+                playButtonPulse.StartPulsing();
+            else
+                playButtonPulse.StopPulsing();
         }
 
         if (emptyCount <= 0)
         {
-            // Instantiate one new slot at the end
             var newSlot = Instantiate(slotPrefab, PanelThatPlaysTheSequence, false);
         }
     }
@@ -353,6 +368,10 @@ public class BrickQueManager : MonoBehaviour
         // clear the logical queue & label
         queue.Clear();
         RefreshLabel();
+
+        // Stop pulsing when cleared
+        if (playButtonPulse != null)
+            playButtonPulse.StopPulsing();
 
         // clear the placed bricks from the bottom panel
         ClearSlotsUI();
