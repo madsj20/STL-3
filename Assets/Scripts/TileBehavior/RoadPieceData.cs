@@ -26,6 +26,8 @@ public class RoadPieceData : ScriptableObject
     [Header("Oil Settings")]
     public AudioClip oilSpillAudio;
     public float spinDuration = 1f;
+    private float lastOilTriggerTime = -999f;
+    private const float oil_cooldown = 0.5f; // Half second cooldown
 
 
     public void OnEnter(RoadPiece piece, Collider2D other)
@@ -62,6 +64,12 @@ public class RoadPieceData : ScriptableObject
                 {
                     var player = other.GetComponent<PlayerController>();
                     if (player == null) break;
+
+                    // Check cooldown
+                    if (Time.time - lastOilTriggerTime < oil_cooldown)
+                        break;
+                    
+                    lastOilTriggerTime = Time.time;
 
                     if (oilSpillAudio != null)
                         AudioSource.PlayClipAtPoint(oilSpillAudio, piece.transform.position);

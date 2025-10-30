@@ -263,6 +263,14 @@ public class PlayerController : MonoBehaviour
             Vector3 oilPosition = new Vector3(gridPosition.x, gridPosition.y, 0);
             GameObject oilInstance = Instantiate(oilPrefab, oilPosition, Quaternion.identity);
 
+            // Disable the collider temporarily to prevent immediate trigger
+            Collider2D oilCollider = oilInstance.GetComponent<Collider2D>();
+            if (oilCollider != null)
+            {
+                oilCollider.enabled = false;
+                StartCoroutine(EnableOilColliderAfterDelay(oilCollider, 1f)); // Enable after 1 second
+            }
+
             // Optional: Add the oil to a parent container for organization
             GameObject oilContainer = GameObject.Find("DroppedOils");
             if (oilContainer == null)
@@ -274,6 +282,15 @@ public class PlayerController : MonoBehaviour
         
         isHolding = false;
         rotationAlreadyHandled = true;
+    }
+
+    private IEnumerator EnableOilColliderAfterDelay(Collider2D collider, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
     }
 
     private void PlayCrashSound()
