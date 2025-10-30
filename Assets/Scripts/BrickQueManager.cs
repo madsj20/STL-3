@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, DropOil, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, DropOil, SpeedBoost, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
@@ -33,6 +33,15 @@ public class BrickQueManager : MonoBehaviour
     private GameObject pausedBrickGO; // remember the brick that was paused on
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+
+    
+    [Header("Speed Boost")]
+    [SerializeField] private float speedBoostMultiplier = 1.5f;  // 2x faster
+    [SerializeField] private int   speedBoostMoves      = 2;   // affect next two moves
+
+    private int   boostMovesLeft = 0;
+    private float? originalMoveDuration = null;
+
 
 
     public GameObject WarningUI;
@@ -258,39 +267,8 @@ public class BrickQueManager : MonoBehaviour
 
             var a = queue.Dequeue();
 
-            switch (a)
-            {
-                case ActionType.None:
-                    // Do nothing
-                    break;
-
-                case ActionType.MoveForward:
-                    player.MoveUp();
-                    break;
-
-                case ActionType.TurnLeft:
-                    player.MoveLeft();
-                    break;
-
-                case ActionType.TurnRight:
-                    player.MoveRight();
-                    break;
-                        
-                case ActionType.MoveBackward:
-                    player.MoveDown();
-                    break;
-                    
-                case ActionType.PlayHorn:
-                    player.PlayHorn();
-                    break;
-                    
-                case ActionType.DropOil:
-                    player.DropOil(oilPrefab, oilDropSound);
-                    break;
-            }
-
-            // Wait until the car finishes moving/rotating
-            yield return new WaitUntil(() => player.isIdle);
+            // Centralize action execution so we can apply temporary speed boost
+            yield return ExecuteActionWithSpeedBoost(a);
 
             // Remove highlight from current slot
             if (currentExecutingIndex < occupiedSlots.Count)
@@ -309,8 +287,79 @@ public class BrickQueManager : MonoBehaviour
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
 
-        // playback finished — resume pulse if any bricks remain
+        // playback finished - resume pulse if any bricks remain
         UpdatePlayPulse();
+    }
+    
+    private IEnumerator ExecuteActionWithSpeedBoost(ActionType a)
+    {
+        // If this is the speed brick, arm the boost for the next N moves (no move now)
+        if (a == ActionType.SpeedBoost)
+        {
+            boostMovesLeft = speedBoostMoves;
+            if (originalMoveDuration == null && player != null)
+                originalMoveDuration = player.moveDuration;
+            yield break;
+        }
+
+        // Only these actions are considered "moves" that consume the boost
+        bool isMove =
+            a == ActionType.MoveForward ||
+            a == ActionType.TurnLeft    ||
+            a == ActionType.TurnRight   ||
+            a == ActionType.MoveBackward;
+
+        // If boosted, use a shorter duration (faster move) for this action
+        if (isMove && boostMovesLeft > 0 && originalMoveDuration.HasValue && player != null)
+        {
+            player.moveDuration = originalMoveDuration.Value / Mathf.Max(0.0001f, speedBoostMultiplier);
+        }
+
+        // Execute the action exactly like before
+        switch (a)
+        {
+            case ActionType.None:
+                // Do nothing
+                break;
+
+            case ActionType.MoveForward:
+                player.MoveUp();
+                break;
+
+            case ActionType.TurnLeft:
+                player.MoveLeft();
+                break;
+
+            case ActionType.TurnRight:
+                player.MoveRight();
+                break;
+                        
+            case ActionType.MoveBackward:
+                player.MoveDown();
+                break;
+                    
+            case ActionType.PlayHorn:
+                player.PlayHorn();
+                break;
+                    
+            case ActionType.DropOil:
+                player.DropOil(oilPrefab, oilDropSound);
+                break;
+        }
+
+        // Wait until the car finishes moving/rotating/acting
+        yield return new WaitUntil(() => player.isIdle);
+
+        // If this was a boosted move, decrement and restore when finished
+        if (isMove && boostMovesLeft > 0 && originalMoveDuration.HasValue && player != null)
+        {
+            boostMovesLeft--;
+            if (boostMovesLeft == 0)
+            {
+                // restore original movement speed after last boosted move
+                player.moveDuration = originalMoveDuration.Value;
+            }
+        }
     }
 
     private void HighlightSlot(Slot slot, bool highlight)
@@ -404,6 +453,14 @@ public class BrickQueManager : MonoBehaviour
         {
             Destroy(oilContainer);
         }
+
+        // >>> NEW: reset any pending speed boost and restore original speed
+        boostMovesLeft = 0;
+        if (originalMoveDuration.HasValue && player != null)
+        {
+            player.moveDuration = originalMoveDuration.Value;
+        }
+        originalMoveDuration = null;
     }
 
     public void ResetPlayerPosition()
@@ -443,6 +500,14 @@ public class BrickQueManager : MonoBehaviour
             {
                 Destroy(oilContainer);
             }
+
+            // >>> NEW: reset any pending speed boost and restore original speed
+            boostMovesLeft = 0;
+            if (originalMoveDuration.HasValue)
+            {
+                player.moveDuration = originalMoveDuration.Value;
+            }
+            originalMoveDuration = null;
         }
     }
 
@@ -506,7 +571,6 @@ public class BrickQueManager : MonoBehaviour
                 ActionType.TurnLeft => "L",
                 ActionType.TurnRight => "R",
                 ActionType.MoveBackward => "B",
-                ActionType.DropOil => "O",
                 _ => "?"
             });
             if (i < arr.Length - 1) sb.Append(" → ");
