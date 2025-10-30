@@ -36,8 +36,8 @@ public class BrickQueManager : MonoBehaviour
 
     
     [Header("Speed Boost")]
-    [SerializeField] private float speedBoostMultiplier = 1.5f;  // 2x faster
-    [SerializeField] private int   speedBoostMoves      = 2;   // affect next two moves
+    [SerializeField] private float speedBoostMultiplier = 1.5f;  // 1.5x faster
+    [SerializeField] private int   speedBoostMoves = 2;   // affect next two moves
 
     private int   boostMovesLeft = 0;
     private float? originalMoveDuration = null;
