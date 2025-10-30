@@ -70,6 +70,9 @@ public class BrickQueManager : MonoBehaviour
     //play the queued commands
     public void Play()
     {
+        // stop pulsing immediately when Play is clicked
+        if (playButtonPulse != null) playButtonPulse.StopPulsing();
+    
         if (isPaused)
         {
             isPaused = false;
@@ -125,6 +128,10 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = false;
 
         AudioListener.pause = true; // Pause all audio
+
+        // resume pulsing while paused (if there are any bricks placed)
+        UpdatePlayPulse();
+
     }
 
     public void PlayFromPanel()
@@ -301,6 +308,9 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = false;
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
+
+        // playback finished — resume pulse if any bricks remain
+        UpdatePlayPulse();
     }
 
     private void HighlightSlot(Slot slot, bool highlight)
@@ -355,6 +365,9 @@ public class BrickQueManager : MonoBehaviour
             else
                 playButtonPulse.StopPulsing();
         }
+
+        // Update pulse state based on current filled count
+        UpdatePlayPulse(filledCount);
 
         if (emptyCount <= 0)
         {
@@ -510,10 +523,36 @@ public class BrickQueManager : MonoBehaviour
     }
 
     public void RemoveWarning()
-        {
+    {
         if (WarningUI != null)
         {
             WarningUI.SetActive(false);
         }
     }
+    
+    private bool HasAnyFilledSlots()
+    {
+        if (PanelThatPlaysTheSequence == null) return false;
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot != null && slot.brickPrefab != null) return true;
+        }
+        return false;
+    }
+
+    private void UpdatePlayPulse(int filledCount = -1)
+    {
+        if (playButtonPulse == null) return;
+
+        bool anyFilled = filledCount >= 0 ? (filledCount > 0) : HasAnyFilledSlots();
+
+        // Pulse only when there are bricks AND we are NOT currently playing.
+        // This means: stop pulsing during execution, resume when finished or paused.
+        if (anyFilled && !isPlaying)
+            playButtonPulse.StartPulsing();
+        else
+            playButtonPulse.StopPulsing();
+    }
+
 }
