@@ -34,23 +34,24 @@ public class BrickQueManager : MonoBehaviour
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
 
-    
+
     [Header("Speed Boost")]
     [SerializeField] private float speedBoostMultiplier = 2f;  // 2x faster
-    [SerializeField] private int   speedBoostMoves = 2;   // affect next two moves
+    [SerializeField] private int speedBoostMoves = 2;   // affect next two moves
 
-    private int   boostMovesLeft = 0;
+    private int boostMovesLeft = 0;
     private float? originalMoveDuration = null;
 
-
-
     public GameObject WarningUI;
+    public GameObject WinningUI;
 
     // --- Replay support ---
-    // Accumulates all commands that have been executed across Play presses.
     private readonly List<ActionType> replayQueue = new List<ActionType>();
-    // True when we are currently playing the accumulated replay (avoid re-recording).
     private bool isReplaying = false;
+
+    // Track if the goal was crossed while we are replaying
+    private bool goalCrossedDuringReplay = false;
+    public bool IsReplaying => isReplaying;
 
     private void Awake()
     {
@@ -87,7 +88,7 @@ public class BrickQueManager : MonoBehaviour
     {
         // stop pulsing immediately when Play is clicked
         if (playButtonPulse != null) playButtonPulse.StopPulsing();
-    
+
         if (isPaused)
         {
             isPaused = false;
@@ -298,15 +299,27 @@ public class BrickQueManager : MonoBehaviour
             RefreshLabel(); // show remaining
         }
 
+        // Capture if we were replaying on this run
+        bool wasReplaying = isReplaying;
+
         isPlaying = false;
         isReplaying = false; // ensure we leave replay mode if it was set
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
 
+        // If we crossed goal while replaying AND the replayed queue has finished, show winning UI now
+        if (wasReplaying && goalCrossedDuringReplay && WinningUI != null)
+        {
+            WinningUI.SetActive(true);
+            commandDelay = 0.05f; // small gap between commands
+        }
+// reset the flag after handling
+goalCrossedDuringReplay = false;
+
         // playback finished - resume pulse if any bricks remain
         UpdatePlayPulse();
     }
-    
+
     private IEnumerator ExecuteActionWithSpeedBoost(ActionType a)
     {
         // If this is the speed brick, arm the boost for the next N moves (no move now)
@@ -321,8 +334,8 @@ public class BrickQueManager : MonoBehaviour
         // Only these actions are considered "moves" that consume the boost
         bool isMove =
             a == ActionType.MoveForward ||
-            a == ActionType.TurnLeft    ||
-            a == ActionType.TurnRight   ||
+            a == ActionType.TurnLeft ||
+            a == ActionType.TurnRight ||
             a == ActionType.MoveBackward;
 
         // If boosted, use a shorter duration (faster move) for this action
@@ -349,15 +362,15 @@ public class BrickQueManager : MonoBehaviour
             case ActionType.TurnRight:
                 player.MoveRight();
                 break;
-                        
+
             case ActionType.MoveBackward:
                 player.MoveDown();
                 break;
-                    
+
             case ActionType.PlayHorn:
                 player.PlayHorn();
                 break;
-                    
+
             case ActionType.DropOil:
                 player.DropOil(oilPrefab, oilDropSound);
                 break;
@@ -410,15 +423,15 @@ public class BrickQueManager : MonoBehaviour
 
         int emptyCount = 0;
         int filledCount = 0;
-        
+
         for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
         {
             var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (slot == null) continue;
-            
-            if (slot.brickPrefab == null) 
+
+            if (slot.brickPrefab == null)
                 emptyCount++;
-            else 
+            else
                 filledCount++;
         }
 
@@ -477,10 +490,16 @@ public class BrickQueManager : MonoBehaviour
             player.moveDuration = originalMoveDuration.Value;
         }
         originalMoveDuration = null;
+
+        // >>> NEW: reset goal flag
+        goalCrossedDuringReplay = false;
     }
 
     public void ResetPlayerPosition()
     {
+        // Don't allow reset during active playback
+        if (isPlaying && !isPaused) return;
+
         if (player != null)
         {
             // Stop any running playback
@@ -511,8 +530,6 @@ public class BrickQueManager : MonoBehaviour
             // Rebuild the queue from the beginning
             RebuildQueueFromIndex(0);
 
-            timer.ResetTimer(0f); // reset the timer to 0
-
             // remove any dropped oil from the scene
             GameObject oilContainer = GameObject.Find("DroppedOils");
             if (oilContainer != null)
@@ -527,6 +544,9 @@ public class BrickQueManager : MonoBehaviour
                 player.moveDuration = originalMoveDuration.Value;
             }
             originalMoveDuration = null;
+
+            // >>> NEW: reset goal flag
+            goalCrossedDuringReplay = false;
         }
     }
 
@@ -609,10 +629,11 @@ public class BrickQueManager : MonoBehaviour
     {
         if (WarningUI != null)
         {
+            Debug.Log("Removing Warning UI");
             WarningUI.SetActive(false);
         }
     }
-    
+
     private bool HasAnyFilledSlots()
     {
         if (PanelThatPlaysTheSequence == null) return false;
@@ -638,4 +659,68 @@ public class BrickQueManager : MonoBehaviour
             playButtonPulse.StopPulsing();
     }
 
+    // --- Optional public helpers for replay control ---
+
+    // Manually clear the accumulated replay (if needed elsewhere)
+    public void ClearReplayQueue()
+    {
+        replayQueue.Clear();
+    }
+
+    // Play the accumulated replay from the beginning
+    public void PlayReplay()
+    {
+        if (isPlaying) return;
+        if (replayQueue.Count == 0) return;
+
+        //remove Winning UI if active
+        if (WinningUI != null && WinningUI.activeSelf)
+        {
+            WinningUI.SetActive(false);
+        }
+
+        commandDelay = 0f; // no delay during replay
+
+        //Remove all oil stains before replay
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Oil").Length; i++)
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("Oil")[i]);
+        }
+        // Reset player position
+        player.RespawnToCurrentStart();
+        ResetTimer();
+
+        // Load the accumulated commands into the execution queue
+        queue.Clear();
+        for (int i = 0; i < replayQueue.Count; i++)
+            queue.Enqueue(replayQueue[i]);
+
+        RemoveAllHighlights();
+        pausedAtIndex = -1;
+        currentExecutingIndex = 0;
+        isReplaying = true;
+
+        // reset goal flag at the start of replay
+        goalCrossedDuringReplay = false;
+
+        StartCoroutine(Run());
+        if (timer != null) timer.StartTimer();
+    }
+
+    public void ResetTimer()
+    {
+        if (timer != null)
+        {
+            timer.ResetTimer();
+        }
+    }
+
+    // Call this from the script that detects the goal line (e.g., PlayerController or Finish handler)
+    public void NotifyGoalCrossed()
+    {
+        if (isReplaying)
+        {
+            goalCrossedDuringReplay = true;
+        }
+    }
 }

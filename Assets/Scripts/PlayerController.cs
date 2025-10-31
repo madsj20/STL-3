@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public float oilSpinDuration = 1f; // how long the 540° spin takes when dropping oil
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+    [SerializeField] private BrickQueManager brickQueManager;
+
 
     private void Awake()
     {
@@ -137,6 +139,7 @@ public class PlayerController : MonoBehaviour
     
     public void SpinOnOil(float duration)
     {
+        Debug.Log("Spinning on oil...");
         StartCoroutine(HandleOilSpin(duration));
     }
 
@@ -204,6 +207,7 @@ public class PlayerController : MonoBehaviour
     
     private IEnumerator HandleOilSpin(float duration)
     {
+        Debug.Log("Handling oil spin...");
         isHolding = true; // Prevent other actions during spin
             
         // Get current facing direction as a quaternion
@@ -333,6 +337,8 @@ public class PlayerController : MonoBehaviour
         {
             timer.StopTimer(); // Stop counting
             Debug.Log("Final time: " + timer.GetFormattedTime());
+            if (brickQueManager != null)
+                brickQueManager.NotifyGoalCrossed();
         }
     }
 }

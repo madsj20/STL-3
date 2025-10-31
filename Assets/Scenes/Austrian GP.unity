@@ -503,6 +503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
+      propertyPath: brickQueManager
+      value: 
+      objectReference: {fileID: 664639921}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6753,6 +6757,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5974452862740654177}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: WinningUI
+      value: 
+      objectReference: {fileID: 5974452862740654178}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: queueLabel
       value: 
       objectReference: {fileID: 1494033021}
@@ -7017,6 +7025,11 @@ PrefabInstance:
 --- !u!1 &5974452862740654177 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4811364322544152598, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5974452862740654178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7966755714322250850, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
   m_PrefabInstance: {fileID: 5974452862740654176}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
