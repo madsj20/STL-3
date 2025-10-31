@@ -64,14 +64,14 @@ public class RoadPieceData : ScriptableObject
                 {
                     var player = other.GetComponent<PlayerController>();
                     if (player == null) break;
+
                     // Check cooldown
-                    /*if (Time.deltaTime - lastOilTriggerTime < oil_cooldown)
+                    if (Time.time - lastOilTriggerTime < oil_cooldown)
                     {
                         break;
-                    }*/
-                    Debug.Log("RoadPieceData Oil");
+                    }
 
-                    lastOilTriggerTime = Time.deltaTime;
+                    lastOilTriggerTime = Time.time;
 
                     if (oilSpillAudio != null)
                         AudioSource.PlayClipAtPoint(oilSpillAudio, piece.transform.position);
@@ -79,6 +79,7 @@ public class RoadPieceData : ScriptableObject
                     player.SpinOnOil(spinDuration);
                     break;
                 }
+ 
             
         }
     }
