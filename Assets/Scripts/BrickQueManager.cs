@@ -481,6 +481,9 @@ public class BrickQueManager : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
+        // Don't allow reset during active playback
+        if (isPlaying && !isPaused) return; 
+
         if (player != null)
         {
             // Stop any running playback
@@ -510,8 +513,6 @@ public class BrickQueManager : MonoBehaviour
 
             // Rebuild the queue from the beginning
             RebuildQueueFromIndex(0);
-
-            timer.ResetTimer(0f); // reset the timer to 0
 
             // remove any dropped oil from the scene
             GameObject oilContainer = GameObject.Find("DroppedOils");
@@ -636,6 +637,45 @@ public class BrickQueManager : MonoBehaviour
             playButtonPulse.StartPulsing();
         else
             playButtonPulse.StopPulsing();
+    }
+
+    // --- Optional public helpers for replay control ---
+
+    // Manually clear the accumulated replay (if needed elsewhere)
+    public void ClearReplayQueue()
+    {
+        replayQueue.Clear();
+    }
+
+    // Play the accumulated replay from the beginning
+    public void PlayReplay()
+    {
+        if (isPlaying) return;
+        if (replayQueue.Count == 0) return;
+        // Reset player position
+        player.RespawnToCurrentStart();
+        ResetTimer();
+
+        // Load the accumulated commands into the execution queue
+        queue.Clear();
+        for (int i = 0; i < replayQueue.Count; i++)
+            queue.Enqueue(replayQueue[i]);
+
+        RemoveAllHighlights();
+        pausedAtIndex = -1;
+        currentExecutingIndex = 0;
+        isReplaying = true;
+
+        StartCoroutine(Run());
+        if (timer != null) timer.StartTimer();
+    }
+
+    public void ResetTimer()
+    {
+        if (timer != null)
+        {
+            timer.ResetTimer();
+        }
     }
 
 }
