@@ -55,6 +55,8 @@ MonoBehaviour:
   oilDropSound: {fileID: 8300000, guid: c8ad2fd948722cd4580bcca3b9993804, type: 3}
   highlightScale: 1.1
   timer: {fileID: 0}
+  speedBoostMultiplier: 1.5
+  speedBoostMoves: 2
   WarningUI: {fileID: 0}
 --- !u!114 &6996014634606488612
 MonoBehaviour:
@@ -78,4 +80,5 @@ MonoBehaviour:
   - {fileID: 8664433607397383791, guid: 58931740031fbc94899e9a451f7b1100, type: 3}
   - {fileID: 8664433607397383791, guid: 8c8a8ee456119324f9e82a957dcfa213, type: 3}
   - {fileID: 8664433607397383791, guid: 0f097c4d35c33c648870efda37217073, type: 3}
+  - {fileID: 8664433607397383791, guid: ddbb815c3806ab144a0fbd62f1948098, type: 3}
   pickablePanel: {fileID: 0}
