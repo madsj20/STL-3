@@ -46,6 +46,12 @@ public class BrickQueManager : MonoBehaviour
 
     public GameObject WarningUI;
 
+    // --- Replay support ---
+    // Accumulates all commands that have been executed across Play presses.
+    private readonly List<ActionType> replayQueue = new List<ActionType>();
+    // True when we are currently playing the accumulated replay (avoid re-recording).
+    private bool isReplaying = false;
+
     private void Awake()
     {
         if (!timer) timer = FindFirstObjectByType<RaceTimer>();
@@ -120,7 +126,7 @@ public class BrickQueManager : MonoBehaviour
     public void Pause()
     {
         if (!isPlaying) return;
-        
+
         isPaused = true;
         pausedAtIndex = currentExecutingIndex; // Remember current position
 
@@ -131,7 +137,6 @@ public class BrickQueManager : MonoBehaviour
             var slot = PanelThatPlaysTheSequence.GetChild(pausedPanelIndex).GetComponent<Slot>();
             pausedBrickGO = slot != null ? slot.brickPrefab : null;
         }
-
 
         StopAllCoroutines();
         isPlaying = false;
@@ -223,7 +228,6 @@ public class BrickQueManager : MonoBehaviour
         return PanelThatPlaysTheSequence.childCount; // after last brick
     }
 
-
     private void Enqueue(ActionType a)
     {
         queue.Enqueue(a);
@@ -233,7 +237,18 @@ public class BrickQueManager : MonoBehaviour
     private IEnumerator Run()
     {
         isPlaying = true;
-        
+
+        // Snapshot and accumulate the queue for replay (only when not replaying)
+        if (!isReplaying)
+        {
+            var snapshot = queue.ToArray();
+            if (snapshot.Length > 0)
+            {
+                // Append to the end to preserve chronological order
+                replayQueue.AddRange(snapshot);
+            }
+        }
+
         if (pausedAtIndex >= 0)
         {
             currentExecutingIndex = pausedAtIndex;
@@ -284,6 +299,7 @@ public class BrickQueManager : MonoBehaviour
         }
 
         isPlaying = false;
+        isReplaying = false; // ensure we leave replay mode if it was set
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
 
@@ -435,7 +451,7 @@ public class BrickQueManager : MonoBehaviour
         isPaused = false;
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
-        
+
         // clear the logical queue & label
         queue.Clear();
         RefreshLabel();
@@ -465,7 +481,7 @@ public class BrickQueManager : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
-         if (player != null)
+        if (player != null)
         {
             // Stop any running playback
             if (isPlaying)
@@ -473,22 +489,25 @@ public class BrickQueManager : MonoBehaviour
                 StopAllCoroutines();
                 isPlaying = false;
             }
-            
+
             // Reset pause and execution state
             isPaused = false;
             currentExecutingIndex = -1;
             pausedAtIndex = -1;
             pausedBrickGO = null;
-            
+
+            // Also reset the accumulated replay as requested
+            replayQueue.Clear();
+
             // Unpause audio if it was paused
             AudioListener.pause = false;
-            
+
             // Reset player position
             player.RespawnToCurrentStart();
-            
+
             // Remove all visual highlights
             RemoveAllHighlights();
-            
+
             // Rebuild the queue from the beginning
             RebuildQueueFromIndex(0);
 
@@ -530,7 +549,7 @@ public class BrickQueManager : MonoBehaviour
 
             // Turn off the background highlight
             slot.SetBackgroundActive(false);
-            
+
             // Also hide the "Background (1)" child object if it exists
             Transform bgTransform = slot.transform.Find("Background (1)");
             if (bgTransform != null)
@@ -549,7 +568,7 @@ public class BrickQueManager : MonoBehaviour
             }
         }
     }
-    
+
     // Update the queue label text
     private void RefreshLabel()
     {
