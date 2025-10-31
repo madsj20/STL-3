@@ -13,7 +13,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     // Squeeze-in detection
     private Slot hoveredSlot;
     private Coroutine squeezeCoroutine;
-    private const float SQUEEZE_DELAY = 1f; // Time to hold before squeeze-in
+    private const float SQUEEZE_DELAY = 0.5f; // Time to hold before squeeze-in
     private bool squeezeTriggered = false;
 
     void Start()
