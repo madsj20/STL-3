@@ -8,14 +8,19 @@ using UnityEngine.UI;
 public class BrickQueManager : MonoBehaviour
 {
     // Define the possible actions the player can take
-    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, None }
+    public enum ActionType { MoveForward, TurnLeft, TurnRight, MoveBackward, PlayHorn, DropOil, SpeedBoost, None }
 
     public PlayerController player;
     public TMP_Text queueLabel;    // shows the queued actions
     public float commandDelay = 0.05f; // small gap between commands
+    public PulseEffect playButtonPulse;
 
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
     public Slot slotPrefab; // prefab used to create additional slots when needed
+
+    // Oil drop settings
+    public GameObject oilPrefab; // Assign your oil road piece prefab in inspector
+    public AudioClip oilDropSound; // Sound when dropping oil
 
     // Highlight settings
     public float highlightScale = 1.1f; // Slight scale increase
@@ -28,6 +33,15 @@ public class BrickQueManager : MonoBehaviour
     private GameObject pausedBrickGO; // remember the brick that was paused on
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
+
+    
+    [Header("Speed Boost")]
+    [SerializeField] private float speedBoostMultiplier = 1.5f;  // 1.5x faster
+    [SerializeField] private int   speedBoostMoves = 2;   // affect next two moves
+
+    private int   boostMovesLeft = 0;
+    private float? originalMoveDuration = null;
+
 
 
     public GameObject WarningUI;
@@ -65,6 +79,9 @@ public class BrickQueManager : MonoBehaviour
     //play the queued commands
     public void Play()
     {
+        // stop pulsing immediately when Play is clicked
+        if (playButtonPulse != null) playButtonPulse.StopPulsing();
+    
         if (isPaused)
         {
             isPaused = false;
@@ -120,6 +137,10 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = false;
 
         AudioListener.pause = true; // Pause all audio
+
+        // resume pulsing while paused (if there are any bricks placed)
+        UpdatePlayPulse();
+
     }
 
     public void PlayFromPanel()
@@ -246,34 +267,8 @@ public class BrickQueManager : MonoBehaviour
 
             var a = queue.Dequeue();
 
-            switch (a)
-            {
-                case ActionType.None:
-                    // Do nothing
-                    break;
-
-                case ActionType.MoveForward:
-                    player.MoveUp();
-                    break;
-
-                case ActionType.TurnLeft:
-                    player.MoveLeft();
-                    break;
-
-                case ActionType.TurnRight:
-                    player.MoveRight();
-                    break;
-                        
-                case ActionType.MoveBackward:
-                    player.MoveDown();
-                    break;
-                case ActionType.PlayHorn:
-                    player.PlayHorn();
-                    break;
-            }
-
-            // Wait until the car finishes moving/rotating
-            yield return new WaitUntil(() => player.isIdle);
+            // Centralize action execution so we can apply temporary speed boost
+            yield return ExecuteActionWithSpeedBoost(a);
 
             // Remove highlight from current slot
             if (currentExecutingIndex < occupiedSlots.Count)
@@ -291,6 +286,80 @@ public class BrickQueManager : MonoBehaviour
         isPlaying = false;
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
+
+        // playback finished - resume pulse if any bricks remain
+        UpdatePlayPulse();
+    }
+    
+    private IEnumerator ExecuteActionWithSpeedBoost(ActionType a)
+    {
+        // If this is the speed brick, arm the boost for the next N moves (no move now)
+        if (a == ActionType.SpeedBoost)
+        {
+            boostMovesLeft = speedBoostMoves;
+            if (originalMoveDuration == null && player != null)
+                originalMoveDuration = player.moveDuration;
+            yield break;
+        }
+
+        // Only these actions are considered "moves" that consume the boost
+        bool isMove =
+            a == ActionType.MoveForward ||
+            a == ActionType.TurnLeft    ||
+            a == ActionType.TurnRight   ||
+            a == ActionType.MoveBackward;
+
+        // If boosted, use a shorter duration (faster move) for this action
+        if (isMove && boostMovesLeft > 0 && originalMoveDuration.HasValue && player != null)
+        {
+            player.moveDuration = originalMoveDuration.Value / Mathf.Max(0.0001f, speedBoostMultiplier);
+        }
+
+        // Execute the action exactly like before
+        switch (a)
+        {
+            case ActionType.None:
+                // Do nothing
+                break;
+
+            case ActionType.MoveForward:
+                player.MoveUp();
+                break;
+
+            case ActionType.TurnLeft:
+                player.MoveLeft();
+                break;
+
+            case ActionType.TurnRight:
+                player.MoveRight();
+                break;
+                        
+            case ActionType.MoveBackward:
+                player.MoveDown();
+                break;
+                    
+            case ActionType.PlayHorn:
+                player.PlayHorn();
+                break;
+                    
+            case ActionType.DropOil:
+                player.DropOil(oilPrefab, oilDropSound);
+                break;
+        }
+
+        // Wait until the car finishes moving/rotating/acting
+        yield return new WaitUntil(() => player.isIdle);
+
+        // If this was a boosted move, decrement and restore when finished
+        if (isMove && boostMovesLeft > 0 && originalMoveDuration.HasValue && player != null)
+        {
+            boostMovesLeft--;
+            if (boostMovesLeft == 0)
+            {
+                // restore original movement speed after last boosted move
+                player.moveDuration = originalMoveDuration.Value;
+            }
+        }
     }
 
     private void HighlightSlot(Slot slot, bool highlight)
@@ -324,16 +393,33 @@ public class BrickQueManager : MonoBehaviour
         if (PanelThatPlaysTheSequence == null || slotPrefab == null) return;
 
         int emptyCount = 0;
+        int filledCount = 0;
+        
         for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
         {
             var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (slot == null) continue;
-            if (slot.brickPrefab == null) emptyCount++;
+            
+            if (slot.brickPrefab == null) 
+                emptyCount++;
+            else 
+                filledCount++;
         }
+
+        // Start pulsing if at least one brick is placed
+        if (playButtonPulse != null)
+        {
+            if (filledCount > 0)
+                playButtonPulse.StartPulsing();
+            else
+                playButtonPulse.StopPulsing();
+        }
+
+        // Update pulse state based on current filled count
+        UpdatePlayPulse(filledCount);
 
         if (emptyCount <= 0)
         {
-            // Instantiate one new slot at the end
             var newSlot = Instantiate(slotPrefab, PanelThatPlaysTheSequence, false);
         }
     }
@@ -354,8 +440,27 @@ public class BrickQueManager : MonoBehaviour
         queue.Clear();
         RefreshLabel();
 
+        // Stop pulsing when cleared
+        if (playButtonPulse != null)
+            playButtonPulse.StopPulsing();
+
         // clear the placed bricks from the bottom panel
         ClearSlotsUI();
+
+        // remove any dropped oil from the scene
+        GameObject oilContainer = GameObject.Find("DroppedOils");
+        if (oilContainer != null)
+        {
+            Destroy(oilContainer);
+        }
+
+        // >>> NEW: reset any pending speed boost and restore original speed
+        boostMovesLeft = 0;
+        if (originalMoveDuration.HasValue && player != null)
+        {
+            player.moveDuration = originalMoveDuration.Value;
+        }
+        originalMoveDuration = null;
     }
 
     public void ResetPlayerPosition()
@@ -388,6 +493,21 @@ public class BrickQueManager : MonoBehaviour
             RebuildQueueFromIndex(0);
 
             timer.ResetTimer(0f); // reset the timer to 0
+
+            // remove any dropped oil from the scene
+            GameObject oilContainer = GameObject.Find("DroppedOils");
+            if (oilContainer != null)
+            {
+                Destroy(oilContainer);
+            }
+
+            // >>> NEW: reset any pending speed boost and restore original speed
+            boostMovesLeft = 0;
+            if (originalMoveDuration.HasValue)
+            {
+                player.moveDuration = originalMoveDuration.Value;
+            }
+            originalMoveDuration = null;
         }
     }
 
@@ -467,10 +587,36 @@ public class BrickQueManager : MonoBehaviour
     }
 
     public void RemoveWarning()
-        {
+    {
         if (WarningUI != null)
         {
             WarningUI.SetActive(false);
         }
     }
+    
+    private bool HasAnyFilledSlots()
+    {
+        if (PanelThatPlaysTheSequence == null) return false;
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot != null && slot.brickPrefab != null) return true;
+        }
+        return false;
+    }
+
+    private void UpdatePlayPulse(int filledCount = -1)
+    {
+        if (playButtonPulse == null) return;
+
+        bool anyFilled = filledCount >= 0 ? (filledCount > 0) : HasAnyFilledSlots();
+
+        // Pulse only when there are bricks AND we are NOT currently playing.
+        // This means: stop pulsing during execution, resume when finished or paused.
+        if (anyFilled && !isPlaying)
+            playButtonPulse.StartPulsing();
+        else
+            playButtonPulse.StopPulsing();
+    }
+
 }

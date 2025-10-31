@@ -25,8 +25,10 @@ public class PlayerController : MonoBehaviour
     private bool isRotating = false;
     private bool isCrashed = false; // Prevent further movement after collision
     public bool isIdle => !isMoving && !isRotating && !isHolding;
+    public bool rotationAlreadyHandled = false;
 
     public float rotateDuration = 0.25f; // how long a 90° turn takes
+    public float oilSpinDuration = 1f; // how long the 540° spin takes when dropping oil
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
 
@@ -95,6 +97,8 @@ public class PlayerController : MonoBehaviour
         if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(Vector2Int.up); // (0,1)
         StartCoroutine(RotateTo(Vector2Int.up));
+
+        rotationAlreadyHandled = false;
     }
     
     public void MoveDown()
@@ -102,6 +106,8 @@ public class PlayerController : MonoBehaviour
         if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(Vector2Int.down); // (0,-1)
         StartCoroutine(RotateTo(Vector2Int.down));
+
+        rotationAlreadyHandled = false;
     }
     
     public void MoveLeft()
@@ -109,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(Vector2Int.left); // (-1,0)
         StartCoroutine(RotateTo(Vector2Int.left));
+        rotationAlreadyHandled = false;
     }
     
     public void MoveRight()
@@ -116,6 +123,8 @@ public class PlayerController : MonoBehaviour
         if (isMoving || isRotating || isHolding || isCrashed) return;
         TryMove(Vector2Int.right); // (1,0)
         StartCoroutine(RotateTo(Vector2Int.right));
+
+        rotationAlreadyHandled = false;
     }
 
     public void SetSpeed(float newSpeed)
@@ -135,6 +144,11 @@ public class PlayerController : MonoBehaviour
     {
         if (sfxSource == null || hornSound == null) return;
         sfxSource.PlayOneShot(hornSound, 0.5f);
+    }
+
+    public void DropOil(GameObject oilPrefab, AudioClip oilSound)
+    {
+        StartCoroutine(HandleOilDrop(oilPrefab, oilSound));
     }
 
     public void Hold(float delay)
@@ -212,6 +226,71 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(faceDirection.x, faceDirection.y, 0));
         
         isHolding = false;
+    }
+
+    private IEnumerator HandleOilDrop(GameObject oilPrefab, AudioClip oilSound)
+    {
+        isHolding = true; // Prevent other actions during oil drop
+        
+        // Play sound effect
+        if (sfxSource != null && oilSound != null)
+        {
+            sfxSource.PlayOneShot(oilSound, 0.7f);
+        }
+        
+        // Spin 540 degrees
+        Quaternion startRotation = transform.rotation;
+        
+        float elapsed = 0f;
+        while (elapsed < oilSpinDuration)
+        {
+            // Rotate 540 degrees over the duration
+            float angle = Mathf.Lerp(0f, 540f, elapsed / oilSpinDuration);
+            transform.rotation = startRotation * Quaternion.Euler(0, 0, -angle);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        
+        // After 540° rotation (1.5 spins), flip the face direction to backwards
+        faceDirection = -faceDirection;
+        
+        // Set final rotation to match the NEW face direction
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(faceDirection.x, faceDirection.y, 0));
+
+        // Drop oil at current position
+        if (oilPrefab != null)
+        {
+            Vector3 oilPosition = new Vector3(gridPosition.x, gridPosition.y, 0);
+            GameObject oilInstance = Instantiate(oilPrefab, oilPosition, Quaternion.identity);
+
+            // Disable the collider temporarily to prevent immediate trigger
+            Collider2D oilCollider = oilInstance.GetComponent<Collider2D>();
+            if (oilCollider != null)
+            {
+                oilCollider.enabled = false;
+                StartCoroutine(EnableOilColliderAfterDelay(oilCollider, 1f)); // Enable after 1 second
+            }
+
+            // Optional: Add the oil to a parent container for organization
+            GameObject oilContainer = GameObject.Find("DroppedOils");
+            if (oilContainer == null)
+            {
+                oilContainer = new GameObject("DroppedOils");
+            }
+            oilInstance.transform.SetParent(oilContainer.transform);
+        }
+        
+        isHolding = false;
+        rotationAlreadyHandled = true;
+    }
+
+    private IEnumerator EnableOilColliderAfterDelay(Collider2D collider, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
     }
 
     private void PlayCrashSound()

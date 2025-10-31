@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoadPieceData
   type: 3
   sprite: {fileID: 0}
+  timer: {fileID: 0}
   startDirection: {x: -1, y: 0}
   pitAudio: {fileID: 0}
   pitDelay: 3
-  oilSpillAudio: {fileID: 0}
+  oilSpillAudio: {fileID: 8300000, guid: c8ad2fd948722cd4580bcca3b9993804, type: 3}
   spinDuration: 1
