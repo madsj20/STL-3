@@ -9,9 +9,6 @@ public class InventoryController : MonoBehaviour
     public GameObject[] brickPrefabs; //Array of all the brick prefabs available in the game
     public GameObject pickablePanel;  // <-- assign your left panel here
     public ScrollRect scrollRect; // Assign the Scroll View Horizontal's ScrollRect component
-
-    public int visibleSlotsBeforeScroll = 11; // Number of slots visible before scrolling starts
-    
     private int lastFilledSlotIndex = -1;
 
     void Start()
@@ -50,12 +47,13 @@ public class InventoryController : MonoBehaviour
                     // non-UI fallback
                     brick.transform.localPosition = Vector3.zero;
                     brick.transform.localScale = Vector3.one;
-                    
+
                 }
             }
         }
     }
 
+    //Mads don't asked me why this is in LateUpdate, it just works better for some reason???
     void LateUpdate()
     {
         // Check if a new brick has been placed and scroll to it

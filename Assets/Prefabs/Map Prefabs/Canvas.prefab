@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 3316844072731274438}
   - component: {fileID: 8415912835456254572}
   - component: {fileID: 8859147938236997720}
-  - component: {fileID: 3469204398582043838}
+  - component: {fileID: 4909729127714821705}
   m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 0
---- !u!114 &3469204398582043838
+--- !u!114 &4909729127714821705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
