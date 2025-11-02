@@ -679,6 +679,8 @@ goalCrossedDuringReplay = false;
             WinningUI.SetActive(false);
         }
 
+        player.ResetWinState(); // timer can run again when replay starts
+
         commandDelay = 0f; // no delay during replay
 
         //Remove all oil stains before replay

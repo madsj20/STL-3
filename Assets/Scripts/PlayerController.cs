@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool isHolding = false;
     private bool isRotating = false;
     private bool isCrashed = false; // Prevent further movement after collision
+    private bool hasWon = false;
     public bool isIdle => !isMoving && !isRotating && !isHolding;
     public bool rotationAlreadyHandled = false;
 
@@ -48,6 +49,18 @@ public class PlayerController : MonoBehaviour
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
+    }
+
+    private void Update()
+    {
+        if (isMoving && !hasWon)
+        {
+            timer.StartTimer(); // Start the timer when the car moves
+        }
+        else if (!isMoving && !isRotating && !isHolding && !isCrashed)
+        {
+            timer.StopTimer(); // Stop the timer when the car is idle
+        }
     }
 
     // Set spawn position for the "START" RoadPiece
@@ -339,6 +352,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Final time: " + timer.GetFormattedTime());
             if (brickQueManager != null)
                 brickQueManager.NotifyGoalCrossed();
+            hasWon = true; // Prevent timer from going
         }
+    }
+
+    public void ResetWinState()
+    {
+        hasWon = false;
     }
 }
