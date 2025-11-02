@@ -14,6 +14,7 @@ public class BrickQueManager : MonoBehaviour
     public TMP_Text queueLabel;    // shows the queued actions
     public float commandDelay = 0.05f; // small gap between commands
     public PulseEffect playButtonPulse;
+    public PulseEffect recordingPulse;
 
     public Transform PanelThatPlaysTheSequence; //The panel that holds the inventory slots
     public Slot slotPrefab; // prefab used to create additional slots when needed
@@ -44,6 +45,7 @@ public class BrickQueManager : MonoBehaviour
 
     public GameObject WarningUI;
     public GameObject WinningUI;
+    public GameObject ReplayBorder;
 
     // --- Replay support ---
     private readonly List<ActionType> replayQueue = new List<ActionType>();
@@ -75,6 +77,24 @@ public class BrickQueManager : MonoBehaviour
     {
         // Ensure there's always more than one empty slot available
         EnsureSlots();
+
+        // Update replay border visibility
+        bool playerHasWon = false;
+        if (player != null)
+        {
+            player.GetCurrentWinState(out playerHasWon);
+        }
+        if (IsReplaying && !playerHasWon)
+        {
+            ReplayBorder.SetActive(true);
+        }
+        else
+        {
+            ReplayBorder.SetActive(false);
+        }
+
+        // Keep recording pulse in sync with execution state
+        UpdateRecordingPulse();
     }
 
     public void ClearQueue()
@@ -657,6 +677,18 @@ goalCrossedDuringReplay = false;
             playButtonPulse.StartPulsing();
         else
             playButtonPulse.StopPulsing();
+    }
+
+    // Keep the recording indicator in sync: pulse while playing and there are pending commands
+    private void UpdateRecordingPulse()
+    {
+        if (recordingPulse == null) return;
+
+        bool shouldPulse = isPlaying && !isPaused && queue.Count > 0 && !isReplaying;
+        if (shouldPulse)
+            recordingPulse.StartPulsing();
+        else
+            recordingPulse.StopPulsing();
     }
 
     // --- Optional public helpers for replay control ---

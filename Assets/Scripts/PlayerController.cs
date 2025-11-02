@@ -355,9 +355,14 @@ public class PlayerController : MonoBehaviour
             hasWon = true; // Prevent timer from going
         }
     }
-
     public void ResetWinState()
     {
-        hasWon = false;
+        hasWon = false; // Allow timer to run again
+    }
+
+    // Method to get the current win state
+    public void GetCurrentWinState(out bool winState)
+    {
+        winState = hasWon;
     }
 }

@@ -451,6 +451,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1171213799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2973443276568058627, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1252162276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503932121027535663, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6c282c332935f47a2bcc0006debad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PulseEffect
 --- !u!1001 &1352348728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6765,6 +6781,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1494033021}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: ReplayBorder
+      value: 
+      objectReference: {fileID: 1171213799}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: recordingPulse
+      value: 
+      objectReference: {fileID: 1252162276}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: playButtonPulse
       value: 
       objectReference: {fileID: 811499457}
@@ -6948,6 +6972,14 @@ PrefabInstance:
     - target: {fileID: 4428718238994913314, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098447755623924697, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 664639921}
+    - target: {fileID: 5098447755623924697, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayReplay
       objectReference: {fileID: 0}
     - target: {fileID: 6051486213982509944, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
