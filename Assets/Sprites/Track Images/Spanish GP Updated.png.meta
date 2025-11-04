@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24f26b4287b458c49bd38e364422335c
+guid: eff5deaec352cc74a9316bb41ddc9c55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4327692413181433254
-    second: Intro Track_0
+      213: -2161879731647806122
+    second: Spanish GP Updated_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Intro Track_0
+      name: Spanish GP Updated_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 513
-        height: 442
+        width: 643
+        height: 487
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a515d8125d0f0c30800000000000000
-      internalID: 4327692413181433254
+      spriteID: 655040496d57ff1e0800000000000000
+      internalID: -2161879731647806122
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Intro Track_0: 4327692413181433254
+      Spanish GP Updated_0: -2161879731647806122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddd848dda58d934b98dc9a20bd9de55, type: 3}
   m_Name: Intro Track
   m_EditorClassIdentifier: Assembly-CSharp::TrackData
-  trackImage: {fileID: 4327692413181433254, guid: 24f26b4287b458c49bd38e364422335c, type: 3}
+  trackImage: {fileID: 1549249435753067776, guid: e6d27c303daf35743b358da820e2af28, type: 3}
   sceneName: Intro Track

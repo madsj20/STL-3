@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddd848dda58d934b98dc9a20bd9de55, type: 3}
   m_Name: Austrian GP
   m_EditorClassIdentifier: Assembly-CSharp::TrackData
-  trackImage: {fileID: -2382368839685100184, guid: e55454c9d1d82bc46a602749432a9cae, type: 3}
+  trackImage: {fileID: -7239564484629747168, guid: 4b50f0e1245ba3a49b4b1ca7c0fb5826, type: 3}
   sceneName: Austrian GP

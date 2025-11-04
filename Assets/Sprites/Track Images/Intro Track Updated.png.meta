@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1358713aaf6b83b46b3ada3f37479295
+guid: e6d27c303daf35743b358da820e2af28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2286032417758986101
-    second: Spanish GP State 10-10-2025_0
+      213: 1549249435753067776
+    second: Intro Track Updated_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spanish GP State 10-10-2025_0
+      name: Intro Track Updated_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 567
-        height: 435
+        width: 498
+        height: 454
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b80c272c0a16640e0800000000000000
-      internalID: -2286032417758986101
+      spriteID: 005398e472a008510800000000000000
+      internalID: 1549249435753067776
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spanish GP State 10-10-2025_0: -2286032417758986101
+      Intro Track Updated_0: 1549249435753067776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9046424008530396100, guid: 3d5b3af5d45be3844a4abd153fb88cbc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -985,6 +989,10 @@ PrefabInstance:
     - target: {fileID: 177176750165132781, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: m_Name
       value: Player (Car)
+      objectReference: {fileID: 0}
+    - target: {fileID: 177176750165132781, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2482393368336429712, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10138,7 +10146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8017801731898282972, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0009972939
+      value: -0.00002789381
       objectReference: {fileID: 0}
     - target: {fileID: 8177971087120896619, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddd848dda58d934b98dc9a20bd9de55, type: 3}
   m_Name: Spanish GP
   m_EditorClassIdentifier: Assembly-CSharp::TrackData
-  trackImage: {fileID: -2286032417758986101, guid: 1358713aaf6b83b46b3ada3f37479295, type: 3}
+  trackImage: {fileID: -2161879731647806122, guid: eff5deaec352cc74a9316bb41ddc9c55, type: 3}
   sceneName: Spanish GP
