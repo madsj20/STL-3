@@ -6832,7 +6832,7 @@ PrefabInstance:
       objectReference: {fileID: 165779641}
     - target: {fileID: 6996014634606488612, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: slotCount
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6996014634606488612, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: scrollRect
