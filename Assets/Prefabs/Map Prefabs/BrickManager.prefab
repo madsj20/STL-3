@@ -83,3 +83,4 @@ MonoBehaviour:
   - {fileID: 8664433607397383791, guid: 0f097c4d35c33c648870efda37217073, type: 3}
   - {fileID: 8664433607397383791, guid: ddbb815c3806ab144a0fbd62f1948098, type: 3}
   pickablePanel: {fileID: 0}
+  scrollRect: {fileID: 0}

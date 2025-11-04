@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454ae8b425aae29498fb541e4f155aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrickPiece
-  action: 7
+  action: 5
 --- !u!114 &6191203619451629358
 MonoBehaviour:
   m_ObjectHideFlags: 0
