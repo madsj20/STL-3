@@ -11,6 +11,7 @@ public class InventoryController : MonoBehaviour
     public ScrollRect scrollRect; // Assign the Scroll View Horizontal's ScrollRect component
     private int lastFilledSlotIndex = -1;
 
+
     void Start()
     {
         // create the requested number of slots
@@ -74,6 +75,7 @@ public class InventoryController : MonoBehaviour
                 rightmostFilledIndex = i;
             }
         }
+
 
         // If a new brick was placed (index changed), scroll to it
         if (rightmostFilledIndex != lastFilledSlotIndex && rightmostFilledIndex >= 0)

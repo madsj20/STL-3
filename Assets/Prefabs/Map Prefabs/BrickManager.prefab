@@ -49,6 +49,7 @@ MonoBehaviour:
   queueLabel: {fileID: 0}
   commandDelay: 0.05
   playButtonPulse: {fileID: 0}
+  recordingPulse: {fileID: 0}
   PanelThatPlaysTheSequence: {fileID: 0}
   slotPrefab: {fileID: 988326274697802718, guid: d0f4a5c2e01346942bb54ae709789705, type: 3}
   oilPrefab: {fileID: 3020080050236287943, guid: 31328b80f1ce50a44b532f32b0977787, type: 3}
@@ -59,6 +60,7 @@ MonoBehaviour:
   speedBoostMoves: 2
   WarningUI: {fileID: 0}
   WinningUI: {fileID: 0}
+  ReplayBorder: {fileID: 0}
 --- !u!114 &6996014634606488612
 MonoBehaviour:
   m_ObjectHideFlags: 0
