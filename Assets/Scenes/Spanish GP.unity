@@ -719,6 +719,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &704566355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4340382402569690435, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6c282c332935f47a2bcc0006debad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PulseEffect
 --- !u!4 &899183735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7323217700861902816, guid: 2291a55250e210947b34c1ed57e98319, type: 3}
@@ -956,7 +967,7 @@ PrefabInstance:
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: recordingPulse
       value: 
-      objectReference: {fileID: 1795564573}
+      objectReference: {fileID: 704566355}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: playButtonPulse
       value: 
@@ -965,6 +976,10 @@ PrefabInstance:
       propertyPath: PanelThatPlaysTheSequence
       value: 
       objectReference: {fileID: 165779641}
+    - target: {fileID: 6996014634606488612, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: scrollRect
+      value: 
+      objectReference: {fileID: 5974452862740654178}
     - target: {fileID: 6996014634606488612, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: pickablePanel
       value: 
@@ -1037,7 +1052,7 @@ PrefabInstance:
     - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: recordingPulse
       value: 
-      objectReference: {fileID: 1795564573}
+      objectReference: {fileID: 0}
     - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: brickQueManager
       value: 
@@ -1084,17 +1099,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2973443276568058627, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
   m_PrefabInstance: {fileID: 5974452862740654176}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1795564573 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1503932121027535663, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
-  m_PrefabInstance: {fileID: 5974452862740654176}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6c282c332935f47a2bcc0006debad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PulseEffect
 --- !u!4 &2035723173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1790645479732341440, guid: 8a865e0d9fe96b943b5f38a67d0e5541, type: 3}
@@ -10006,7 +10010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3128332040366634687, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3218047424286818719, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10120,6 +10124,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 478081776}
+    - target: {fileID: 6455967026054707500, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6675700516908841371, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10146,7 +10154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8017801731898282972, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002789381
+      value: -0.00095167325
       objectReference: {fileID: 0}
     - target: {fileID: 8177971087120896619, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10172,6 +10180,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6c282c332935f47a2bcc0006debad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PulseEffect
+--- !u!114 &5974452862740654178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9193914192613881114, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
