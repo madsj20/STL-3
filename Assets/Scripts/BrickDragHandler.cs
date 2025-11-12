@@ -100,7 +100,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         }
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData) 
     {
         var rt = GetComponent<RectTransform>();
         if (!rt) { transform.position = eventData.position; return; }
@@ -121,8 +121,8 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             currentSlot = FindNearestSlot(eventData.position, eventData.pressEventCamera);
         }
 
-        // Show a thin vertical insertion line on left/right edge
-        if (currentSlot != null)
+        // Show a thin vertical insertion line only when the slot is occupied 
+        if (currentSlot != null && currentSlot.brickPrefab != null)
         {
             pendingInsertIndex = currentSlot.transform.GetSiblingIndex();
             ShowInsertionMarker(currentSlot);
@@ -159,6 +159,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             squeezeTriggered = false;
         }
     }
+
 
     private Slot FindNearestSlot(Vector2 screenPos, Camera camera)
     {
@@ -371,7 +372,11 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     // Always draw a thin vertical line on the LEFT edge of the hovered slot
     private void ShowInsertionMarker(Slot slot)
     {
-        if (insertionMarker == null || slot == null) return;
+        if (insertionMarker == null || slot == null || slot.brickPrefab == null)
+        {
+            HideInsertionMarker();
+            return;
+        }
 
         insertionMarker.SetActive(true);
 
@@ -379,20 +384,16 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         var markerRT = insertionMarker.GetComponent<RectTransform>();
         if (slotRT == null || markerRT == null) return;
 
-        // Get slot corners
+        // (existing positioning code unchanged)
         Vector3[] c = new Vector3[4];
         slotRT.GetWorldCorners(c);
-        // c[1] = top-left, c[0] = bottom-left
-
         Vector3 top = c[1];
         Vector3 bottom = c[0];
-
         Vector3 mid = (top + bottom) * 0.5f;
-        float height = Vector3.Distance(top, bottom) * 35f; // extend beyond slot height
+        float height = Vector3.Distance(top, bottom) * 35f;
 
-        // Shift the line left so it sits on the slot border
         markerRT.position = mid + new Vector3(-0.1f, 0f, 0f);
-        markerRT.sizeDelta = new Vector2(5f, height); // thin vertical line
+        markerRT.sizeDelta = new Vector2(5f, height);
         markerRT.localRotation = Quaternion.identity;
     }
 
