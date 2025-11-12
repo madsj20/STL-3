@@ -47,6 +47,7 @@ public class BrickQueManager : MonoBehaviour
     public GameObject ReplayBorder;
     public GameObject TimerObject;
     public GameObject RecordCamera;
+    private GameObject ReplayBlockers;
 
     // --- Replay support ---
     private readonly List<ActionType> replayQueue = new List<ActionType>();
@@ -66,6 +67,9 @@ public class BrickQueManager : MonoBehaviour
 
     private void Start()
     {
+        //Find ReplayBloockers
+        ReplayBlockers = GameObject.Find("ReplayBlockers");
+        ReplayBlockers.SetActive(false);
         // Make sure all slot backgrounds are OFF at scene start
         if (PanelThatPlaysTheSequence == null) return;
 
@@ -104,11 +108,13 @@ public class BrickQueManager : MonoBehaviour
         {
             TimerObject.SetActive(true);
             RecordCamera.SetActive(false);
+            ReplayBlockers.SetActive(true);
         }
         else if (TimerObject != null)
         {
             TimerObject.SetActive(false);
             RecordCamera.SetActive(true);
+            ReplayBlockers.SetActive(false);
         }
     }
 
@@ -775,10 +781,103 @@ public class BrickQueManager : MonoBehaviour
         player.RespawnToCurrentStart();
         ResetTimer();
 
-        // Load the accumulated commands into the execution queue
+        Debug.Log($"PlayReplay: replayQueue.Count={replayQueue.Count} items=[{string.Join(",", replayQueue)}]");
+
+        // --- Build the visual slots from replayQueue ---
+        // Clear existing bricks and ensure enough slots
+        ClearSlotsUI();
+
+        if (PanelThatPlaysTheSequence != null && slotPrefab != null)
+        {
+            // Ensure there are at least as many slots as replay items
+            int neededSlots = replayQueue.Count;
+            for (int i = PanelThatPlaysTheSequence.childCount; i < neededSlots; i++)
+            {
+                Instantiate(slotPrefab, PanelThatPlaysTheSequence, false);
+            }
+
+            // Try to get the inventory prefabs so we can instantiate matching brick visuals
+            var inventory = FindFirstObjectByType<InventoryController>();
+            GameObject[] brickPrefabs = inventory != null ? inventory.brickPrefabs : null;
+
+            int replayIndex = 0;
+            for (int i = 0; i < PanelThatPlaysTheSequence.childCount && replayIndex < replayQueue.Count; i++)
+            {
+                var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+                if (slot == null) continue;
+
+                // only fill empty slots (preserve existing if any)
+                if (slot.brickPrefab != null) continue;
+
+                ActionType action = replayQueue[replayIndex];
+
+                GameObject prefabToUse = null;
+                if (brickPrefabs != null)
+                {
+                    for (int p = 0; p < brickPrefabs.Length; p++)
+                    {
+                        var pf = brickPrefabs[p];
+                        if (pf == null) continue;
+                        var bp = pf.GetComponent<BrickPiece>();
+                        if (bp != null && bp.action == action)
+                        {
+                            prefabToUse = pf;
+                            break;
+                        }
+                    }
+                }
+
+                GameObject instance;
+                if (prefabToUse != null)
+                {
+                    instance = Instantiate(prefabToUse, slot.transform, false);
+                }
+                else
+                {
+                    // Fallback: create a simple placeholder GameObject that has BrickPiece with the right action
+                    instance = new GameObject("ReplayBrick_" + action.ToString());
+                    instance.transform.SetParent(slot.transform, false);
+                    var bp = instance.AddComponent<BrickPiece>();
+                    bp.action = action;
+                    // optional: add a minimal RectTransform so layout won't break
+                    var rt = instance.AddComponent<RectTransform>();
+                    rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
+                    rt.pivot = new Vector2(0.5f, 0.5f);
+                    rt.anchoredPosition = Vector2.zero;
+                    rt.localScale = Vector3.one;
+                }
+
+                // Normalize RectTransform/visuals so the brick looks correct inside slot
+                var instanceRT = instance.GetComponent<RectTransform>();
+                if (instanceRT != null)
+                {
+                    instanceRT.anchorMin = instanceRT.anchorMax = new Vector2(0.5f, 0.5f);
+                    instanceRT.pivot = new Vector2(0.5f, 0.5f);
+                    instanceRT.anchoredPosition = Vector2.zero;
+                    instanceRT.localRotation = Quaternion.identity;
+                    instanceRT.localScale = Vector3.one;
+                }
+
+                slot.brickPrefab = instance;
+                slot.SetBackgroundActive(false);
+
+                replayIndex++;
+            }
+
+            // Force layout rebuild so UI reflects new slots/bricks immediately
+            var rtPanel = PanelThatPlaysTheSequence.GetComponent<RectTransform>();
+            if (rtPanel != null)
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rtPanel);
+        }
+
+        // Load the accumulated commands into the execution queue (logical)
         queue.Clear();
         for (int i = 0; i < replayQueue.Count; i++)
-            queue.Enqueue(replayQueue[i]);
+        {
+            Enqueue(replayQueue[i]); // uses RefreshLabel
+            Debug.Log($"  Enqueued replay action: {replayQueue[i]}");
+        }
+        Debug.Log("Queue:" + string.Join(", ", queue));
 
         RemoveAllHighlights();
         pausedAtIndex = -1;

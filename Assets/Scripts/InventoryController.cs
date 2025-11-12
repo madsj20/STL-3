@@ -55,6 +55,7 @@ public class InventoryController : MonoBehaviour
     }
 
     //Mads don't asked me why this is in LateUpdate, it just works better for some reason???
+    //Mads: No questions asked hahaha
     void LateUpdate()
     {
         // Check if a new brick has been placed and scroll to it
