@@ -56,7 +56,7 @@ MonoBehaviour:
   oilDropSound: {fileID: 8300000, guid: c8ad2fd948722cd4580bcca3b9993804, type: 3}
   highlightScale: 1.1
   timer: {fileID: 0}
-  speedBoostMultiplier: 1.5
+  speedBoostMultiplier: 2
   speedBoostMoves: 2
   WarningUI: {fileID: 0}
   WinningUI: {fileID: 0}

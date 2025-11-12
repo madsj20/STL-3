@@ -961,6 +961,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1494033021}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: TimerObject
+      value: 
+      objectReference: {fileID: 5974452862740654179}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: RecordCamera
+      value: 
+      objectReference: {fileID: 5974452862740654180}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: ReplayBorder
       value: 
       objectReference: {fileID: 1738770761}
@@ -10191,6 +10199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+--- !u!1 &5974452862740654179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7176934700157047410, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5974452862740654180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2218600023183557930, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+  m_PrefabInstance: {fileID: 5974452862740654176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

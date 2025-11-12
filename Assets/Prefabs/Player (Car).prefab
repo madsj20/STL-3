@@ -116,7 +116,7 @@ MonoBehaviour:
   moveDuration: 1
   crashSound: {fileID: 8300000, guid: 1b7f85cf8c9362649b9c498e72b4021e, type: 3}
   hornSound: {fileID: 8300000, guid: 7bb88caa0958ff641b64e75334fdc516, type: 3}
-  crashSoundVolume: 0.8
+  crashSoundVolume: 1
   rotationAlreadyHandled: 0
   rotateDuration: 0.25
   oilSpinDuration: 1

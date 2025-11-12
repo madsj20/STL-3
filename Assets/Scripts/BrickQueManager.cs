@@ -35,7 +35,6 @@ public class BrickQueManager : MonoBehaviour
 
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
 
-
     [Header("Speed Boost")]
     [SerializeField] private float speedBoostMultiplier = 2f;  // 2x faster
     [SerializeField] private int speedBoostMoves = 2;   // affect next two moves
@@ -46,6 +45,8 @@ public class BrickQueManager : MonoBehaviour
     public GameObject WarningUI;
     public GameObject WinningUI;
     public GameObject ReplayBorder;
+    public GameObject TimerObject;
+    public GameObject RecordCamera;
 
     // --- Replay support ---
     private readonly List<ActionType> replayQueue = new List<ActionType>();
@@ -54,6 +55,9 @@ public class BrickQueManager : MonoBehaviour
     // Track if the goal was crossed while we are replaying
     private bool goalCrossedDuringReplay = false;
     public bool IsReplaying => isReplaying;
+
+    [Header("Slots")]
+    [SerializeField] private int defaultEmptySlotCount = 5;
 
     private void Awake()
     {
@@ -95,6 +99,17 @@ public class BrickQueManager : MonoBehaviour
 
         // Keep recording pulse in sync with execution state
         UpdateRecordingPulse();
+
+        if (isReplaying && TimerObject != null)
+        {
+            TimerObject.SetActive(true);
+            RecordCamera.SetActive(false);
+        }
+        else if (TimerObject != null)
+        {
+            TimerObject.SetActive(false);
+            RecordCamera.SetActive(true);
+        }
     }
 
     public void ClearQueue()
@@ -333,8 +348,8 @@ public class BrickQueManager : MonoBehaviour
             WinningUI.SetActive(true);
             commandDelay = 0.05f; // small gap between commands
         }
-// reset the flag after handling
-goalCrossedDuringReplay = false;
+        // reset the flag after handling
+        goalCrossedDuringReplay = false;
 
         // playback finished - resume pulse if any bricks remain
         UpdatePlayPulse();
@@ -496,6 +511,9 @@ goalCrossedDuringReplay = false;
         // clear the placed bricks from the bottom panel
         ClearSlotsUI();
 
+        // Reset slots to a fixed amount of empty slots
+        ResetPlayPanelToEmptySlots(defaultEmptySlotCount);
+
         // remove any dropped oil from the scene
         GameObject oilContainer = GameObject.Find("DroppedOils");
         if (oilContainer != null)
@@ -513,6 +531,9 @@ goalCrossedDuringReplay = false;
 
         // >>> NEW: reset goal flag
         goalCrossedDuringReplay = false;
+
+        // ensure pulses reflect the now-empty state
+        UpdatePlayPulse(0);
     }
 
     public void ResetPlayerPosition()
@@ -606,6 +627,36 @@ goalCrossedDuringReplay = false;
                     Destroy(child);
                 }
             }
+        }
+    }
+
+    // Create exactly N empty slots in the play panel (deletes existing Slot children)
+    private void ResetPlayPanelToEmptySlots(int desiredEmpty)
+    {
+        if (PanelThatPlaysTheSequence == null || slotPrefab == null) return;
+
+        // Delete existing Slot children only
+        for (int i = PanelThatPlaysTheSequence.childCount - 1; i >= 0; i--)
+        {
+            var child = PanelThatPlaysTheSequence.GetChild(i);
+            if (child.GetComponent<Slot>() != null)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        // Recreate desired amount of empty slots
+        int count = Mathf.Max(0, desiredEmpty);
+        for (int i = 0; i < count; i++)
+        {
+            Instantiate(slotPrefab, PanelThatPlaysTheSequence, false);
+        }
+
+        // Ensure layout updates so the UI reflects the new slots immediately
+        var rt = PanelThatPlaysTheSequence.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
         }
     }
 
