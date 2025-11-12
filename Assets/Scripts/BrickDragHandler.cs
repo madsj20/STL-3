@@ -13,15 +13,11 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     // Squeeze-in detection
     private Slot hoveredSlot;
     private Coroutine squeezeCoroutine;
-    private const float SQUEEZE_DELAY = 0.5f; // Time to hold before squeeze-in
+    private const float SqueezeDelay = 0.5f; // Time to hold before squeeze-in
     private bool squeezeTriggered = false;
-
-    // ---- NEW: visual insertion marker state (purely visual, no logic change) ----
-    private GameObject insertionMarker;                 // thin vertical line
-    private Color highlightColor = new Color(1f, 0.2f, 0f, 0.9f); // bright orange
-    private bool insertAfter;                           // true = right edge, false = left edge
-    private int pendingInsertIndex = -1;               // computed while hovering (visual only)
-    // ---------------------------------------------------------------------------
+    private GameObject insertionMarker; // thin vertical line
+    private bool insertAfter; // true = right edge, false = left edge
+    private int pendingInsertIndex = -1; // computed while hovering (visual only)
 
     void Start()
     {
@@ -88,8 +84,20 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             canvasGroup.alpha = 0.6f;
         }
 
-        // ---- NEW: create the insertion marker (hidden until we hover a slot) ----
+        // create the insertion marker (hidden until we hover a slot)
         CreateInsertionMarker();
+
+        // Reset squeeze flags on all slots
+        var manager = FindFirstObjectByType<BrickQueManager>();
+        if (manager != null && manager.PanelThatPlaysTheSequence != null)
+        {
+            foreach (Transform t in manager.PanelThatPlaysTheSequence)
+            {
+                var s = t.GetComponent<Slot>();
+                if (s != null)
+                    s.squeezeUsedThisDrag = false;
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -113,7 +121,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             currentSlot = FindNearestSlot(eventData.position, eventData.pressEventCamera);
         }
 
-        // ---- NEW: show a thin vertical insertion line on left/right edge ----
+        // Show a thin vertical insertion line on left/right edge
         if (currentSlot != null)
         {
             pendingInsertIndex = currentSlot.transform.GetSiblingIndex();
@@ -124,7 +132,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             HideInsertionMarker();
             pendingInsertIndex = -1;
         }
-        // --------------------------------------------------------------------
 
         // Only trigger squeeze-in for occupied slots (and don't squeeze into your own original slot)
         if (currentSlot != null && currentSlot.brickPrefab != null && currentSlot != hoveredSlot && currentSlot != originalSlot)
@@ -188,11 +195,12 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     private IEnumerator SqueezeInTimer(Slot targetSlot)
     {
-        yield return new WaitForSeconds(SQUEEZE_DELAY);
+        yield return new WaitForSeconds(SqueezeDelay);
 
         // After delay, perform the squeeze-in
-        if (targetSlot != null && targetSlot.brickPrefab != null)
+        if (targetSlot != null && targetSlot.brickPrefab != null && !targetSlot.squeezeUsedThisDrag)
         {
+            targetSlot.squeezeUsedThisDrag = true;
             PerformSqueezeIn(targetSlot);
             squeezeTriggered = true;
         }
@@ -248,13 +256,12 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             squeezeCoroutine = null;
         }
 
-        // ---- NEW: clean up visual insertion marker ----
+        // Clean up visual insertion marker
         if (insertionMarker != null)
         {
             Destroy(insertionMarker);
             insertionMarker = null;
         }
-        // ----------------------------------------------
 
         // Hide hint arrow no matter how the drag ends
         if (ArrowHintController.Instance != null)
@@ -290,7 +297,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
                 return;
             }
 
-            // MODIFIED: Destroy old brick instead of swapping
+            // Destroy old brick instead of swapping
             GameObject oldBrick = dropSlot.brickPrefab;
 
             // If slot already had a brick, destroy it
@@ -315,7 +322,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             return;
         }
 
-        // delete the dragged item if dropped outside inventory panel
+        // Delete the dragged item if dropped outside inventory panel
         if (originalSlot != null && originalSlot.brickPrefab == gameObject)
             originalSlot.brickPrefab = null;
 
@@ -358,7 +365,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         rectTransform.anchorMin = rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
         rectTransform.pivot = new Vector2(0.5f, 0.5f);
 
-        // NOTE: no Outline component (no lines)
         insertionMarker.SetActive(false);
     }
 
