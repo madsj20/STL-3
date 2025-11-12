@@ -5,6 +5,7 @@ public class Slot : MonoBehaviour
 {
     public GameObject brickPrefab;
     public Image backgroundImage;
+    public bool squeezeUsedThisDrag = false;
 
     private void Start()
     {

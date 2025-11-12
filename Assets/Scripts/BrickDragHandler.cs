@@ -13,8 +13,11 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     // Squeeze-in detection
     private Slot hoveredSlot;
     private Coroutine squeezeCoroutine;
-    private const float SQUEEZE_DELAY = 0.5f; // Time to hold before squeeze-in
+    private const float SqueezeDelay = 0.5f; // Time to hold before squeeze-in
     private bool squeezeTriggered = false;
+    private GameObject insertionMarker; // thin vertical line
+    private bool insertAfter; // true = right edge, false = left edge
+    private int pendingInsertIndex = -1; // computed while hovering (visual only)
 
     void Start()
     {
@@ -69,7 +72,6 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             ArrowHintController.Instance.ShowForAction(piece.action);
         }
-    
 
         // Re-parent to the nearest Canvas so the brick can be dragged across all UI
         var canvas = GetComponentInParent<Canvas>();
@@ -82,9 +84,23 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             canvasGroup.alpha = 0.6f;
         }
 
+        // create the insertion marker (hidden until we hover a slot)
+        CreateInsertionMarker();
+
+        // Reset squeeze flags on all slots
+        var manager = FindFirstObjectByType<BrickQueManager>();
+        if (manager != null && manager.PanelThatPlaysTheSequence != null)
+        {
+            foreach (Transform t in manager.PanelThatPlaysTheSequence)
+            {
+                var s = t.GetComponent<Slot>();
+                if (s != null)
+                    s.squeezeUsedThisDrag = false;
+            }
+        }
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData) 
     {
         var rt = GetComponent<RectTransform>();
         if (!rt) { transform.position = eventData.position; return; }
@@ -105,17 +121,29 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             currentSlot = FindNearestSlot(eventData.position, eventData.pressEventCamera);
         }
 
+        // Show a thin vertical insertion line only when the slot is occupied 
+        if (currentSlot != null && currentSlot.brickPrefab != null)
+        {
+            pendingInsertIndex = currentSlot.transform.GetSiblingIndex();
+            ShowInsertionMarker(currentSlot);
+        }
+        else
+        {
+            HideInsertionMarker();
+            pendingInsertIndex = -1;
+        }
+
         // Only trigger squeeze-in for occupied slots (and don't squeeze into your own original slot)
         if (currentSlot != null && currentSlot.brickPrefab != null && currentSlot != hoveredSlot && currentSlot != originalSlot)
         {
             // New slot detected
             hoveredSlot = currentSlot;
             squeezeTriggered = false;
-            
+
             // Stop previous coroutine if any
             if (squeezeCoroutine != null)
                 StopCoroutine(squeezeCoroutine);
-            
+
             // Start new squeeze timer
             squeezeCoroutine = StartCoroutine(SqueezeInTimer(currentSlot));
         }
@@ -131,6 +159,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             squeezeTriggered = false;
         }
     }
+
 
     private Slot FindNearestSlot(Vector2 screenPos, Camera camera)
     {
@@ -167,11 +196,12 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     private IEnumerator SqueezeInTimer(Slot targetSlot)
     {
-        yield return new WaitForSeconds(SQUEEZE_DELAY);
-        
+        yield return new WaitForSeconds(SqueezeDelay);
+
         // After delay, perform the squeeze-in
-        if (targetSlot != null && targetSlot.brickPrefab != null)
+        if (targetSlot != null && targetSlot.brickPrefab != null && !targetSlot.squeezeUsedThisDrag)
         {
+            targetSlot.squeezeUsedThisDrag = true;
             PerformSqueezeIn(targetSlot);
             squeezeTriggered = true;
         }
@@ -184,7 +214,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         if (slotsPanel == null) return;
 
         int targetIndex = targetSlot.transform.GetSiblingIndex();
-        
+
         // Check if the last slot is occupied - if so, create a new slot
         var lastSlot = slotsPanel.GetChild(slotsPanel.childCount - 1).GetComponent<Slot>();
         if (lastSlot != null && lastSlot.brickPrefab != null)
@@ -196,13 +226,13 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
                 Slot newSlot = Instantiate(inventoryController.slotPrefab, slotsPanel, false);
             }
         }
-        
+
         // Shift all bricks from targetIndex onwards to the right
         for (int i = slotsPanel.childCount - 1; i > targetIndex; i--)
         {
             var currentSlot = slotsPanel.GetChild(i).GetComponent<Slot>();
             var previousSlot = slotsPanel.GetChild(i - 1).GetComponent<Slot>();
-            
+
             if (currentSlot == null || previousSlot == null) continue;
 
             // Move brick from previous slot to current slot
@@ -225,6 +255,13 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             StopCoroutine(squeezeCoroutine);
             squeezeCoroutine = null;
+        }
+
+        // Clean up visual insertion marker
+        if (insertionMarker != null)
+        {
+            Destroy(insertionMarker);
+            insertionMarker = null;
         }
 
         // Hide hint arrow no matter how the drag ends
@@ -261,7 +298,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
                 return;
             }
 
-            // MODIFIED: Destroy old brick instead of swapping
+            // Destroy old brick instead of swapping
             GameObject oldBrick = dropSlot.brickPrefab;
 
             // If slot already had a brick, destroy it
@@ -286,7 +323,7 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             return;
         }
 
-        // delete the dragged item if dropped outside inventory panel
+        // Delete the dragged item if dropped outside inventory panel
         if (originalSlot != null && originalSlot.brickPrefab == gameObject)
             originalSlot.brickPrefab = null;
 
@@ -308,5 +345,61 @@ public class BrickDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         rt.anchoredPosition = Vector2.zero;
         rt.localRotation = Quaternion.identity;
         rt.localScale = Vector3.one;
+    }
+
+    // Create a simple UI image we can stretch into a thin vertical line
+    private void CreateInsertionMarker()
+    {
+        if (insertionMarker != null) return;
+
+        insertionMarker = new GameObject("InsertionMarker");
+        var canvas = GetComponentInParent<Canvas>();
+        if (canvas) insertionMarker.transform.SetParent(canvas.transform, false);
+
+        var image = insertionMarker.AddComponent<Image>();
+        image.raycastTarget = false;
+
+        // Gray color
+        image.color = new Color(0.2f, 0.2f, 0.2f, 0.7f);
+
+        var rectTransform = insertionMarker.GetComponent<RectTransform>();
+        rectTransform.anchorMin = rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+        rectTransform.pivot = new Vector2(0.5f, 0.5f);
+
+        insertionMarker.SetActive(false);
+    }
+
+    // Always draw a thin vertical line on the LEFT edge of the hovered slot
+    private void ShowInsertionMarker(Slot slot)
+    {
+        if (insertionMarker == null || slot == null || slot.brickPrefab == null)
+        {
+            HideInsertionMarker();
+            return;
+        }
+
+        insertionMarker.SetActive(true);
+
+        var slotRT = slot.GetComponent<RectTransform>();
+        var markerRT = insertionMarker.GetComponent<RectTransform>();
+        if (slotRT == null || markerRT == null) return;
+
+        // (existing positioning code unchanged)
+        Vector3[] c = new Vector3[4];
+        slotRT.GetWorldCorners(c);
+        Vector3 top = c[1];
+        Vector3 bottom = c[0];
+        Vector3 mid = (top + bottom) * 0.5f;
+        float height = Vector3.Distance(top, bottom) * 35f;
+
+        markerRT.position = mid + new Vector3(-0.1f, 0f, 0f);
+        markerRT.sizeDelta = new Vector2(5f, height);
+        markerRT.localRotation = Quaternion.identity;
+    }
+
+
+    private void HideInsertionMarker()
+    {
+        if (insertionMarker != null) insertionMarker.SetActive(false);
     }
 }
