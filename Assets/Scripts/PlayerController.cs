@@ -49,6 +49,28 @@ public class PlayerController : MonoBehaviour
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
         sfxSource.playOnAwake = false;
+
+        // Apply player color from saved RGB PlayerPrefs only (CarColor_R / CarColor_G / CarColor_B).
+        // No named-color handling; if RGB keys are missing fall back to red.
+        const string prefR = "CarColor_R";
+        const string prefG = "CarColor_G";
+        const string prefB = "CarColor_B";
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            if (PlayerPrefs.HasKey(prefR) && PlayerPrefs.HasKey(prefG) && PlayerPrefs.HasKey(prefB))
+            {
+                float r = PlayerPrefs.GetFloat(prefR, 1f);
+                float g = PlayerPrefs.GetFloat(prefG, 0f);
+                float b = PlayerPrefs.GetFloat(prefB, 0f);
+                sr.color = new Color(r, g, b, 1f);
+            }
+            else
+            {
+                sr.color = Color.red; // default color when no RGB saved
+            }
+        }
     }
 
     private void Update()
