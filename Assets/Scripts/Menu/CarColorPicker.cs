@@ -4,19 +4,21 @@ using UnityEngine.UI;
 public class CarColorPicker : MonoBehaviour
 {
     public Image carColorPreview;
+    public Image prevArrow;
+    public Image nextArrow;
 
     // Editable in Inspector
     private Color[] colors = new Color[]
     {
-        new Color(1, 1, 1), //white
-        new Color(0, 0.45f, 1), // blue
-        new Color(0, 1, 0), // green
-        new Color(1, 0, 0), // red
+        new Color(1f, 1f, 1f), // white
+        new Color(0f, 0.45f, 1f), // blue
+        new Color(0f, 1f, 0f), // green
+        new Color(1f, 0f, 0f), // red
         new Color(1f, 0.92f, 0.016f), // yellow
         new Color(1f, 0.41f, 0.71f) // pink
     };
 
-    public string[] colorNames = new string[] { "Blue", "Green", "Red", "Yellow", "Pink" };
+    public string[] colorNames = new string[] { "White", "Blue", "Green", "Red", "Yellow", "Pink" };
 
     private int currentIndex = 0;
     private const string PrefIndexKey = "CarColorIndex";
@@ -28,6 +30,9 @@ public class CarColorPicker : MonoBehaviour
     {
         if (colors == null || colors.Length == 0) return;
 
+        // Always restore saved index first (clamped).
+        currentIndex = Mathf.Clamp(PlayerPrefs.GetInt(PrefIndexKey, 0), 0, colors.Length - 1);
+
         // If separate RGB values were saved previously, restore them.
         if (PlayerPrefs.HasKey(PrefRKey) && PlayerPrefs.HasKey(PrefGKey) && PlayerPrefs.HasKey(PrefBKey))
         {
@@ -35,13 +40,10 @@ public class CarColorPicker : MonoBehaviour
             float g = PlayerPrefs.GetFloat(PrefGKey, 0f);
             float b = PlayerPrefs.GetFloat(PrefBKey, 0f);
             ApplyColor(new Color(r, g, b, 1f));
-            // Keep currentIndex as the saved index if present, otherwise 0
-            currentIndex = Mathf.Clamp(PlayerPrefs.GetInt(PrefIndexKey, 0), 0, colors.Length - 1);
         }
         else
         {
-            // Fallback to saved index (or default 0)
-            currentIndex = Mathf.Clamp(PlayerPrefs.GetInt(PrefIndexKey, 0), 0, colors.Length - 1);
+            // Fallback to saved index (or default 0) and apply that color from the list.
             ApplyCurrentColor();
         }
     }
@@ -79,9 +81,27 @@ public class CarColorPicker : MonoBehaviour
     {
         if (carColorPreview != null) carColorPreview.color = color;
 
+        // Update arrow colors based on current index (use palette neighbors)
+        UpdateArrowColors();
+
         // Save RGB separately as requested
         PlayerPrefs.SetFloat(PrefRKey, color.r);
         PlayerPrefs.SetFloat(PrefGKey, color.g);
         PlayerPrefs.SetFloat(PrefBKey, color.b);
+    }
+
+    private void UpdateArrowColors()
+    {
+        if (colors == null || colors.Length == 0) return;
+
+        int len = colors.Length;
+        int prevIndex = (currentIndex - 1 + len) % len;
+        int nextIndex = (currentIndex + 1) % len;
+
+        if (prevArrow != null)
+            prevArrow.color = colors[prevIndex];
+
+        if (nextArrow != null)
+            nextArrow.color = colors[nextIndex];
     }
 }
