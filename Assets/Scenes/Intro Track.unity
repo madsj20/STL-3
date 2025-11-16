@@ -776,10 +776,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Car)
       objectReference: {fileID: 0}
-    - target: {fileID: 177176750165132781, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2482393368336429712, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.45
@@ -824,6 +820,10 @@ PrefabInstance:
       propertyPath: brickQueManager
       value: 
       objectReference: {fileID: 309674404}
+    - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 519420032}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9555,6 +9555,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 309674404}
+    - target: {fileID: 8402397367228440719, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402397367228440719, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402397367228440719, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920580066955992965, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920580066955992965, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920580066955992965, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8962753766340433226, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
