@@ -38,6 +38,7 @@ public class BrickQueManager : MonoBehaviour
     [Header("Speed Boost")]
     [SerializeField] private float speedBoostMultiplier = 2f;  // 2x faster
     [SerializeField] private int speedBoostMoves = 2;   // affect next two moves
+    [SerializeField] private Color speedBorderColor = new Color(1f, 0.84f, 0f, 1f); // Gold/yellow color
 
     private int boostMovesLeft = 0;
     private float? originalMoveDuration = null;
@@ -77,7 +78,10 @@ public class BrickQueManager : MonoBehaviour
         {
             var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
             if (slot != null)
+            {
                 slot.SetBackgroundActive(false);
+                slot.SetSpeedBorderActive(false);
+            }
         }
     }
 
@@ -85,6 +89,9 @@ public class BrickQueManager : MonoBehaviour
     {
         // Ensure there's always more than one empty slot available
         EnsureSlots();
+
+        // Update speed boost borders whenever slots change
+        UpdateSpeedBoostBorders();
 
         // Update replay border visibility
         bool playerHasWon = false;
@@ -494,6 +501,58 @@ public class BrickQueManager : MonoBehaviour
         }
     }
 
+    // Update speed boost border indicators for slots after speed bricks
+    private void UpdateSpeedBoostBorders()
+    {
+        if (PanelThatPlaysTheSequence == null) return;
+
+        // First, clear all speed borders
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot != null)
+            {
+                slot.SetSpeedBorderActive(false);
+            }
+        }
+
+        // Go through all slots from left to right
+        for (int i = 0; i < PanelThatPlaysTheSequence.childCount; i++)
+        {
+            var slot = PanelThatPlaysTheSequence.GetChild(i).GetComponent<Slot>();
+            if (slot == null || slot.brickPrefab == null) continue;
+
+            var piece = slot.brickPrefab.GetComponent<BrickPiece>();
+            if (piece == null) continue;
+
+            // If this is a speed boost brick, highlight the next N slots
+            if (piece.action == ActionType.SpeedBoost)
+            {
+                int slotsHighlighted = 0;
+                
+                // Look at the next slots (both empty and filled)
+                for (int nextIdx = i + 1; 
+                     nextIdx < PanelThatPlaysTheSequence.childCount && slotsHighlighted < speedBoostMoves; 
+                     nextIdx++)
+                {
+                    var nextSlot = PanelThatPlaysTheSequence.GetChild(nextIdx).GetComponent<Slot>();
+                    if (nextSlot == null) continue;
+
+                    // Highlight this slot (whether empty or filled)
+                    nextSlot.SetSpeedBorderActive(true);
+                    nextSlot.SetSpeedBorderColor(speedBorderColor);
+                    slotsHighlighted++;
+                }
+            }
+        }
+    }
+
+    // Public method that can be called from other scripts when bricks are added/removed
+    public void RefreshSpeedBoostBorders()
+    {
+        UpdateSpeedBoostBorders();
+    }
+
     public void ClearAll()
     {
         // stop any running playback
@@ -616,6 +675,7 @@ public class BrickQueManager : MonoBehaviour
 
             // Turn off the background highlight
             slot.SetBackgroundActive(false);
+            slot.SetSpeedBorderActive(false);
 
             // Also hide the "Background (1)" child object if it exists
             Transform bgTransform = slot.transform.Find("Background (1)");
