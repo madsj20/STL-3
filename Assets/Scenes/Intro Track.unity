@@ -464,6 +464,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5974452862740654177}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: speedBoostMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: PanelThatPlaysTheSequence
       value: 
       objectReference: {fileID: 165779641}
