@@ -122,6 +122,9 @@ MonoBehaviour:
   oilSpinDuration: 1
   timer: {fileID: 0}
   brickQueManager: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  crashShakeDuration: 0.35
+  crashShakeMagnitude: 0.15
 --- !u!61 &7665659089439074654
 BoxCollider2D:
   m_ObjectHideFlags: 0

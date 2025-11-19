@@ -60,9 +60,31 @@ public class BrickQueManager : MonoBehaviour
     [Header("Slots")]
     [SerializeField] private int defaultEmptySlotCount = 5;
 
+    [Header("Juice: Squash & Stretch (applies while queue executes)")]
+    [Tooltip("Enable simple squash & stretch on the player while the queue is executing.")]
+    [SerializeField] private bool enableSquashStretch = true;
+    [Tooltip("Peak stretch multiplier along the forward axis (local Y) when playing.")]
+    [SerializeField] private float stretchAmount = 1.12f;
+    [Tooltip("Squash multiplier along forward axis (local Y) when not playing.")]
+    [SerializeField] private float squashAmount = 0.88f;
+    [Tooltip("How fast the player's scale lerps toward the target.")]
+    [SerializeField] private float scaleLerpSpeed = 8f;
+
+    // runtime state for scale handling
+    private Vector3 playerOriginalScale = Vector3.one;
+    private bool originalScaleCaptured = false;
+    private Coroutine scaleRoutine = null;
+
     private void Awake()
     {
         if (!timer) timer = FindFirstObjectByType<RaceTimer>();
+
+        // capture player's original scale if already assigned
+        if (player != null && player.transform != null)
+        {
+            playerOriginalScale = player.transform.localScale;
+            originalScaleCaptured = true;
+        }
     }
 
     private void Start()
@@ -185,6 +207,9 @@ public class BrickQueManager : MonoBehaviour
 
         AudioListener.pause = true; // Pause all audio
 
+        // When execution stops, switch to squash state
+        StartScaleMode(false);
+
         // resume pulsing while paused (if there are any bricks placed)
         UpdatePlayPulse();
 
@@ -280,6 +305,9 @@ public class BrickQueManager : MonoBehaviour
     {
         isPlaying = true;
 
+        // when queue execution starts, start stretch state
+        StartScaleMode(true);
+
         // Snapshot and accumulate the queue for replay (only when not replaying)
         if (!isReplaying)
         {
@@ -347,6 +375,9 @@ public class BrickQueManager : MonoBehaviour
         isReplaying = false; // ensure we leave replay mode if it was set
         currentExecutingIndex = -1;
         pausedAtIndex = -1;
+
+        // when execution stopped, switch to squash state
+        StartScaleMode(false);
 
         // If we crossed goal while replaying AND the replayed queue has finished, show winning UI now
         if (wasReplaying && goalCrossedDuringReplay && WinningUI != null)
@@ -430,6 +461,57 @@ public class BrickQueManager : MonoBehaviour
                 player.moveDuration = originalMoveDuration.Value;
             }
         }
+    }
+
+    // Start the scale routine toward stretch (playing=true) or squash (playing=false)
+    private void StartScaleMode(bool playing)
+    {
+        if (!enableSquashStretch || player == null || player.transform == null) return;
+
+        // capture original scale if not yet done
+        if (!originalScaleCaptured)
+        {
+            playerOriginalScale = player.transform.localScale;
+            originalScaleCaptured = true;
+        }
+
+        // stop any previous scale coroutine
+        if (scaleRoutine != null)
+        {
+            StopCoroutine(scaleRoutine);
+            scaleRoutine = null;
+        }
+
+        Vector3 target;
+        if (playing)
+        {
+            // stretch along local Y (forward). Compensate X so volume feels consistent.
+            float stretch = Mathf.Max(0.0001f, stretchAmount);
+            float xComp = 1f - (stretch - 1f) * 0.55f;
+            target = new Vector3(playerOriginalScale.x * xComp, playerOriginalScale.y * stretch, playerOriginalScale.z);
+        }
+        else
+        {
+            // squash along local Y and compensate X
+            float squash = Mathf.Clamp(squashAmount, 0.01f, 2f);
+            float xComp = 1f + (1f - squash) * 0.6f;
+            target = new Vector3(playerOriginalScale.x * xComp, playerOriginalScale.y * squash, playerOriginalScale.z);
+        }
+
+        scaleRoutine = StartCoroutine(LerpPlayerScaleTo(target));
+    }
+
+    private IEnumerator LerpPlayerScaleTo(Vector3 target)
+    {
+        if (player == null || player.transform == null) yield break;
+        Transform t = player.transform;
+        while (Vector3.Distance(t.localScale, target) > 0.001f)
+        {
+            t.localScale = Vector3.Lerp(t.localScale, target, Time.deltaTime * scaleLerpSpeed);
+            yield return null;
+        }
+        t.localScale = target;
+        scaleRoutine = null;
     }
 
     private void HighlightSlot(Slot slot, bool highlight)
@@ -540,6 +622,9 @@ public class BrickQueManager : MonoBehaviour
 
         // ensure pulses reflect the now-empty state
         UpdatePlayPulse(0);
+
+        // apply squash since execution ended / cleared
+        StartScaleMode(false);
     }
 
     public void ResetPlayerPosition()
@@ -594,6 +679,9 @@ public class BrickQueManager : MonoBehaviour
 
             // >>> NEW: reset goal flag
             goalCrossedDuringReplay = false;
+
+            // ensure player shows squash (not stretched)
+            StartScaleMode(false);
         }
     }
 

@@ -61,6 +61,13 @@ MonoBehaviour:
   WarningUI: {fileID: 0}
   WinningUI: {fileID: 0}
   ReplayBorder: {fileID: 0}
+  TimerObject: {fileID: 0}
+  RecordCamera: {fileID: 0}
+  defaultEmptySlotCount: 5
+  enableSquashStretch: 1
+  stretchAmount: 1.1
+  squashAmount: 1
+  scaleLerpSpeed: 2
 --- !u!114 &6996014634606488612
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1065,6 +1065,10 @@ PrefabInstance:
       propertyPath: brickQueManager
       value: 
       objectReference: {fileID: 478081776}
+    - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 519420032}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

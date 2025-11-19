@@ -34,6 +34,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private RaceTimer timer; // Reference to the RaceTimer in this scene
     [SerializeField] private BrickQueManager brickQueManager;
 
+    [Header("Crash Camera Shake")]
+    [Tooltip("Optional: assign the Camera's transform (falls back to Camera.main if empty)")]
+    public Transform cameraTransform;
+    [Tooltip("How long the camera shakes when crashing")]
+    public float crashShakeDuration = 0.35f;
+    [Tooltip("How far the camera moves during the shake")]
+    public float crashShakeMagnitude = 0.22f;
+
+    private Coroutine cameraShakeCoroutine;
 
     private void Awake()
     {
@@ -44,7 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         gridManager = FindAnyObjectByType<GridManager>();
         animator = GetComponent<Animator>();
-        
+
         // Setup SFX AudioSource for crash sound
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.loop = false;
@@ -101,7 +110,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isCrashing", false); // reset crash animation
         isCrashed = false; // Allow movement again
-        
+
         var pieces = Object.FindObjectsByType<RoadPiece>(FindObjectsSortMode.None);
         foreach (var p in pieces)
         {
@@ -137,7 +146,7 @@ public class PlayerController : MonoBehaviour
 
         rotationAlreadyHandled = false;
     }
-    
+
     public void MoveDown()
     {
         if (isMoving || isRotating || isHolding || isCrashed) return;
@@ -146,7 +155,7 @@ public class PlayerController : MonoBehaviour
 
         rotationAlreadyHandled = false;
     }
-    
+
     public void MoveLeft()
     {
         if (isMoving || isRotating || isHolding || isCrashed) return;
@@ -154,7 +163,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(RotateTo(Vector2Int.left));
         rotationAlreadyHandled = false;
     }
-    
+
     public void MoveRight()
     {
         if (isMoving || isRotating || isHolding || isCrashed) return;
@@ -171,7 +180,7 @@ public class PlayerController : MonoBehaviour
         float clampedSpeed = Mathf.Clamp(roundedSpeed, 0.5f, 5f);
         moveDuration = 1f / clampedSpeed;
     }
-    
+
     public void SpinOnOil(float duration)
     {
         Debug.Log("Spinning on oil...");
@@ -197,7 +206,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator MoveTo(Vector2Int newPos)
     {
         isMoving = true;
-        
+
         Vector3 start = transform.position;
         Vector3 end = new Vector3(newPos.x, newPos.y, 0);
 
@@ -213,7 +222,7 @@ public class PlayerController : MonoBehaviour
         gridPosition = newPos;
         isMoving = false;
     }
-    
+
     private IEnumerator RotateTo(Vector2Int newDir)
     {
         isRotating = true;
@@ -239,15 +248,15 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isHolding = false;
     }
-    
+
     private IEnumerator HandleOilSpin(float duration)
     {
         Debug.Log("Handling oil spin...");
         isHolding = true; // Prevent other actions during spin
-            
+
         // Get current facing direction as a quaternion
         Quaternion startRotation = transform.rotation;
-        
+
         float elapsed = 0f;
         while (elapsed < duration)
         {
@@ -257,29 +266,29 @@ public class PlayerController : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        
+
         // After 540° rotation (1.5 spins), flip the face direction to backwards
         faceDirection = -faceDirection;
-        
+
         // THEN set final rotation to match the NEW face direction
         transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(faceDirection.x, faceDirection.y, 0));
-        
+
         isHolding = false;
     }
 
     private IEnumerator HandleOilDrop(GameObject oilPrefab, AudioClip oilSound)
     {
         isHolding = true; // Prevent other actions during oil drop
-        
+
         // Play sound effect
         if (sfxSource != null && oilSound != null)
         {
             sfxSource.PlayOneShot(oilSound, 0.7f);
         }
-        
+
         // Spin 540 degrees
         Quaternion startRotation = transform.rotation;
-        
+
         float elapsed = 0f;
         while (elapsed < oilSpinDuration)
         {
@@ -289,10 +298,10 @@ public class PlayerController : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        
+
         // After 540° rotation (1.5 spins), flip the face direction to backwards
         faceDirection = -faceDirection;
-        
+
         // Set final rotation to match the NEW face direction
         transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(faceDirection.x, faceDirection.y, 0));
 
@@ -318,7 +327,7 @@ public class PlayerController : MonoBehaviour
             }
             oilInstance.transform.SetParent(oilContainer.transform);
         }
-        
+
         isHolding = false;
         rotationAlreadyHandled = true;
     }
@@ -342,11 +351,54 @@ public class PlayerController : MonoBehaviour
     {
         isCrashed = true;
         PlayCrashSound();
-        
+
         if (animator != null)
         {
             animator.SetBool("isCrashing", true); // trigger crash animation
         }
+
+        // Start camera shake when crashing
+        if (cameraShakeCoroutine != null)
+        {
+            StopCoroutine(cameraShakeCoroutine);
+            cameraShakeCoroutine = null;
+        }
+        cameraShakeCoroutine = StartCoroutine(CameraShakeCoroutine(crashShakeDuration, crashShakeMagnitude));
+    }
+
+    private IEnumerator CameraShakeCoroutine(float duration, float magnitude)
+    {
+        // choose the camera transform: user-assigned or Camera.main
+        Transform cam = cameraTransform != null ? cameraTransform : (Camera.main != null ? Camera.main.transform : null);
+        if (cam == null) yield break;
+
+        // use localPosition if camera has a parent, otherwise position
+        bool useLocal = cam.parent != null;
+        Vector3 originalPos = useLocal ? cam.localPosition : cam.position;
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            float x = (Random.value * 2f - 1f) * magnitude;
+            float y = (Random.value * 2f - 1f) * magnitude;
+            Vector3 offset = new Vector3(x, y, 0f);
+
+            if (useLocal)
+                cam.localPosition = originalPos + offset;
+            else
+                cam.position = originalPos + offset;
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // restore
+        if (useLocal)
+            cam.localPosition = originalPos;
+        else
+            cam.position = originalPos;
+
+        cameraShakeCoroutine = null;
     }
 
     public void ResetPosition()
