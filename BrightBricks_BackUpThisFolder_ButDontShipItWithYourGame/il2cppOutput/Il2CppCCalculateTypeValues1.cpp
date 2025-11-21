@@ -3554,7 +3554,7 @@ struct U3CSqueezeInTimerU3Ed__15_tE4838D97767FE513E78BC356F1DABEA13A0EE187  : pu
 	Slot_tC1CF93C4345A89624C638031DE98B5A9AD59E0E2* ___targetSlot;
 	BrickDragHandler_tC2AF0CDD8F568C7896874846052A1AC106D60969* ___U3CU3E4__this;
 };
-struct U3CRunU3Ed__52_t6A9D8CDAB7DC15BA13EFC10B7B83EFA553FFC1FD  : public RuntimeObject
+struct U3CRunU3Ed__53_t8EAB88D576C2A7D9FBBF32134D0ABAC64D89C06F  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -27071,7 +27071,7 @@ struct UpdateFlags_tBF0D802FF9F8C33DA5DE40ED2B21768D88E33574
 {
 	int32_t ___value__;
 };
-struct U3CLerpPlayerScaleToU3Ed__55_tDD9E088B9F8F5A9DACD2E5BB1EDA0F4A34582984  : public RuntimeObject
+struct U3CLerpPlayerScaleToU3Ed__56_t8F49945AD4354C349AE70EAF8EAE6B93D6A9D6B3  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -33897,7 +33897,7 @@ struct AssetPackManagerStatusQueryCallback_tD4EF794B8FBBE3EC1FCD94A3C2A49DA09840
 	List_1_t241EF1F6D92653B18C43F539A61468E6E26E3FC9* ___m_States;
 	int64_t ___m_Size;
 };
-struct U3CExecuteActionWithSpeedBoostU3Ed__53_tC306D4EBD1725B3D0D74CBFFCEEA9929AECDB7AB  : public RuntimeObject
+struct U3CExecuteActionWithSpeedBoostU3Ed__54_t096ED884B5FE323AEA671365816DB110B6F99C65  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -40135,6 +40135,7 @@ struct BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A  : public MonoB
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___TimerObject;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RecordCamera;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ReplayBlockers;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlayerParticles;
 	List_1_t42948E53D7587F9A03D3DA7A76A16549B6D897AE* ___replayQueue;
 	bool ___isReplaying;
 	bool ___goalCrossedDuringReplay;
@@ -54062,11 +54063,11 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize8472 = { sizeof(BrickPiece_t
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8473;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize8473 = { sizeof(int32_t)+ sizeof(RuntimeObject), sizeof(int32_t), 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8474;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize8474 = { sizeof(U3CExecuteActionWithSpeedBoostU3Ed__53_tC306D4EBD1725B3D0D74CBFFCEEA9929AECDB7AB), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize8474 = { sizeof(U3CExecuteActionWithSpeedBoostU3Ed__54_t096ED884B5FE323AEA671365816DB110B6F99C65), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8475;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize8475 = { sizeof(U3CLerpPlayerScaleToU3Ed__55_tDD9E088B9F8F5A9DACD2E5BB1EDA0F4A34582984), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize8475 = { sizeof(U3CLerpPlayerScaleToU3Ed__56_t8F49945AD4354C349AE70EAF8EAE6B93D6A9D6B3), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8476;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize8476 = { sizeof(U3CRunU3Ed__52_t6A9D8CDAB7DC15BA13EFC10B7B83EFA553FFC1FD), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize8476 = { sizeof(U3CRunU3Ed__53_t8EAB88D576C2A7D9FBBF32134D0ABAC64D89C06F), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8477;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize8477 = { sizeof(BrickQueManager_tBA30B58E1DCF407377ECF5969BB5DCC3AFE3D02A), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8478;

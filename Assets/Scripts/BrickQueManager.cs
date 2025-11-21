@@ -49,6 +49,7 @@ public class BrickQueManager : MonoBehaviour
     public GameObject TimerObject;
     public GameObject RecordCamera;
     private GameObject ReplayBlockers;
+    public GameObject PlayerParticles;
 
     // --- Replay support ---
     private readonly List<ActionType> replayQueue = new List<ActionType>();
@@ -496,6 +497,8 @@ public class BrickQueManager : MonoBehaviour
             float stretch = Mathf.Max(0.0001f, stretchAmount);
             float xComp = 1f - (stretch - 1f) * 0.55f;
             target = new Vector3(playerOriginalScale.x * xComp, playerOriginalScale.y * stretch, playerOriginalScale.z);
+            //Enable player particles when moving
+            PlayerParticles.SetActive(true);
         }
         else
         {
@@ -503,6 +506,8 @@ public class BrickQueManager : MonoBehaviour
             float squash = Mathf.Clamp(squashAmount, 0.01f, 2f);
             float xComp = 1f + (1f - squash) * 0.6f;
             target = new Vector3(playerOriginalScale.x * xComp, playerOriginalScale.y * squash, playerOriginalScale.z);
+            //Disable player particles when not moving
+            PlayerParticles.SetActive(false);
         }
 
         scaleRoutine = StartCoroutine(LerpPlayerScaleTo(target));
