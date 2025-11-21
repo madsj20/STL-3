@@ -1541,11 +1541,11 @@ RectTransform:
   - {fileID: 1873317587}
   m_Father: {fileID: 283993167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -350, y: 229}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!1 &1151368857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3735286913821172767, guid: a702fc8197220764488303680cb86243, type: 3}
       propertyPath: musicVolume
-      value: 0
+      value: 0.784
       objectReference: {fileID: 0}
     - target: {fileID: 6560149011719903668, guid: a702fc8197220764488303680cb86243, type: 3}
       propertyPath: m_Name
@@ -2048,11 +2048,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1086792931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 285.59998, y: -204.36703}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 310.9, y: -191.4}
   m_SizeDelta: {x: 124.96997, y: 124.97}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873317588
 MonoBehaviour:
   m_ObjectHideFlags: 0
