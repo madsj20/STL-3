@@ -462,6 +462,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &997171918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8716905615092791603, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
+  m_PrefabInstance: {fileID: 1352348728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171213799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2973443276568058627, guid: c1bf0e563a4586844aa3c731277daa21, type: 3}
@@ -518,18 +523,6 @@ PrefabInstance:
     - target: {fileID: 2482393368336429712, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846759200834773381, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
-      propertyPath: InitialModule.size3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846759200834773381, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846759200834773381, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8258027097321600469, guid: 2e3882eaabd081e4b98036f4c9e29f02, type: 3}
       propertyPath: brickQueManager
@@ -6727,9 +6720,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1494033021}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: CarDustLeft
+      value: 
+      objectReference: {fileID: 997171918}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: TimerObject
       value: 
       objectReference: {fileID: 5974452862740654180}
+    - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
+      propertyPath: CarDustRight
+      value: 
+      objectReference: {fileID: 1916191342}
     - target: {fileID: 2885354765561187296, guid: 43d0e34615faa4343b02b25b9b625d15, type: 3}
       propertyPath: RecordCamera
       value: 
