@@ -45,6 +45,7 @@ public class BrickQueManager : MonoBehaviour
 
     public GameObject WarningUI;
     public GameObject WinningUI;
+    public GameObject WinningParticles;
     public GameObject ReplayBorder;
     public GameObject TimerObject;
     public GameObject RecordCamera;
@@ -58,6 +59,13 @@ public class BrickQueManager : MonoBehaviour
 
     // Track if the goal was crossed while we are replaying
     private bool goalCrossedDuringReplay = false;
+    // New: track if goal was crossed (live) and we should show win AFTER replay
+    private bool pendingWinAfterReplay = false;
+
+    // Prevent scheduling multiple delayed replays
+    private bool replayScheduled = false;
+    [SerializeField] private float autoReplayDelay = 2f; // seconds to wait before auto replay
+
     public bool IsReplaying => isReplaying;
 
     [Header("Slots")]
@@ -94,7 +102,9 @@ public class BrickQueManager : MonoBehaviour
     {
         //Find ReplayBloockers
         ReplayBlockers = GameObject.Find("ReplayBlockers");
-        ReplayBlockers.SetActive(false);
+        if (ReplayBlockers != null)
+            ReplayBlockers.SetActive(false);
+
         // Make sure all slot backgrounds are OFF at scene start
         if (PanelThatPlaysTheSequence == null) return;
 
@@ -389,13 +399,14 @@ public class BrickQueManager : MonoBehaviour
         StartScaleMode(false);
 
         // If we crossed goal while replaying AND the replayed queue has finished, show winning UI now
-        if (wasReplaying && goalCrossedDuringReplay && WinningUI != null)
+        if (wasReplaying && (goalCrossedDuringReplay || pendingWinAfterReplay) && WinningUI != null)
         {
             WinningUI.SetActive(true);
             commandDelay = 0.05f; // small gap between commands
         }
-        // reset the flag after handling
+        // reset the flags after handling
         goalCrossedDuringReplay = false;
+        pendingWinAfterReplay = false;
 
         // playback finished - resume pulse if any bricks remain
         UpdatePlayPulse();
@@ -686,6 +697,8 @@ public class BrickQueManager : MonoBehaviour
 
         // >>> NEW: reset goal flag
         goalCrossedDuringReplay = false;
+        pendingWinAfterReplay = false;
+        replayScheduled = false;
 
         // ensure pulses reflect the now-empty state
         UpdatePlayPulse(0);
@@ -746,6 +759,8 @@ public class BrickQueManager : MonoBehaviour
 
             // >>> NEW: reset goal flag
             goalCrossedDuringReplay = false;
+            pendingWinAfterReplay = false;
+            replayScheduled = false;
 
             // ensure player shows squash (not stretched)
             StartScaleMode(false);
@@ -1040,7 +1055,8 @@ public class BrickQueManager : MonoBehaviour
         currentExecutingIndex = 0;
         isReplaying = true;
 
-        // reset goal flag at the start of replay
+        // do NOT clear pendingWinAfterReplay here; it should be honored after replay
+        // reset goal flag that specifically tracks crossing during a replay
         goalCrossedDuringReplay = false;
 
         StartCoroutine(Run());
@@ -1058,9 +1074,63 @@ public class BrickQueManager : MonoBehaviour
     // Call this from the script that detects the goal line (e.g., PlayerController or Finish handler)
     public void NotifyGoalCrossed()
     {
+        // If we are currently replaying, mark that the replay crossed the goal
         if (isReplaying)
         {
             goalCrossedDuringReplay = true;
+            return;
         }
+
+        // Otherwise, mark that we should show the winning UI after the replay finishes
+        pendingWinAfterReplay = true;
+
+        // Hide any immediate winning UI if present
+        if (WinningUI != null && WinningUI.activeSelf)
+            WinningUI.SetActive(false);
+
+        // Immediately stop any ongoing playback so the player stays on the goal
+        if (isPlaying)
+        {
+            // Stop the Run coroutine and related coroutines in this manager
+            StopAllCoroutines();
+            isPlaying = false;
+            isPaused = false;
+            currentExecutingIndex = -1;
+            pausedAtIndex = -1;
+
+            // Clear logical queue and UI highlights so remaining bricks won't run
+            queue.Clear();
+            RefreshLabel();
+            RemoveAllHighlights();
+
+            // Ensure the player visual returns to squash state
+            StartScaleMode(false);
+        }
+
+        // Schedule auto replay after delay (only once)
+        if (!replayScheduled)
+        {
+            replayScheduled = true;
+            StartCoroutine(AutoPlayReplayAfterDelay(autoReplayDelay));
+            if (ReplayBlockers != null) ReplayBlockers.SetActive(true);
+            if (WinningParticles != null) WinningParticles.SetActive(true);
+        }
+    }
+
+    private IEnumerator AutoPlayReplayAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        // If we have a replay recorded, start it. Otherwise show Winning UI now.
+        if (replayQueue.Count > 0)
+        {
+            PlayReplay();
+        }
+        else
+        {
+            if (WinningUI != null)
+                WinningUI.SetActive(true);
+        }
+
+        replayScheduled = false;
     }
 }

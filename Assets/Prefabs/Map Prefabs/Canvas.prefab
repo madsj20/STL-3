@@ -2705,6 +2705,7 @@ RectTransform:
   - {fileID: 4134987063913911135}
   - {fileID: 4785953121828079695}
   - {fileID: 2524219028965551992}
+  - {fileID: 5594778855724356733}
   - {fileID: 1022841886139353327}
   - {fileID: 2484615930873431195}
   - {fileID: 8202941099529331614}
@@ -3802,7 +3803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -26.000153, y: -0.00095167325}
+  m_AnchoredPosition: {x: -26.000153, y: -0.000079749065}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &7398206402444344027
@@ -4193,12 +4194,12 @@ GameObject:
   - component: {fileID: 2386126972724612282}
   - component: {fileID: 1070568848504484840}
   m_Layer: 6
-  m_Name: Particle System
+  m_Name: Winning Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5594778855724356733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4206,12 +4207,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7064721162548846878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1022841886139353327}
+  m_Father: {fileID: 4308627512469296405}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -11130,9 +11131,6 @@ PrefabInstance:
     - {fileID: 7227913575961766823, guid: beef6c1af292f1e46b12e381ae735f03, type: 3}
     - {fileID: 4270794356916501981, guid: beef6c1af292f1e46b12e381ae735f03, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4835901216323398603, guid: beef6c1af292f1e46b12e381ae735f03, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 5594778855724356733}
     - targetCorrespondingSourceObject: {fileID: 6500099394951698139, guid: beef6c1af292f1e46b12e381ae735f03, type: 3}
       insertIndex: 2
       addedObject: {fileID: 5138504214111398391}

@@ -37,8 +37,9 @@ public class RoadPieceData : ScriptableObject
 
             case RoadPieceType.Goal:
                 Debug.Log("GOAL!");
-                if (UIManager.Instance != null && UIManager.Instance.WinningUI != null)
-                    UIManager.Instance.WinningUI.SetActive(true);
+                // Do not show Winning UI directly here. PlayerController handles goal crossing
+                // and will notify BrickQueManager which schedules the replay and showing of the
+                // winning UI after replay finishes.
                 break;
 
 

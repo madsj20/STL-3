@@ -125,6 +125,23 @@ public class PlayerController : MonoBehaviour
         ResetPosition();
     }
 
+    // Public: stop the player's actions and freeze on goal
+    public void StopAtGoal()
+    {
+        // Stop any running motion coroutines to freeze immediately
+        StopAllCoroutines();
+
+        // Prevent further movement
+        isCrashed = true;
+        isMoving = false;
+        isRotating = false;
+        isHolding = false;
+
+        // Ensure animator isn't in crash state
+        if (animator != null)
+            animator.SetBool("isCrashing", false);
+    }
+
     // Makes the car drive forward if possible
     private bool TryMove(Vector2Int delta)
     {
@@ -420,15 +437,32 @@ public class PlayerController : MonoBehaviour
         }
 
         // Only react if the object entering is tagged as "Goal"
-        if (other.CompareTag("Goal") && timer != null)
+        if (other.CompareTag("Goal") && timer != null && !hasWon)
         {
             timer.StopTimer(); // Stop counting
             Debug.Log("Final time: " + timer.GetFormattedTime());
+
+            // Freeze the player immediately so they stand on the goal
+            StopAtGoal();
+
             if (brickQueManager != null)
                 brickQueManager.NotifyGoalCrossed();
             hasWon = true; // Prevent timer from going
         }
     }
+    /*
+    // Also handle case where player passes through the goal quickly (OnTriggerExit)
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Goal") && timer != null && !hasWon)
+        {
+            timer.StopTimer();
+            Debug.Log("Final time (exit): " + timer.GetFormattedTime());
+            if (brickQueManager != null)
+                brickQueManager.NotifyGoalCrossed();
+            hasWon = true;
+        }
+    }*/
     public void ResetWinState()
     {
         hasWon = false; // Allow timer to run again
